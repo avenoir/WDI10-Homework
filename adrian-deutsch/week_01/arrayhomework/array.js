@@ -146,38 +146,32 @@ var theWord = ["F", "O", "X"];
 var guessedLetters = ["_", "_", "_"];
 
 var guessLetter = function (letter){
-	var goodGuess;
-	var moreToGuess;
+	var goodGuess = false;
+	var charRemain = false;
+
 	for (var i = 0; i < theWord.length; i++){
-		if (guessedLetter === theWord[0]){
-			guessedLetters[0] = guessedLetter;
-			goodGuess = true;
-		}
-		else if (guessedLetter === theWord[1]){
-			guessedLetters[1] = guessedLetter;
-			goodGuess = true;
-		}
-		else if (guessedLetter === theWord[2]){
-			guessedLetters[2] = guessedLetter;
-			goodGuess = true;
-		}
-		else {
-			moreToGuess = true;
-              console.log('Try again!');
-          }
-		
-	}
-};
-		  if (goodGuess) {
-              console.log('Yes, you found a letter!');
-              console.log(guessedLetters);
-              if (!moreToGuess) {
-                  console.log('YOU WON!');
-              } 
-          } 
-      
 
+		if (letter === theWord[i]){
+			guessedLetters[i] = letter;
+			goodGuess = true;
+		}
 
+	    if (guessedLetters[i] === "_") {
+            charRemain = true;
+        }
+	
+		if (goodGuess) {
+            console.log('Yes, you found a letter!');
+            console.log(guessedLetters);
+        }
+
+        if (!moreToGuess) {
+            console.log('YOU WON!');
+        } else {
+            console.log("Try again");
+        }
+    } 
+}
 guessLetter("F");
 guessLetter("I");
 guessLetter("O");
