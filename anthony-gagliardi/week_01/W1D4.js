@@ -113,3 +113,31 @@ var isObtuse = function(shape) {
 };
 console.log("We passed in: ", angle, ", it should return true.", isObtuse(angle));
 console.log("We passed in: ", badAngle, ", it should return false.", isObtuse(badAngle));
+
+
+// JavaScript Bank
+
+var accounts = [
+	{name: 'Tony G', bal: 12345, active: true}
+	{name: 'Larry P', bal: 54132, active: false}
+	{name: 'Jerry T', bal: 15125, active: true}
+	{name: 'Merry D', bal: 34232, active: false}
+]
+
+for (var i = 0; i < accounts.length; i++) {
+	var acc = accounts[i];
+	if (acc.active === true) {
+        console.log(acc.name + ' has an account balance of ' + acc.bal);
+	} else if (acc[i] === false){
+		console.log("This account belongs to " + acc.name + ' with a balance of ' + acc.bal + ' and is ready to be audited');
+	} for (var j = 0; j <= 5; j++) {
+	    var newAccounts = [
+	        {name: 'Becky O', bal: 98210, active: true}
+	        {name: 'Nelly Doh', bal: 21543, active: true}
+	        {name: 'Ferry No', bal: 43081, active: true}
+	        {name: 'Something Low', bal: 48165, active: true}
+	        {name: 'No Idea', bal: 71092, active: true}
+	        ]
+	    return newAccounts[i].push(accounts) // I can't figure out why the second array in  'accounts' is always an error, without fixing i I'm not sure if it will run but I did what I think mighta worked anyway.
+	}
+}
