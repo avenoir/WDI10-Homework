@@ -67,11 +67,12 @@ var reverseString2 = function(string) {
      }
     return newArray;
 }
+
 console.log(reverseString2("It's opposite day"));
 
 // Write a function findLongestWord that takes an array of words and returns the length of the longest one.
 var findLongestWord = function(wordArray){
-	words = wordArray.split(" ");
+	var words = wordArray.split(" ");
 	var longestLen = 0; 
 	for ( var i = 0; i < words.length ; i++) {
 		if (words[i].length > longestLen){

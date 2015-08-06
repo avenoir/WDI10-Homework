@@ -29,7 +29,7 @@ var guessLetter = function(guessedLetter) {
 	// Iterate through the word letters and see if the guessed letter is in there.
 	var lettersFound = 0;
 	for (var i = 0; i < letters.length; i++) {
-		if ( guessedLetter === letters[i] ) { // If the guessed letter matches a word letter,
+		if (guessedLetter === letters[i]) { // If the guessed letter matches a word letter,
 			currentGuess[i] = guessedLetter;  // change the guessed letters array to reflect that.
 			lettersFound++;
 		}
