@@ -165,11 +165,18 @@ Write a 'transfer' on the bank that allows you to transfer amounts between two a
 
 var bank = {  
 	accounts: [],
+	returnTotalSum: function() {
+		var sum = 0;
+		for (var i=0; i<bank.accounts.length; i++ ) {
+			sum += bank.accounts[i].balance;
+		}
+		return sum;
+	},
 	returnBalance: function(a) 	{ return bank.accounts[a].balance },
 	addAccount: function(a) 	{ return bank.accounts.push(a) - 1 },     // Adds an account and returns account number
  	deposit: function(a, amt)	{ bank.accounts[a].balance += amt  },
  	withdraw: function(a, amt)	{ bank.accounts[a].balance -= amt }
-}
+}	
 
 // Setup Guy's account and do a deposit and withdrawal
 var newAccountnum = bank.addAccount( { ownersName:"Guy", balance:5 } );
@@ -190,6 +197,9 @@ console.log( bank.accounts[newAccountnum].ownersName + " currently has " + bank.
 
 bank.withdraw(newAccountnum,3);
 console.log( bank.accounts[newAccountnum].ownersName + " currently has " + bank.returnBalance(newAccountnum) + " dollars." );
+
+
+console.log("Total sum in all accounts is " + bank.returnTotalSum() + " dollars.");
 
 
 
