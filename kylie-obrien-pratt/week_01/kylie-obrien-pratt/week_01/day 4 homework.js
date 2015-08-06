@@ -109,7 +109,7 @@ var triangle = {
 };
 
 var height = function() {
-	
+
 }
 
 var area = function(shape){
@@ -121,6 +121,26 @@ console.log("We passed in rectangle, ", rectangle, " the area should be 16 ", ar
 console.log("We passed in rectangle, ", badRectangle, " the area should be 16 ", area(badRectangle));
 
 // isObtuse - Returns whether the triangle is obtuse or not
+
+
+// Javascript Bank
+
+var accounts = [
+	{balance: 200, ownerName: "Joseph Heller"},
+	{balance: 3000, ownerName: "John Brown"},
+	{balance: 100000, ownerName: "John Smith"}
+	];
+
+for (var = 0; i < accounts.length; i++) {
+	var totalBalance = accounts[i];
+	if (totalBalance.alreadyRead === true) {
+	console.log("You've already read " book.title + " by " + book.author);
+	} else {
+	console.log("You still need to read " book.title + " by " + book.author);
+	}
+}
+
+
 
 
 
