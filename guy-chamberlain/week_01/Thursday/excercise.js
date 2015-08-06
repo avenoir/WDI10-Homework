@@ -165,42 +165,67 @@ Write a 'transfer' on the bank that allows you to transfer amounts between two a
 
 var bank = {  
 	accounts: [],
-	returnTotalSum: function() {
-		var sum = 0;
-		for (var i=0; i<bank.accounts.length; i++ ) {
-			sum += bank.accounts[i].balance;
-		}
-		return sum;
-	},
-	returnBalance: function(a) 	{ return bank.accounts[a].balance },
-	addAccount: function(a) 	{ return bank.accounts.push(a) - 1 },     // Adds an account and returns account number
- 	deposit: function(a, amt)	{ bank.accounts[a].balance += amt  },
- 	withdraw: function(a, amt)	{ bank.accounts[a].balance -= amt }
+		returnTotalSum: function() {											  // Return the total sum in all accounts		
+			var sum = 0;
+			for ( var i=0; i < bank.accounts.length; i++ ) {
+				sum += bank.accounts[i].balance;
+			}
+			return sum;
+		},
+	addAccount: function(a) 	{ if (bank.negativeCheck(a.balance))  return bank.accounts.push(a) - 1; },			
+
+	// Deposit and return the new balance					 
+ 	deposit: function(a, amt)	{ return bank.accounts[a].balance += amt;  },  			
+ 
+  	// Withdraw and return the new balance
+ 	withdraw: function(a, amt)	{ if (bank.negativeCheck(bank.accounts[a].balance - amt)) return bank.accounts[a].balance -= amt; },
+
+ 	transfer: function(fromA, toA, amt)
+ 	                            { bank.withdraw(fromA, amt); bank.deposit(toA, amt); },
+ 	negativeCheck: function(a) {												  // checks that an account balance >= zero 
+		if (a >= 0) {
+			return true;
+		} else {
+			console.log("Accounts cannot have negative values");
+			return false;
+		} 
+	}                     
 }	
 
+
 // Setup Guy's account and do a deposit and withdrawal
-var newAccountnum = bank.addAccount( { ownersName:"Guy", balance:5 } );
-console.log( bank.accounts[newAccountnum].ownersName + " currently has " + bank.returnBalance(newAccountnum) + " dollars." );
+console.log("");
+var newAccountnum = bank.addAccount( { ownersName:"Guy", balance:5 });
+console.log( bank.accounts[newAccountnum].ownersName + " opened account with " + bank.accounts[newAccountnum].balance + " dollars." );
 
-bank.deposit(newAccountnum,2);
-console.log( bank.accounts[newAccountnum].ownersName + " currently has " + bank.returnBalance(newAccountnum) + " dollars." );
+console.log( bank.accounts[newAccountnum].ownersName + " deposited 2 dollars and now has " + bank.deposit(newAccountnum,2) + " dollars." );
+console.log( bank.accounts[newAccountnum].ownersName + " withdrew 3 dollars and now has  " + bank.withdraw(newAccountnum,3) + " dollars." );
 
-bank.withdraw(newAccountnum,3);
-console.log( bank.accounts[newAccountnum].ownersName + " currently has " + bank.returnBalance(newAccountnum) + " dollars." );
+var account1 = newAccountnum;
 
 // Setup Aili's account and do a deposit and withdrawal
+console.log("");
 var newAccountnum = bank.addAccount( { ownersName:"Aili", balance:10 } );
-console.log( bank.accounts[newAccountnum].ownersName + " currently has " + bank.returnBalance(newAccountnum) + " dollars." );
+console.log( bank.accounts[newAccountnum].ownersName + " opened account with " + bank.accounts[newAccountnum].balance + " dollars." );
 
-bank.deposit(newAccountnum,2);
-console.log( bank.accounts[newAccountnum].ownersName + " currently has " + bank.returnBalance(newAccountnum) + " dollars." );
+console.log( bank.accounts[newAccountnum].ownersName + " deposited 2 dollars and now has " + bank.deposit(newAccountnum,2) + " dollars." );
+console.log( bank.accounts[newAccountnum].ownersName + " withdrew 3 dollard and now has  " + bank.withdraw(newAccountnum,3) + " dollars." );
 
-bank.withdraw(newAccountnum,3);
-console.log( bank.accounts[newAccountnum].ownersName + " currently has " + bank.returnBalance(newAccountnum) + " dollars." );
+var account2 = newAccountnum;
 
-
+console.log("");
 console.log("Total sum in all accounts is " + bank.returnTotalSum() + " dollars.");
 
+
+// Do a transfer from account 1 to account 2
+bank.transfer(account1, account2, 1);
+console.log("");
+console.log("Transfered 1 dolllar to aili's account");
+console.log("Guy now has " + bank.accounts[account1].balance + " dollars");
+console.log("Aili now has " + bank.accounts[account2].balance + " dollars");
+
+console.log("");
+console.log("Total sum in all accounts is " + bank.returnTotalSum() + " dollars.");
 
 
 
