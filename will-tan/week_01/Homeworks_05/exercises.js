@@ -66,7 +66,7 @@ var fundsTransfer = function(transferAmount, accountA, accountB){
 	}
 };
 
-// Bank Object with 4 key-value pairs
+// Bank Object
 var bank = {
 	accounts: [ { name: "Will", balance: 1000, deposit, withdraw }, { name: "Nico", balance: 5000, deposit, withdraw } ],
 	totalSum: bankReserves,
