@@ -44,7 +44,7 @@ isObtuse - Returns whether the triangle is obtuse or not
 
 // triangle object
 var triangle = {
-	sideA: 4,
+	sideA: 100,
 	sideB: 4,
 	sideC: 5
 };
