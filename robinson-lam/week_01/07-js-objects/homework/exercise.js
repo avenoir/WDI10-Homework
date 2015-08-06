@@ -59,6 +59,27 @@ var area = function(triangle) {
   return area;
 };
 
+var isObtuse = function(triangle) {
+  var temp;
+  var sides = [triangle.sideA, triangle.sideB, triangle.sideC];
+
+  // sort ascending
+  for (x = 0; x < sides.length - 1; x++) {
+    if (sides[x] > sides[x + 1]) {
+      temp = sides[x];
+      sides[x] = sides[x + 1];
+      sides[x + 1] = temp;
+    }
+    console.log(sides);
+  }
+
+  if ((Math.sqrt(sides[0]) + Math.sqrt(sides[1])) < Math.sqrt(sides[2])) {
+    return true;
+  } else {
+    return false;
+  }
+};
+
 // JavaScript Bank
 
 var JSBank = {
