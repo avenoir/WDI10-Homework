@@ -1,4 +1,4 @@
-// Bank
+// Bank program
 
 var bank = {
   //the accounts
