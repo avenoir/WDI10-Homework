@@ -172,6 +172,8 @@ var bank = {
 			}
 			return sum;
 		},
+	
+	// Add account and return the account number	
 	addAccount: function(a) 	{ if (bank.negativeCheck(a.balance))  return bank.accounts.push(a) - 1; },			
 
 	// Deposit and return the new balance					 
@@ -182,6 +184,7 @@ var bank = {
 
  	transfer: function(fromA, toA, amt)
  	                            { bank.withdraw(fromA, amt); bank.deposit(toA, amt); },
+ 	
  	negativeCheck: function(a) {												  // checks that an account balance >= zero 
 		if (a >= 0) {
 			return true;
