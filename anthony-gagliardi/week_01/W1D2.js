@@ -1,26 +1,26 @@
 // Part 1
 
-var squareNumber = function(number){
-    var result = number * number;
+var squareNumber = function(square){
+    var result = square * square;
     console.log(result);
 }
 squareNumber(20)
 
-var halfNumber = function(number){
-    var result = number / 2;
+var halfNumber = function(half){
+    var result = half / 2;
     console.log(result);
 }
 halfNumber(10)
 
-var percentOf = function(number){
-	var result = number * 255;
+var percentOf = function(num1, num2){
+	var result = num1 / 100 * num2;
 	console.log(result);
 }
-percentOf(0.35)
+percentOf(64.9, 216)
 
-var areaOfCircle = function(number){
-	var result = Math.PI * number * number;
-	return 'The area for a circle with radius 2 is ' + Math.round(result + "e+2"); // 2 Numbers past decimal point (can't get decimal point)
+var areaOfCircle = function(area){
+	var result = Math.PI * area * area;
+	console.log('The area for a circle with radius 2 is ' + Math.round(result + "e+2")); // 2 Numbers past decimal point (can't get decimal point)
 }
 areaOfCircle(40)
 
@@ -38,3 +38,31 @@ var mathinAround = function(number){
     console.log(result);
 }
 mathinAround(10)
+
+
+// BONUS: DrEvil:
+
+var drEvil = function(evil) {
+	if (evil < 1000000) {
+		return '$' + evil + '... Boooriiiing'
+	} else if (evil >= 1000000) {
+		return '$' + evil + ' (pinky)'
+	}
+}
+console.log(drEvil(10))
+console.log(drEvil(1000000))
+console.log(drEvil(100000))
+console.log(drEvil(10000000))
+
+
+// BONUS: MixUp
+
+
+// BONUS: FixStart
+
+
+// BONUS: Verbing
+
+
+// BONUS: Not Bad
+
