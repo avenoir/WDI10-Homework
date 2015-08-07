@@ -22,7 +22,7 @@ var rectangle = {
 };
 
 var isSquare = function(r) {
-	if (r.length = r.width) {
+	if (r.length === r.width) {
 		return true;
 	} else {
 		return false;	
