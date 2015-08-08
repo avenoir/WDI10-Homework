@@ -21,6 +21,10 @@ var planTrip = function(departureLine, departureStop, arrivalLine, arrivalStop )
 	// empty arrays to store the trip line details
 	var firstPart = []; var secondPart = []; var reverseLine = []; 
 
+	// empty message strings to store messages
+	var message1 = {}; var message2 = {}; var message3 = {}; var message4 = {};
+	var message = {};
+
 	// if you need to change lines
 	if (departureLine !== arrivalLine) {
 		
@@ -44,11 +48,16 @@ var planTrip = function(departureLine, departureStop, arrivalLine, arrivalStop )
 			secondPart = lines[arrivalLine].slice(unionIndexArrival + 1, arrivalIndex + 1);
 		}
 
-		// output to the user
-		console.log("Your must travel through the following stops on the " + departureLine + " line: " + firstPart.join(", "));
-		console.log("Change at Union Square to Line " + arrivalLine);
-		console.log("Your journey continues through the following stops: " + secondPart.join(", "));
-		console.log((firstPart.length + secondPart.length) + " stops in total.");
+		// output to the user is stored in the messages
+		message1 = "Your must travel through the following stops on the " + departureLine + " line: " + firstPart.join(", ");
+		message2 = "Change at Union Square to Line " + arrivalLine;
+		message3 = "Your journey continues through the following stops: " + secondPart.join(", ");
+		message4 = (firstPart.length + secondPart.length) + " stops in total.";
+		message = message1 + "\n" + message2 + "\n" + message3 + "\n" + message4;
+
+		// return final message
+		return message;
+
 	 }
 
 	// if you donot need to change lines 
@@ -65,9 +74,13 @@ var planTrip = function(departureLine, departureStop, arrivalLine, arrivalStop )
 			firstPart = reverseLine.slice(tempDepart + 1, tempArrive + 1);
 		}
 
-		// output to the user
-		console.log("Your must travel through the following stops on the " + departureLine + " line: " + firstPart.join(", "));
-		console.log(firstPart.length + " stops in total.");	
+		// output to the user is stored in the following messages
+		message1 = "Your must travel through the following stops on the " + departureLine + " line: " + firstPart.join(", ");
+		message2 = firstPart.length + " stops in total.";
+		message = message1 + "\n" + message2;
+
+		// return final message
+		return message;
 
 	}
 };
@@ -75,7 +88,7 @@ var planTrip = function(departureLine, departureStop, arrivalLine, arrivalStop )
 // user inputs
 var deptStop = {}; var arrvStop = {};
 
-//testing departure lines
+// testing departure lines
 var deptLine = prompt("Enter the departure Line ( N, L, 6):");
 if (deptLine === 'N') {
 	deptStop = prompt("Enter the departure terminal (Times Square, 34th, 28th, 23rd, Union Square, 8th):");
@@ -85,7 +98,7 @@ if (deptLine === 'N') {
 	deptStop = prompt("Enter the departure terminal (Grand Central, 33rd, 28th, 23rd, Union Square, Astor Place):");
 }
 
-//asking user input for arrival
+// asking user input for arrival
 var arrvLine = prompt("Enter the arrival Line ( N, L, 6):");
 if (arrvLine === 'N') {
 	arrvStop = prompt("Enter the arrival terminal (Times Square, 34th, 28th, 23rd, Union Square, 8th):");
@@ -95,5 +108,5 @@ if (arrvLine === 'N') {
 	arrvStop = prompt("Enter the arrival terminal (Grand Central, 33rd, 28th, 23rd, Union Square, Astor Place):");
 }
 
-// calling function planTrip
-planTrip(deptLine, deptStop, arrvLine, arrvStop);
+// calling function planTrip and alerting the user
+alert(planTrip(deptLine, deptStop, arrvLine, arrvStop));
