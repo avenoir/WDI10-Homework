@@ -74,7 +74,9 @@ var travelLine = function(line, fromIndex, toIndex) {
 			stations.push(lines[line][i]);
 		}
 	}
-	stations.push(lines[line][i]);
+	if (i != fromIndex ) { 										// Again ignore first stations because already there!
+		stations.push(lines[line][i]);
+	}
 
 	return stations;
 }
@@ -88,42 +90,51 @@ var planTrip = function(lineFrom, stationFrom, lineTo, stationTo) {
 	if ( stationFromIndex === -1 || stationToIndex === -1 ) {
 		console.log("Station not found for specified line!");
 	} else { 
-		var stations = [];
-		var stopCount = 0;
 
 		// Check if we have to change lines or not.
-
 	    if (lineFrom === lineTo) {
 			
 			// We only have travel one line from 'from' station to 'to' station.
-
-			stations = travelLine(lineFrom, stationFromIndex, stationToIndex);
-			console.log("You must travel through the following stops on the " + lineFrom + " line: " + stations.join(", ") + ".");
-	
-			stopCount = stations.length;
+			var stations1 = travelLine(lineFrom, stationFromIndex, stationToIndex);
 	
 		} else {
 	
 			// First travel from start 'from' station to union square 
-	
-			stations = travelLine(lineFrom, stationFromIndex, lines[lineFrom].indexOf("Union Square"));
-			console.log("You must travel through the following stops on the " + lineFrom + " line: " + stations.join(", ") + ".");
-	
-			stopCount = stations.length;
-			
-			console.log("Change at Union Square.");
-			
-			// Now travel from union square to destination station	
+			var stations1 = travelLine(lineFrom, stationFromIndex, lines[lineFrom].indexOf("Union Square"));
 
-			stations = travelLine(lineTo,lines[lineTo].indexOf("Union Square"), stationToIndex);
-			console.log("Your journey continues through the following stops on " + lineTo + " line: " + stations.join(", ") + ".");
-	
-	    	stopCount += stations.length;
+			// Now travel from union square to destination station	
+			var stations2 = travelLine(lineTo,lines[lineTo].indexOf("Union Square"), stationToIndex);
 	    }
-	    console.log(stopCount + " stops in total.")
+	    
+	    consoleLogIt(lineFrom, stationFrom, lineTo, stationTo, stations1, stations2);
 	}
 
 }
 
+var consoleLogIt = function(lineFrom, stationFrom, lineTo, stationTo, stations1, stations2) {
+			
+	console.log("Traveling FROM " + stationFrom + " line " + lineFrom + " TO " + stationTo + " line " + lineTo);
+
+	console.log("You must travel through the following stops on the " + lineFrom + " line: " + stations1.join(", ") + ".");
+	var stopCount = stations1.length;
+
+	if (stations2 && stations2.length > 0) {
+		console.log("Change at Union Square.");
+		console.log("Your journey continues through the following stops on " + lineTo + " line: " + stations2.join(", ") + ".");
+	   	stopCount += stations2.length;
+	}
+
+	console.log(stopCount + " stops in total.")
+	console.log("-----------------------------------------------------------------------------------------")
+}
+
+planTrip('N','Junk','6','Junk');
+planTrip('N', 'Times Square', '6', 'Astor Place');
+planTrip('N', 'Times Square', '6', 'Union Square');
+planTrip('N', 'Times Square', 'N', '23rd');
+planTrip('N', 'Times Square', 'N', 'Times Square');
+planTrip('N', 'Union Square', '6', 'Union Square');
 planTrip('N', 'Times Square', '6', '33rd');
+planTrip('6', '33rd', 'N', 'Times Square');
+
 
