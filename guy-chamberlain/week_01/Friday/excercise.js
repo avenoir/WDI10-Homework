@@ -58,18 +58,19 @@ var lines = {
 }
 
 
-var travelLine = function(line, stationFrom, stationTo) {
+var travelLine = function(line, fromIndex, toIndex) {
 
 	// Determine direction of travel
-	if (lines[line].indexOf(stationFrom) < lines[line].indexOf(stationTo) ) {
-		var direction = 1;     // Going forward along line
+	if (fromIndex < toIndex ) {
+		var direction = 1;     									// Going forward along line
 	} else {
-		var direction = -1;    // Going backwards along line
+		var direction = -1;    									// Going backwards along line
 	}
-	// Travel the line
+	
+	// Travel the line going in the correct direction
 	var stations = [];
-	for ( var i = lines[line].indexOf(stationFrom); i != lines[line].indexOf(stationTo); i += direction ) {
-		if (i != lines[line].indexOf(stationFrom)) { // Ignore first stations because already there!
+	for ( var i = fromIndex; i != toIndex; i += direction ) {
+		if (i != fromIndex ) { 									// Ignore first stations because already there!
 			stations.push(lines[line][i]);
 		}
 	}
@@ -80,25 +81,43 @@ var travelLine = function(line, stationFrom, stationTo) {
 
 var planTrip = function(lineFrom, stationFrom, lineTo, stationTo) {
 	
-	if ( lines[lineFrom].indexOf(stationFrom) === -1 || lines[lineTo].indexOf(stationTo) === -1 ) {
-		console.log("Invalid Station!");
+	var stationFromIndex = lines[lineFrom].indexOf(stationFrom); 
+	var stationToIndex = lines[lineTo].indexOf(stationTo);
+
+	// Check that we have too valid stations 
+	if ( stationFromIndex === -1 || stationToIndex === -1 ) {
+		console.log("Station not found for specified line!");
 	} else { 
-		var stations;
+		var stations = [];
 		var stopCount = 0;
+
+		// Check if we have to change lines or not.
+
 	    if (lineFrom === lineTo) {
-			stations = travelLine(lineFrom, stationFrom, stationTo);
+			
+			// We only have travel one line from 'from' station to 'to' station.
+
+			stations = travelLine(lineFrom, stationFromIndex, stationToIndex);
+			console.log("You must travel through the following stops on the " + lineFrom + " line: " + stations.join(", ") + ".");
+	
 			stopCount = stations.length;
-			console.log("You must travel through the following stops on the " + lineFrom + " line: " + stations.join(", ") + ".");
+	
 		} else {
-			// Gotta change at Union Square
-			stations = travelLine(lineFrom, stationFrom, "Union Square");
+	
+			// First travel from start 'from' station to union square 
+	
+			stations = travelLine(lineFrom, stationFromIndex, lines[lineFrom].indexOf("Union Square"));
 			console.log("You must travel through the following stops on the " + lineFrom + " line: " + stations.join(", ") + ".");
+	
 			stopCount = stations.length;
 			
 			console.log("Change at Union Square.");
 			
-			stations = travelLine(lineTo, "Union Square", stationTo);
+			// Now travel from union square to destination station	
+
+			stations = travelLine(lineTo,lines[lineTo].indexOf("Union Square"), stationToIndex);
 			console.log("Your journey continues through the following stops on " + lineTo + " line: " + stations.join(", ") + ".");
+	
 	    	stopCount += stations.length;
 	    }
 	    console.log(stopCount + " stops in total.")
