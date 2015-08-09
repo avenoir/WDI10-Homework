@@ -67,7 +67,7 @@ var travelLine = function(line, fromIndex, toIndex) {
 		var direction = -1;    									// Going backwards along line
 	}
 	
-	// Travel the line going in the correct direction
+	// Travel the line going in the direction of travel
 	var stations = [];
 	for ( var i = fromIndex; i != toIndex; i += direction ) {
 		if (i != fromIndex ) { 									// Ignore first stations because already there!
@@ -83,41 +83,50 @@ var travelLine = function(line, fromIndex, toIndex) {
 
 var planTrip = function(lineFrom, stationFrom, lineTo, stationTo) {
 	
+	console.log("Traveling FROM " + stationFrom + " line " + lineFrom + " TO " + stationTo + " line " + lineTo);
+
+	// Check if the two lines exist
+	if ( !(lineFrom in lines) || !(lineTo in lines) ) {
+		console.log("Line not found!");
+		console.log("---------------");
+		return;
+	}
+
 	var stationFromIndex = lines[lineFrom].indexOf(stationFrom); 
 	var stationToIndex = lines[lineTo].indexOf(stationTo);
 
 	// Check that we have too valid stations 
 	if ( stationFromIndex === -1 || stationToIndex === -1 ) {
-		console.log("Station not found for specified line!");
-	} else { 
+		console.log("Station not found for specified line!");		
+		console.log("-------------------------------------");
+		return;	
+	} 
 
-		// Check if we have to change lines or not.
-	    if (lineFrom === lineTo) {
+	// Check if we have to change lines or not.
+	if (lineFrom === lineTo) {
 			
-			// We only have travel one line from 'from' station to 'to' station.
-			var stations1 = travelLine(lineFrom, stationFromIndex, stationToIndex);
+		// We only have travel one line from origin station to destination station.
+		var stations1 = travelLine(lineFrom, stationFromIndex, stationToIndex);
 	
-		} else {
+	} else {
 	
-			// First travel from start 'from' station to union square 
-			var stations1 = travelLine(lineFrom, stationFromIndex, lines[lineFrom].indexOf("Union Square"));
+		// First travel from orifon station to union square 
+		var stations1 = travelLine(lineFrom, stationFromIndex, lines[lineFrom].indexOf("Union Square"));
 
-			// Now travel from union square to destination station	
-			var stations2 = travelLine(lineTo,lines[lineTo].indexOf("Union Square"), stationToIndex);
-	    }
-	    
-	    consoleLogIt(lineFrom, stationFrom, lineTo, stationTo, stations1, stations2);
-	}
-
+		// Now travel from union square to destination station	
+		var stations2 = travelLine(lineTo,lines[lineTo].indexOf("Union Square"), stationToIndex);
+	}	    
+	consoleLogIt(lineFrom, stationFrom, lineTo, stationTo, stations1, stations2);
 }
 
 var consoleLogIt = function(lineFrom, stationFrom, lineTo, stationTo, stations1, stations2) {
 			
-	console.log("Traveling FROM " + stationFrom + " line " + lineFrom + " TO " + stationTo + " line " + lineTo);
+	var stopCount = 0;
 
-	console.log("You must travel through the following stops on the " + lineFrom + " line: " + stations1.join(", ") + ".");
-	var stopCount = stations1.length;
-
+	if (stations1 && stations1.length > 0) {
+		console.log("You must travel through the following stops on the " + lineFrom + " line: " + stations1.join(", ") + ".");
+		stopCount += stations1.length;
+	}	
 	if (stations2 && stations2.length > 0) {
 		console.log("Change at Union Square.");
 		console.log("Your journey continues through the following stops on " + lineTo + " line: " + stations2.join(", ") + ".");
@@ -128,6 +137,7 @@ var consoleLogIt = function(lineFrom, stationFrom, lineTo, stationTo, stations1,
 	console.log("-----------------------------------------------------------------------------------------")
 }
 
+planTrip('Junk','Junk','6','Junk');
 planTrip('N','Junk','6','Junk');
 planTrip('N', 'Times Square', '6', 'Astor Place');
 planTrip('N', 'Times Square', '6', 'Union Square');
