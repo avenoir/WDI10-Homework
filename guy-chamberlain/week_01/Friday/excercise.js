@@ -110,7 +110,7 @@ var planTrip = function(lineFrom, stationFrom, lineTo, stationTo) {
 	
 	} else {
 	
-		// First travel from orifon station to union square 
+		// First travel from 'from' station to union square 
 		var stations1 = travelLine(lineFrom, stationFromIndex, lines[lineFrom].indexOf("Union Square"));
 
 		// Now travel from union square to destination station	
@@ -144,7 +144,7 @@ planTrip('N', 'Times Square', '6', 'Union Square');
 planTrip('N', 'Times Square', 'N', '23rd');
 planTrip('N', 'Times Square', 'N', 'Times Square');
 planTrip('N', 'Union Square', '6', 'Union Square');
-planTrip('N', 'Times Square', '6', '33rd');
 planTrip('6', '33rd', 'N', 'Times Square');
+planTrip('N', 'Times Square', '6', '33rd');
 
 
