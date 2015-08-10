@@ -130,7 +130,8 @@ for (var i = 0; i < accounts.length; i++) {
         console.log(acc.name + ' has an account balance of ' + acc.bal);
 	} else if (acc[i] === false){
 		console.log("This account belongs to " + acc.name + ' with a balance of ' + acc.bal + ' and is ready to be audited');
-	} for (var j = 0; j <= 5; j++) {
+	}
+	for (var j = 0; j <= 5; j++) {
 	    var newAccounts = [
 	        {name: 'Becky O', bal: 98210, active: true}
 	        {name: 'Nelly Doh', bal: 21543, active: true}
