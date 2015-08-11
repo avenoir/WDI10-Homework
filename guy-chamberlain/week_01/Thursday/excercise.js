@@ -174,16 +174,16 @@ var bank = {
 		},
 	
 	// Add account and return the account number	
-	addAccount: function(a) 	{ if (bank.negativeCheck(a.balance))  return bank.accounts.push(a) - 1; },			
+	addAccount: function(a) 	{ if (this.negativeCheck(a.balance))  return this.accounts.push(a) - 1; },			
 
 	// Deposit and return the new balance					 
- 	deposit: function(a, amt)	{ return bank.accounts[a].balance += amt;  },  			
+ 	deposit: function(a, amt)	{ return this.accounts[a].balance += amt;  },  			
  
   	// Withdraw and return the new balance
- 	withdraw: function(a, amt)	{ if (bank.negativeCheck(bank.accounts[a].balance - amt)) return bank.accounts[a].balance -= amt; },
+ 	withdraw: function(a, amt)	{ if (this.negativeCheck(bank.accounts[a].balance - amt)) return this.accounts[a].balance -= amt; },
 
  	transfer: function(fromA, toA, amt)
- 	                            { bank.withdraw(fromA, amt); bank.deposit(toA, amt); },
+ 	                            { this.withdraw(fromA, amt); this.deposit(toA, amt); },
  	
  	negativeCheck: function(a) {												  // checks that an account balance >= zero 
 		if (a >= 0) {
