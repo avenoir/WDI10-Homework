@@ -23,7 +23,6 @@ console.log(isSquare(rectangle))
 var area = function (a) {
 	return a.length * a.width
 }
-
 console.log(area(rectangle))
 
 var perimeter = function (a) {

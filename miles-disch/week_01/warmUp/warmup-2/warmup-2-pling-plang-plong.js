@@ -31,7 +31,7 @@ var converter = function (number) {
 	}
 
 	if ( result.length === 0 ) {
-		return number + "";
+		return number + ""; 
 	}
 
 }
