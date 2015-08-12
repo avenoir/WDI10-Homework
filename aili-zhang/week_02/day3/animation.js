@@ -33,31 +33,17 @@ catImage.style.left = "0px"; // initial position of the cat image
 catImage.style.marginTop = "300px";
 
 
+// cartoonCat.style.marginLeft = "300px
+var dancingCat1 = document.createElement("img");
+dancingCat1.src = "http://media.giphy.com/media/67j0Iy0UzvBG8/giphy.gif";
+document.getElementsByTagName("body")[0].appendChild(dancingCat1);
+dancingCat1.style.marginLeft = "5px";
+dancingCat1.style.marginTop = "300px";
 
-var guitarCat = document.createElement("img");
-guitarCat.src = "images/guitar_cat.gif";
-document.getElementsByTagName("body")[0].appendChild(guitarCat);
-guitarCat.style.marginLeft = "5px";
-
-var headPhoneCat = document.createElement("img");
-headPhoneCat.src = "images/headphone cat.GIF";
-headPhoneCat.style.height = "300px";
-headPhoneCat.style.width = "300px";
-document.getElementsByTagName("body")[0].appendChild(headPhoneCat);
-headPhoneCat.style.marginLeft = "50px";
-
-var wiggleCat = document.createElement("img");
-wiggleCat.src = "images/cat wiggle.gif";
-wiggleCat.style.height = "300px";
-wiggleCat.style.width = "300px";
-document.getElementsByTagName("body")[0].appendChild(wiggleCat);
-wiggleCat.style.marginLeft = "200px";
-
-var cartoonCat = document.createElement("img");
-cartoonCat.src = "images/cartoon cat.gif";
-document.getElementsByTagName("body")[0].appendChild(cartoonCat);
-cartoonCat.style.marginLeft = "300px";
-
+var dancingCat2 = document.createElement("img");
+dancingCat2.src = "http://media.giphy.com/media/67j0Iy0UzvBG8/giphy.gif";
+document.getElementsByTagName("body")[0].appendChild(dancingCat2);
+dancingCat2.style.marginLeft = "100px";
 
 
 var catWalk = function(){
@@ -92,31 +78,24 @@ var catWalk = function(){
 
 	// if the cat is in the middle of the screen
 	if ((parseInt(catImage.style.left)) >= 400 && (parseInt(catImage.style.left)) < 600){
-	// if ((parseInt(catImage.style.left)) === 500){
 		console.log("hiding");
 
-		guitarCat.style.display = "";
-		wiggleCat.style.display = "";
-		headPhoneCat.style.display = "";
-		cartoonCat.style.display = "";
+		dancingCat1.style.display = "";
+		dancingCat2.style.display = "";
 		catImage.style.display = "none";
 
 		// waitSeconds(catImage, 3000);
-
 		// var pauseTime = window.setTimeout(catWalk, 10000);
 
 	} else {
 		console.log("walking");
 		catImage.style.display = "";
-		guitarCat.style.display = "none";
-		wiggleCat.style.display = "none";
-		headPhoneCat.style.display = "none";
-		cartoonCat.style.display = "none";
+		dancingCat1.style.display = "none";
+		dancingCat2.style.display = "none";
 	}
 };
 
 var catTimer = window.setInterval(catWalk, 100);
-
 
 
 var waitSeconds = function (cat, iMilliSeconds) {
