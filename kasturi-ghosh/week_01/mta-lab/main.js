@@ -10,6 +10,8 @@ var lines = {
 var planTrip = function(departureLine, departureStop, arrivalLine, arrivalStop ) {
 
 	// determining the indexes of the departure, arrival and union square terminals
+	// var unionIndex, tempDepart, tempArrive, tempUnion, unionIndexArrival;
+
 	var unionIndex = -1; var tempDepart = 0; var tempArrive = 0; 
 	var tempUnion = 0; var unionIndexArrival = 0;
 
@@ -22,8 +24,7 @@ var planTrip = function(departureLine, departureStop, arrivalLine, arrivalStop )
 	var firstPart = []; var secondPart = []; var reverseLine = []; 
 
 	// empty message strings to store messages
-	var message1 = {}; var message2 = {}; var message3 = {}; var message4 = {};
-	var message = {};
+	var message1, message2, message3, message4, message;
 
 	// if you need to change lines
 	if (departureLine !== arrivalLine) {
@@ -86,27 +87,64 @@ var planTrip = function(departureLine, departureStop, arrivalLine, arrivalStop )
 };
 
 // user inputs
-var deptStop = {}; var arrvStop = {};
+var deptLine, deptStop, arrvLine, arrvStop;
+// var stops = [];
 
-// testing departure lines
-var deptLine = prompt("Enter the departure Line ( N, L, 6):");
-if (deptLine === 'N') {
-	deptStop = prompt("Enter the departure terminal (Times Square, 34th, 28th, 23rd, Union Square, 8th):");
-} else if (deptLine === 'L') {
-	deptStop = prompt("Enter the departure terminal (8th, 6th, Union Square, 3rd, 1st):");
-} else {
-	deptStop = prompt("Enter the departure terminal (Grand Central, 33rd, 28th, 23rd, Union Square, Astor Place):");
+// var departure = {};
+// var arrival = {};
+
+var controlPrompt = function ( typeOfLine ) {
+	var line = prompt( "Enter the " + typeOfLine + " line ( N, L, 6 ):" ).toUpperCase();
+	var stop = prompt( "Enter the " + typeOfLine + " terminal (" + lines[line].join(", ") + ")." );
+
+	// stops.push({
+	// 	line: line,
+	// 	stop: stop
+	// });
+
+	if ( typeOfLine === "departure" ) {
+		deptLine = line;
+		// stops.push( {
+		// 	line: line,
+		// 	stop: stop
+		// })
+		// departure["line"] = line;
+		deptStop = stop;
+		// departure["stop"] = stop;
+	} else {
+		arrvLine = line;
+		// arrival["line"] = line;
+		arrvStop = stop;
+		// arrival["stop"] = stop;
+	}
+
 }
 
-// asking user input for arrival
-var arrvLine = prompt("Enter the arrival Line ( N, L, 6):");
-if (arrvLine === 'N') {
-	arrvStop = prompt("Enter the arrival terminal (Times Square, 34th, 28th, 23rd, Union Square, 8th):");
-} else if (arrvLine === 'L') {
-	arrvStop = prompt("Enter the arrival terminal (8th, 6th, Union Square, 3rd, 1st):");
-} else {
-	arrvStop = prompt("Enter the arrival terminal (Grand Central, 33rd, 28th, 23rd, Union Square, Astor Place):");
-}
-
-// calling function planTrip and alerting the user
+controlPrompt("departure");
+controlPrompt("arrival");
 alert(planTrip(deptLine, deptStop, arrvLine, arrvStop));
+
+
+
+// // testing departure lines
+// var deptLine = prompt("Enter the departure Line ( N, L, 6):");
+// if (deptLine === 'N') {
+// 	deptStop = prompt("Enter the departure terminal (Times Square, 34th, 28th, 23rd, Union Square, 8th):");
+// } else if (deptLine === 'L') {
+// 	deptStop = prompt("Enter the departure terminal (8th, 6th, Union Square, 3rd, 1st):");
+// } else {
+// 	deptStop = prompt("Enter the departure terminal (Grand Central, 33rd, 28th, 23rd, Union Square, Astor Place):");
+// }
+
+// // asking user input for arrival
+// var arrvLine = prompt("Enter the arrival Line ( N, L, 6):");
+// if (arrvLine === 'N') {
+// 	arrvStop = prompt("Enter the arrival terminal (Times Square, 34th, 28th, 23rd, Union Square, 8th):");
+// } else if (arrvLine === 'L') {
+// 	arrvStop = prompt("Enter the arrival terminal (8th, 6th, Union Square, 3rd, 1st):");
+// } else {
+// 	arrvStop = prompt("Enter the arrival terminal (Grand Central, 33rd, 28th, 23rd, Union Square, Astor Place):");
+// }
+
+// // calling function planTrip and alerting the user
+// alert(planTrip(deptLine, deptStop, arrvLine, arrvStop));
