@@ -1,0 +1,152 @@
+/* CSS SELECTORS */
+
+1. EVERYTHING ON THE PAGE
+*
+
+* {
+	margin: 0;
+	padding: 0;
+}
+
+can be used with child selectors
+
+#container * {
+	border: 1px solid black;
+}
+
+This will target every single element that is a child of the of the #container div
+
+
+
+2. ID target single element by id
+#x
+
+
+#container {
+	width: 960px;
+	margin: auto;
+}
+
+
+
+
+3. CLASS target multiple elements / groups
+.x
+
+
+.error {
+	color: red
+}
+
+
+
+
+4. DECSENDANT - specific, links in lists
+
+X Y
+
+li a {
+	text-decoration: none;
+}
+
+
+
+
+
+5. TYPE - elements according to type
+
+a {
+	color: red;
+}
+
+ul {
+	margin-left: 0;
+}
+
+
+
+
+
+6. X:visited and X link
+
+a:link { color: red; }
+a: visited { color: purple; }
+
+use : visited psuedo class for visited links
+
+
+
+
+
+7. X + Y
+
+ul + p {
+	color:  red;
+}
+
+This is an adjacent selector. Only the element that is immediately preceded by the former element
+
+In this case, only the first paragraph after each ul will have red text
+
+
+8. X > Y
+
+div#container > ul {
+	border: 1px solid black;
+}
+
+the different between the standard X Y and X > Y is that the latter will only select direct Children. For examole consider the following markup
+
+<div id="container">
+<ul>
+	<li> List item
+		<ul>
+			<li> Chile </li>
+			</ul>
+		</li>
+		<li> list item </li>
+		<li> list item </li>
+		<li> list item </li>
+	</ul>
+</div>
+
+a selector of #contaner > ul will only target the uls which are direct choldren of the div with an id container. It will not target  the ul that is a child of the first li
+
+
+9. X ~ Y
+
+ul ~ p {
+	color: red;
+}
+
+The sibling combinator is similar to X + Y however it is less strict.
+While an adjacent selector is (ul + p) will only select the first element that is imdideatly preceded by the former selector this one is more generalised. 
+It will select referring to our example above any p element as lon as they follow a ul
+
+
+
+10. X[title]
+
+a[title] {
+	color: green;
+}
+
+Referred to as an attributes selector, in our exaample avvoe it will only selectt he anchor tags that have a title attribute
+Anchor tags which do no will receive this paticlatr style 
+
+
+11. X[href="foo"]
+
+
+12. X[href*="nettuts"]
+
+13. X[href^="http"]
+
+
+
+
+
+
+
+
+
