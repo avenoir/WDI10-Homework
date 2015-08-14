@@ -1,0 +1,75 @@
+@import url(http://fonts.googleapis.com/css?family=Playfair+Display:700italic,400italic);
+
+body{
+
+	background-color: #ededed;
+	transition:background-color 0.5s linear;
+}
+
+body:hover{
+	background-color: #d8bebe;
+}
+
+.container{
+	width: 960px;
+	margin: 0 auto;
+}
+
+h1{
+	text-align: center;
+	color: white;
+	position: relative;
+	-webkit-animation:mymove 5s;
+	font-family: 'Playfair Display', serif;
+}
+
+@keyframes mymove{
+
+	from{top:400px;}
+	to{top:0px;}
+}
+
+a{	
+	background-color: none;
+	text-decoration: none;
+	color: black;
+	transition:background-color 0.2s linear;
+}
+
+a:hover{
+	background-color: rgba(255,255,255,0.4);
+}
+
+header{
+	position: relative;
+	top: 100px;
+}
+
+
+
+.biography{
+	font-family: 'Playfair Display', serif;
+	color: white;
+	top: 100px;
+	position: relative;
+	-webkit-animation:pmove 0.8s;
+}
+
+@keyframes pmove{
+	from{top: 400px;}
+	to{top: 100px;}
+}
+
+img{
+	height: 100px;
+	width: 100px;
+	margin: 0;
+	padding: 0;
+	opacity: 0;
+	transition:opacity 0.1s;
+}
+
+img:hover{
+	opacity: 1;
+}
+
