@@ -1,0 +1,40 @@
+@import url(http://fonts.googleapis.com/css?family=Lato:400,700,700italic);
+
+body {
+  color: black;
+  background-color: grey;
+  font-family: 'Lato', sans-serif;
+}
+
+.container {
+  max-width: 960px;
+  margin: 0 auto; /* 0 vertically, center horizontally */
+  text-align: center; 
+}
+
+h1 {
+  color: black;
+  text-decoration: underline;
+} 
+
+h2 {
+  color: black;
+}
+
+.pic1 {
+  border-radius: 10%;
+}
+
+.linkout {
+  display: block;
+  padding: 20px 0 20px 0;
+  margin: 10px 0 10px 0;
+  color: black;
+  font-size: 20px;
+  background: rgba(0,0,0,0.2);
+  border: 1px solid black;
+}
+
+.linkout:hover {
+  color: white;
+}
