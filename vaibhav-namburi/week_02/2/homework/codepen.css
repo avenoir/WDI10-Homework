@@ -1,0 +1,124 @@
+@import url(http://fonts.googleapis.com/css?family=Lobster);
+@import url(http://fonts.googleapis.com/css?family=Indie+Flower);
+.container{
+  width: 960px;
+  margin: 0 auto;
+}
+
+h1{
+  text-align: left;
+  font-family: "Lobster";
+}
+
+.navbar{
+  opacity: 0;
+  background-color: rgba(0,0,0,0.5);
+  transition:opacity 0.2s linear;
+  padding:10px;
+}
+
+.navbar:hover{
+  opacity:1;
+}
+
+.hr:hover{
+  display: none;
+}
+
+ul{
+  position: relative;
+  left: -23px;
+}
+
+li{
+  background-color: rgba(255,255,255,0.6);
+  color: white;
+  display: inline-block;
+  width: 33%;
+  text-align: center;
+
+}
+
+li:hover{
+  opacity: 1;
+}
+
+body{
+  /*background: url(http://special.nikkeibp.co.jp/ts/article/0i0i/103733/images/cut2.jpg);*/
+  background-color: grey;
+}
+
+img{
+  
+  position: relative;
+  left: 290px;
+  top: 3px;
+  height:500px;
+  z-index: 9832;
+
+}
+
+.footer{
+  height: 50px;
+}
+
+#ruby{
+  padding: 0;
+}
+
+.image{
+
+  background-image: url(http://www.rabne.tk/wp-content/uploads/2015/01/21387-grey-grid-texture-2560x1600-abstract-wallpaper.jpg);
+  background-size: cover;
+}
+
+h4{
+  position: relative;
+
+  font-family: "Lobster";
+  color: white;
+  width: 50px;
+  overflow: hidden;
+     margin: 0;
+    padding: 0;
+    border: 0;
+    outline: 0;
+}
+
+
+
+.footer{
+ height: 60px;
+}
+
+.footer p{
+  position: relative;
+  margin-top: 0px;
+  top: -110px;
+  left: 500px;
+  font-size: 5em;
+  font-family: 'Indie Flower', cursive;
+  color: #e21f1f;
+  width: 450px;
+  height: 90px;
+}
+
+.footer ul{
+
+  position: relative;
+  width: 300px;
+ 
+}
+
+.footer img{
+  opacity: 0.1;
+  height: 30px;
+  width: 30px;
+  position: relative;
+ top: -40px;
+}
+
+.footer img:hover{
+  opacity: 1;
+}
+
