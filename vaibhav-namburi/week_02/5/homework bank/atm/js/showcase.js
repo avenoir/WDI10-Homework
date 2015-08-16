@@ -7,22 +7,22 @@ var Account = {
 	},
 	validity:function(accountType){
 		var numberValue = parseInt(accountType.$inputValue.val());
-		var alternateAccount = (accountType.name==="checking" ? savings : checking);	//selects the alternate account from the passed in account, to deduct money
+		var alternateAccount = (accountType.name==="checking" ? savings : checking);	
 
-		alternateAccount.balance= (Account.balance() - numberValue);		// remaining is total-withdrawn
+		alternateAccount.balance= (Account.balance() - numberValue);		
 		alternateAccount.$balanceDisplay.text("$" + alternateAccount.balance );
-		accountType.balance=0;					//calling accounts balance is set to zero after subtraction to allow formula to work
-		accountType.$inputValue.val("");		//sets the input form to nothing
+		accountType.balance=0;					
+		accountType.$inputValue.val("");		
 	}
 }
 
-function Bank(name){		//create a prototype of which object instances can be made
-	var self = this;			// setting the current calling object to variable self;
+function Bank(name){		
+	var self = this;			
 	this.name=name;
 	this.balance=0;
 	this.$inputValue = $("#"+name+"-amount");
 	this.$balanceDisplay=$("#"+name+"-balance");
-													//set property names to help globalize IDs
+													
 	this.initialize=function(){
 		$("#"+name+"-deposit").on("click", function(){
 			var numberValue = parseInt(self.$inputValue.val()); 
@@ -30,7 +30,7 @@ function Bank(name){		//create a prototype of which object instances can be made
 			self.balance += numberValue;
 			self.$balanceDisplay.text("$" + self.balance );
 			$("#"+self.name).removeClass("zero").addClass("account"); 
-			self.$inputValue.val("");							//self is used instead of "this" as this will be local to the event handler
+			self.$inputValue.val("");							
 		});
 
 		$("#"+name+"-withdraw").on("click", function(){
@@ -39,14 +39,13 @@ function Bank(name){		//create a prototype of which object instances can be made
 			if(self.balance<numberValue && numberValue< Account.balance()){
 
 				self.$balanceDisplay.text("$" +0);
-				$("#"+self.name).removeClass("account").addClass("zero");		//switches the color of current account to red
-
-				Account.validity(self);		//calls on the validity function of the account object and sends the calling object instance as an arguement
+				$("#"+self.name).removeClass("account").addClass("zero");		
+				Account.validity(self);		
 
 			}
 
 			else{
-			self.balance -= numberValue;						//if above is false then this is executed
+			self.balance -= numberValue;						
 			self.$balanceDisplay.text("$" + self.balance );
 			self.$inputValue.val("");
 			}
