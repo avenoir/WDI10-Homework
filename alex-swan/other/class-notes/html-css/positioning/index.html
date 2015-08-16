@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>CSS Positioning Demo</title>
+	<link rel="stylesheet" href="css/positioning.css">
+</head>
+<body>
+	
+	<h1>CSS Positioning Demo</h1>
+
+	<h2>Display</h2>
+	
+	<div class="box">display: block</div>
+	
+	Here is an example of <div class="inline">display inline</div>.
+	<p><strong>Some</strong> of these <em>words</em> are <span>inline</span> elements. <img src="http://fillmurray.com/50/50" alt="More text here."></p>
+
+	<div class="box">display: block box</div>
+	<div class="box inline">display: inline box</div>
+	<div class="box inline-block">display: inline-block box</div>
+
+	<div class="box">static box</div>
+	<hr>
+	<h2>Positioning</h2>
+	<div class="box">static box</div>
+	<div class="box relative">relative box</div>
+	<div class="box absolute">absolute box</div>
+	<div class="box fixed">fixed box</div>
+
+	<div class="super-relative relative">
+	relative parent
+
+	<div class="box">static box</div>
+	<div class="box absolute">absolute box</div>
+	</div>
+
+	<h2>z-index</h2>
+	<div class="super-relative relative"> super-relative
+	<div class="minibox red">red</div>
+	<div class="minibox green">green</div>
+	<div class="minibox blue">blue</div>
+	</div>
+</body>
+</html>

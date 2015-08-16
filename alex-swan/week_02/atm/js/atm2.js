@@ -19,7 +19,7 @@ $(document).ready(function () {
 
 	$checking.filter($withdraw).on('click', function(){
 
-		balance = withdraw($checking.filter($amount), $checking.filter($balance), balance.checking, balance.savings);
+		balance.checking = withdraw($checking.filter($amount), $checking.filter($balance), balance.checking, balance.savings);
 		inTheRed();
 	}); 
 
@@ -31,10 +31,9 @@ $(document).ready(function () {
 
 	$savings.filter($withdraw).on('click', function(){
 
-		balance = withdraw($savings.filter($amount), $savings.filter($balance), balance.savings, balance.checking);
+		balance.savings = withdraw($savings.filter($amount), $savings.filter($balance), balance.savings, balance.checking);
 		inTheRed();
 	}); 
-
 
 var deposit = function ( amount, balance, currentBalance ) {
 
@@ -46,14 +45,14 @@ var deposit = function ( amount, balance, currentBalance ) {
 
 		} else {
 
-		currentBalance += $value;
-		balance.html("$" + currentBalance);
-		amount.val("");
+			currentBalance += $value;
+			balance.html("$" + currentBalance);
+			amount.val("");
 
-	} return currentBalance;
+		} return currentBalance;
 };
 
-var withdraw = function ( amount, balance, current, other)
+var withdraw = function ( amount, balance, current, other) {
 
 		var $value = parseInt($amount.val());
 
@@ -62,43 +61,36 @@ var withdraw = function ( amount, balance, current, other)
 			return;
 		}
 
-		else {
-
-		if (current + other - $value < 0){
-			return;
-		}
-
-		else if (current - $value > 0 ) {
+		// else if (current + other - $value < 0) {
+		// 		return;
+		
+		else if (current - $value >= 0 ) {
 			current -= $value;
 			$balance.html("$" + current);
 			$amount.val("");		
 
-		} else {
-			var remainder = $value - current;
-			other = other - remainder;
-			current = 0;
-			$balance.html("$" + current);
-			$amount.val("");
-			$balance.html("$" + other);	
-		} inTheRed();
+		// } else {
+		// 	var remainder = $value - current;
+		// 	other = other - remainder;
+		// 	current = 0;
+		// 	$balance.html("$" + current);
+		// 	$amount.val("");
+		// 	$balance.html("$" + other);	
+		// } 
+		inTheRed();
 	}
-		return ;
-	}); 
+		return current;
+	}; 
 
 var inTheRed = function () {
 		var current = $('.account').children().filter($("div[id$='balance']"))
 		current.each(function() {
 			if ($(this).html() === "$0"){
-				$(this).css('background-color', '#F52F4F');
+				$(this).removeClass('account').addClass('zero');
 			} else {
-				$(this).css('background-color', '#E3E3E3');
+				$(this).removeClass('zero').addClass('account');
 			}
 		})
 	};
 	inTheRed();
-
 });
-
-
-		// $accountAmount = $(this).siblings().filter($amount);
-		// $accountBalance = $(this).siblings().filter($balance);
