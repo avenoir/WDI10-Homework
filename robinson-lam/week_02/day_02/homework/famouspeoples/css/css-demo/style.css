@@ -1,0 +1,49 @@
+.triviaBox {
+	border: 1px solid red;
+	width: 960px;
+	margin: 0 auto;
+}
+
+.thumbnail {
+	position: relative;
+	width: 500px;
+	margin: 0 auto;
+}
+
+.thumbnailImage {
+	width: 100%; 
+	height: 50px;
+
+	border: 1px solid blue;
+	overflow: hidden;
+
+	transition: height 0.6s ease;
+}
+
+.thumbnail .overlayInfo {
+	opacity: 0;
+	background: rgba(0, 0, 0, 0.6);
+	color: white;
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	padding: 10px;
+
+	transition: opacity 0.6s ease;
+}
+
+.thumbnail .thumbnailImage img {
+	transition: width 0.6s ease;
+}
+
+.thumbnail:hover .overlayInfo {
+	opacity: 1;
+}
+
+.thumbnail:hover .thumbnailImage {
+	height: 250px;
+}
+
+.thumbnail:hover .thumbnailImage img {
+	width: 100%;
+}

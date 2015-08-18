@@ -28,7 +28,6 @@ var walkRight = function() {
 
 	checkCatForTransform();
   
-
 	 if (parseInt(cat.style.left) >= (parseInt(leClub.style.width) - parseInt(cat.style.width))) {
 	    window.clearInterval(walkTimerRight);
 	 	walkTimerLeft = window.setInterval(walkLeft, 100);
