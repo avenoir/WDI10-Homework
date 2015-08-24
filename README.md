@@ -27,4 +27,4 @@
     + Is there anything that you'd like some further information on?
     + Roughly, how long did it take?
 
-If you don't mention anything in the comments, i'll assume you had no problems at all with it!
+If you don't mention anything in the comments, we will assume you had no problems at all with it!
