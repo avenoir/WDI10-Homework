@@ -2,12 +2,10 @@ var bank = {
     accounts: [{
         balance: 0,
         name: 'John Doe'
-    }, 
-    {
+    }, {
         balance: 60500,
         name: 'John Galt'
-    }, 
-    {
+    }, {
         balance: 8000,
         name: 'Jack Wild'
     }],
@@ -38,16 +36,21 @@ var bank = {
         return totalBalance;
     },
 
-    addAccount: function(n, b) {
-        var newAccount = {}
+    checkAccount: function(n) {
         for (var i = 0; i < bank.accounts.length; i++) {
             if (bank.accounts[i].name === n) {
-                console.log('this account exsists!')
+                return false;
             }
         }
-        for (var j = 0; j < bank.accounts.length; i++) {
-        	if (bank.accounts[i].name !== n)
-        		bank.accounts.push({name: n, balance: b})
+    },
+    addAccount: function(n, b) {
+            if (bank.accountExsists(n) !== false) {
+                bank.accounts.push({
+                    name: n,
+                    balance: b
+                })
+            } else {
+                return 'this account account exsists';
+            }
         }
     }
-}

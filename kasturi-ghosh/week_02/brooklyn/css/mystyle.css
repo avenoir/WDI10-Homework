@@ -1,0 +1,35 @@
+h1 {
+	color: grey;
+}
+
+a {
+	text-decoration: none;
+	color: blue;
+}
+
+footer {
+	color: grey;
+	font-size: 7px;
+}
+
+.container {
+	margin: 0 auto;
+	max-width: 600px;
+}
+
+.big {
+	width: 925px;
+}
+
+.small {
+	border: 2px solid grey;
+}
+
+#para {
+	width: 925px;
+	text-align: justify;
+}
+
+#date {
+	color: blue;
+}
