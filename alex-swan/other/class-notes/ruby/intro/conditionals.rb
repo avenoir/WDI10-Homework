@@ -25,13 +25,14 @@ end
 puts "23 is greater than 4" if 23 > 4	
 
 
-bananas = false
-if bananas !=true
-	puts "You need to buy bananas"
+milk = false
+if milk !=true
+	puts "You need to buy milk"
 end
 	
-unless bananas == true
-	puts "You need to buy bananas"
+unless milk == true
+	puts "You need to buy milk"
 end
 
-puts "You need to buy bananas" unless bananas
+puts "You need to buy milk" unless milk
+

@@ -1,37 +1,37 @@
+var balance = {
+	checking: 0, savings: 0
+}
+
 $(document).ready(function () {
 
-	var balance = {
-		checking: 0, savings: 0
-	}
-
-	var $checking = $('#checking').children();
-	var $savings = $('#savings').children();
+	var $checking = $('#checking');
+	var $savings = $('#savings');
 	var $balance = $("div[id$='balance']");
 	var $amount = $("input[id$='amount']");
 	var $deposit = $("input[id$='deposit']");
 	var $withdraw = $("input[id$='withdraw']");
+debugger;
+	$checking.find($deposit).on('click', function(){
 
-	$checking.filter($deposit).on('click', function(){
-
-		balance.checking = deposit($checking.filter($amount), $checking.filter($balance), balance.checking);
+		balance.checking = deposit($checking.find($amount), $checking.find($balance), balance.checking);
 		inTheRed();
 	}); 
 
-	$checking.filter($withdraw).on('click', function(){
+	$checking.find($withdraw).on('click', function(){
 
-		balance.checking = withdraw($checking.filter($amount), $checking.filter($balance), balance.checking, balance.savings);
+		balance.checking = withdraw($checking.find($amount), $checking.find($balance), balance.checking, balance.savings);
 		inTheRed();
 	}); 
 
-	$savings.filter($deposit).on('click', function(){
+	$savings.find($deposit).on('click', function(){
 
-		balance.savings = deposit($savings.filter($amount), $savings.filter($balance), balance.savings);
+		balance.savings = deposit($savings.find($amount), $savings.find($balance), balance.savings);
 		inTheRed();
 	}); 
 
-	$savings.filter($withdraw).on('click', function(){
+	$savings.find($withdraw).on('click', function(){
 
-		balance.savings = withdraw($savings.filter($amount), $savings.filter($balance), balance.savings, balance.checking);
+		balance.savings = withdraw($savings.find($amount), $savings.find($balance), balance.savings, balance.checking);
 		inTheRed();
 	}); 
 
@@ -59,26 +59,25 @@ var withdraw = function ( amount, balance, current, other) {
 		if (!($value) || $value <= 0){
 			$amount.val("");
 			return;
-		}
-
-		// else if (current + other - $value < 0) {
-		// 		return;
+		} else if (current + other - $value < 0) {
+				return;
 		
-		else if (current - $value >= 0 ) {
+		} else if (current - $value >= 0 ) {
 			current -= $value;
 			$balance.html("$" + current);
 			$amount.val("");		
 
-		// } else {
-		// 	var remainder = $value - current;
-		// 	other = other - remainder;
-		// 	current = 0;
-		// 	$balance.html("$" + current);
-		// 	$amount.val("");
-		// 	$balance.html("$" + other);	
-		// } 
+		} else {
+			var remainder = $value - current;
+			other = other - remainder;
+			current = 0;
+			$balance.html("$" + current);
+			$amount.val("");
+			$balance.html("$" + other);	
+		} 
+
 		inTheRed();
-	}
+	
 		return current;
 	}; 
 
