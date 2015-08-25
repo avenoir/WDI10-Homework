@@ -51,51 +51,47 @@
 # # "7 stops in total."
 # */
 
-lines = {
-		'N':  ["Times Square", "34th", "28th", "23rd", "Union Square", "8th"],
-		'L':  ["8th", "6th", "Union Square", "3rd", "1st"],
+$lines = {
+		 N:  ["Times Square", "34th", "28th", "23rd", "Union Square", "8th"],
+		 L:  ["8th", "6th", "Union Square", "3rd", "1st"],
 		'6':  ["Grand Central", "33rd", "28th", "23rd", "Union Square", "Astor Place"]
 }
 
 
-def travel_line(lines, line, from_ind, to_ind)
+def travel_line(line, from_ind, to_ind)
 
 	# Determine direction of travel
-	if  from_ind < to_ind   
-		direction = 1     									# Going forward along line
-	else 
-		direction = -1    									# Going backwards along line
-	end
+	from_ind < to_ind ? direction = 1 : direction = -1
 	
 	# Travel the line going in the direction of travel
 	stations = []
 	i = from_ind
 	while i != to_ind
 		if  i != from_ind   									# Ignore first stations because already there!
-			stations << lines[line][i] 
+			stations << $lines[line][i] 
 		end
 		i += direction
 	end
 	if  i != from_ind   										# Again ignore first stations because already there!
-		stations << lines[line][i] 
+		stations << $lines[line][i] 
 	end
 
 	stations
 end
 
-def planTrip(lines, line_from, station_from, line_to, station_to)
+def planTrip(line_from, station_from, line_to, station_to)
 	
 	puts "Traveling FROM #{station_from} line #{line_from.to_s} TO #{station_to} line #{line_to.to_s}"
 
-	# Check if the two lines exist
-	if   !(lines.has_key? line_from) || !(lines.has_key? line_to) 
+	# Check if the two $lines exist
+	if   !($lines.has_key? line_from) || !($lines.has_key? line_to) 
 		puts "Line not found!"
 		puts "---------------"
 		return
 	end
 
-	station_from_ind = lines[line_from].index station_from  
-	station_to_ind = lines[line_to].index station_to 
+	station_from_ind = $lines[line_from].index station_from  
+	station_to_ind = $lines[line_to].index station_to 
 
 	# Check that we have too valid stations 
 	if  station_from_ind == nil || station_to_ind == nil  
@@ -104,20 +100,20 @@ def planTrip(lines, line_from, station_from, line_to, station_to)
 		return	
 	end 
 
-	# Check if we have to change lines or not.
+	# Check if we have to change $lines or not.
 	if  line_from == line_to  
 			
 		# We only have travel one line from origin station to destination station.
-		stations1 = travel_line( lines, line_from, station_from_ind, station_to_ind )
+		stations1 = travel_line( line_from, station_from_ind, station_to_ind )
 	
 		stations2 = []
 	elsif
 	
 		# First travel from 'from' station to union square 
-		stations1 = travel_line( lines, line_from, station_from_ind, lines[line_from].index("Union Square") )
+		stations1 = travel_line( line_from, station_from_ind, $lines[line_from].index("Union Square") )
 
 		# Now travel from union square to destination station	
-		stations2 = travel_line( lines, line_to,lines[line_to].index("Union Square"), station_to_ind )
+		stations2 = travel_line( line_to,$lines[line_to].index("Union Square"), station_to_ind )
 	end	    
 	print_it line_from, station_from, line_to, station_to, stations1, stations2 
 
@@ -141,14 +137,14 @@ def print_it(line_from, station_from, line_to, station_to, stations1, stations2)
 	puts "-----------------------------------------------------------------------------------------"
 end
 
-planTrip lines, :junk,'Junk',:junk,'Junk' 
-planTrip lines, :N,'Junk',:'6','Junk' 
-planTrip lines, :N, 'Times Square', :'6', 'Astor Place' 
-planTrip lines, :N, 'Times Square', :'6', 'Union Square' 
-planTrip lines, :N, 'Times Square', :N, '23rd' 
-planTrip lines, :N, 'Times Square', :N, 'Times Square' 
-planTrip lines, :N, 'Union Square', :'6', 'Union Square' 
-planTrip lines, :'6', '33rd', :N, 'Times Square' 
-planTrip lines, :N, 'Times Square', :'6', '33rd' 
+planTrip  :junk,'Junk',:junk,'Junk' 
+planTrip  :N,'Junk',:'6','Junk' 
+planTrip  :N, 'Times Square', :'6', 'Astor Place' 
+planTrip  :N, 'Times Square', :'6', 'Union Square' 
+planTrip  :N, 'Times Square', :N, '23rd' 
+planTrip  :N, 'Times Square', :N, 'Times Square' 
+planTrip  :N, 'Union Square', :'6', 'Union Square' 
+planTrip :'6', '33rd', :N, 'Times Square' 
+planTrip  :N, 'Times Square', :'6', '33rd' 
 
 
