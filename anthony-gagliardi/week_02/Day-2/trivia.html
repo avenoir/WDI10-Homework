@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Trivia Page</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+  <link rel="stylesheet" type="text/css" href="css/trivia.css">
+    <script src="http://maps.googleapis.com/maps/api/js"></script>
+    <script>
+      function initialize() {
+        var mapProp = {
+          center:new google.maps.LatLng(34.6864,135.5200),
+          zoom:6,
+          mapTypeId:google.maps.MapTypeId.ROADMAP
+        };
+        var map=new google.maps.Map(document.getElementById("googleMap"),mapProp);
+      }
+      google.maps.event.addDomListener(window, 'load', initialize);
+      </script>
+</head>
+<body>
+<div class="container">
+  <ul class="nav nav-pills">
+    <li><a href="index.html">Home Page</a></li>
+    <li><a href="bio.html">Biography</a></li>
+    <li><a href="htown.html">Hometown</a></li>
+    <li class="active"><a href="trivia.html">Trivia</a></li>
+  </ul>
+<img class="banner" src="images/trivia-banner.jpeg">
+<div class="jumbotron">
+  <h3>More Yukihiro's References</h3>
+
+<div class="row">
+  <div class="col-md-12">
+    <ol>
+      <li><a href="http://www.mormon.org/matz">Hi I'm まつもとゆきひろ (Matsumoto "Matz" Yukihiro)".</a>mormon.org. Retrieved 12 December 2014. I am a computer programmer. I designed a programming language called ‘Ruby.’ I am a Mormon.</li>
+      <li><a href="http://vasily.jp/category/press/">"PRESSRELEASE - 株式会社VASILY(ヴァシリー)". vasily.jp.</a></li>
+      <li><a href="http://www.japaninc.com/article.php?articleID=828">"The Man Who Gave Us Ruby". japaninc.com.</a></li>
+      <li><a href="http://www.oreilly.com/pub/au/714">"Yukihiro Matsumoto".</a> oreilly.com. 1 February 2013.</li>
+      <li><a href="http://eigenclass.org/hiki/ruby+0.95">More archeolinguistics: unearthing proto-Ruby</a></li>
+      <li><a href="http://blade.nagaokaut.ac.jp/cgi-bin/scat.rb/ruby/ruby-talk/382">"[ruby-talk:00382] Re: history of ruby". nagaokaut.ac.jp.</a></li>
+      <li><a href="http://github.com/mruby/mruby">mruby source code</a></li>
+      <li>Matt Aimonetti. <a href="http://matt.aimonetti.net/posts/2012/04/20/mruby-and-mobiruby/">"mruby and MobiRuby - Matt Aimonetti".</a> <a href="https://github.com/">GitHub.</a></li>
+      <li><a href="https://github.com/matz/streem">"matz/streem". <a href="https://github.com/">GitHub.</a></li>
+      <li><a href="http://www.fsf.org/news/2011-free-software-awards-announced">"2011 Free Software Awards announced".</a> <a href="https://en.wikipedia.org/wiki/Free_Software_Foundation">Free Software Foundation.</a> 26 March 2012.</li>
+      <li><a href="http://www.mormon.org/matz">"Hi I'm まつもとゆきひろ (Matsumoto "Matz" Yukihiro)".</a> mormon.org. Retrieved 12 December 2014. I am a computer programmer. I designed a programming language called ‘Ruby.’ I am a Mormon.</li>
+      <li><a href="https://cs.byu.edu/article/colloquium-yukihiro-matsumoto">"Colloquium--Yukihiro Matsumoto".</a> <a href="https://en.wikipedia.org/wiki/Brigham_Young_University">BYU.</a> Retrieved 4 June 2013.</p></li>
+    </div>
+  <div class="row">
+    <div class="col-md-6">
+      <div id="googleMap" style="width:500px;height:380px;"></div>
+    </div>
+  <div class="row">
+    <div class="col-md-6">
+      <img class="profile" src="images/profile3.jpg">
+  </div>
+</div>
+</div>
+
+</body>
+</html>
