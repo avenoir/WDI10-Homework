@@ -1,0 +1,21 @@
+<div class="status">
+
+	<% unless @poster.nil? %>
+		<div class="picture">
+			<strong><%= @title %></strong>
+			<br>
+			<img src="<%= @poster %>">
+		</div>
+		
+	<% else %>
+		Enter a valid movie!
+	<% end %>
+
+</div>
+
+<form action="/movies">
+	
+	<input type="text" name="movietitle" placeholder="title of the movie" autofocus>
+	<button>View Poster</button>
+
+</form>

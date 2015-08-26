@@ -1,0 +1,16 @@
+<div class="status">
+<% unless @price.nil? %>
+	<%= @stock_symbol %> traded at $<strong><%= @price %></strong>	
+<% else %>
+	Enter a VALID stock symbol
+<% end %>
+
+<hr />
+</div>
+
+
+<form action="/stocks">
+	<input type="text" name="stocksymbol" placeholder="stock symbol goes here, e.g. AAPL"autofocus>
+	<br />
+	<button>Get Price</button>
+</form>
