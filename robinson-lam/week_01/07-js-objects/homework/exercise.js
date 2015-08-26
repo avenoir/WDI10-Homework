@@ -3,11 +3,6 @@ console.log("Exercise.js is working, hell yeah");
 // Geometry Function Lab
 // Part 1: Rectangle
 
-var rectangle = {
-  length: 4,
-  width: 4,
-};
-
 var isSquare = function(rectangle) {
   if (rectangle.length === rectangle.width) {
     return true;
@@ -24,17 +19,16 @@ var perimeter = function(rectangle) {
   return (rectangle.length + rectangle.width) * 2;
 };
 
+var rectangle = {
+  length: 4,
+  width: 4,
+};
+
 console.log(isSquare(rectangle));
 console.log(area(rectangle));
 console.log(perimeter(rectangle));
 
 // Part 2: Triangle
-
-var triangle = {
-  sideA: 3,
-  sideB: 4,
-  sideC: 4
-};
 
 var isEquilateral = function(triangle) {
   if ((triangle.sideA === triangle.sideB) && (triangle.sideA === triangle.sideC)) {
@@ -78,6 +72,12 @@ var isObtuse = function(triangle) {
   } else {
     return false;
   }
+};
+
+var triangle = {
+  sideA: 3,
+  sideB: 4,
+  sideC: 4
 };
 
 // JavaScript Bank
