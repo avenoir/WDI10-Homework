@@ -1,0 +1,161 @@
+@import url(http://fonts.googleapis.com/css?family=Playfair+Display);
+
+
+body {
+	text-align: center;
+    font-family: 'Playfair Display', serif;
+    color:black;
+	background-color: white;
+    max-width: 960px;
+}
+
+header {
+    background-color: white;
+   }
+
+nav {
+    font-size: 150%;
+    background-color: rgba(0, 138, 184,1);
+    padding: 7px;
+}
+
+nav a {
+    color: white;
+    padding: 20px;
+}
+
+nav a:hover {
+ opacity: 0.7;
+}
+
+div {
+    border: 3px solid;
+    border-color: rgba(0, 138, 184,1);
+}
+
+h1 {
+    font-size: 300%;
+}
+
+q {
+    font-size: 135%;
+}
+
+
+a {
+    display: inline;
+    width: 60px;
+}
+
+li {
+    display: inline;
+}
+
+br+img {
+    display: inline-block;
+    width: 32%;
+    margin: 0.1%;   
+    border-radius: 200px;
+    margin-top: 20px;
+    border: 3px solid;
+    border-color: rgba(0, 138, 184,1);
+}
+
+br+img:hover {
+
+    border-color: #FF33CC;
+}
+
+ul>li>img{
+    width: 200px;
+    border-radius: 100px;
+    padding: 5px;
+}
+
+#happy {
+    font-size: 200%;
+    position: absolute;
+    left:140px;
+    top: 550px;
+    z-index: -1;
+}
+
+#sad {
+    font-size: 200%;
+    position: absolute;
+    left:370px;
+    top: 550px;
+    z-index: -1;
+}
+
+#suprised {
+    font-size: 200%;
+    position: absolute;
+    left:540px;
+    top: 550px;
+    z-index: -1;
+}
+
+#aroused {
+    font-size: 200%;
+    position: absolute;
+    left:755px;
+    top: 550px;
+    z-index: -1;
+}
+
+#playfull {
+    font-size: 200%;
+    position: absolute;
+    left:755px;
+    top: 850px;
+    z-index: -1;
+}
+
+
+#playfull {
+    font-size: 200%;
+    position: absolute;
+    left:110px;
+    top: 835px;
+    z-index: -1;
+}
+
+#disturbed {
+    font-size: 200%;
+    position: absolute;
+    left:310px;
+    top: 835px;
+    z-index: -1;
+}
+
+#ropable {
+    font-size: 200%;
+    position: absolute;
+    left:540px;
+    top: 835px;
+    z-index: -1;
+}
+#seductive {
+    font-size: 200%;
+    position: absolute;
+    left:740px;
+    top: 835px;
+    z-index: -1;
+}
+ul>li>img:hover{
+    opacity: 0.1;
+    border: 3px solid;
+    border-color: rgba(255, 51, 204,1);
+
+}
+
+.appreciation:hover {
+    color:#FF33CC;
+    
+}
+
+#map {
+    margin-top: 20px;
+}
+

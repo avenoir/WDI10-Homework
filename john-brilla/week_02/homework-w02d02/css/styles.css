@@ -1,0 +1,116 @@
+@import url(http://fonts.googleapis.com/css?family=Roboto:400,700);
+
+body {
+	font-family: 'Roboto', sans-serif;
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#2ab0ed), color-stop(49%,#9fd8ef), color-stop(100%,#e4f5fc));	
+}
+header {
+	background-color: white;
+	height: 50px;
+	position:fixed;
+	top: 0px;
+	left:0px;
+	width: 100%;
+	border-bottom: 2px solid tomato;
+	z-index: 99;
+}
+header img { position:absolute; top:10px; right:10px; }
+header ul li {
+	display: inline;
+	margin-right: 15px;
+}
+header a{
+	text-decoration: none;
+	font-weight: bold;
+	color: deepskyblue;
+	transition: color .2s linear;
+}
+header a:hover { color: black;}
+header span::after {
+	content: url('../images/bright.png');
+	position: absolute;
+	top:10px;
+	right:5px;
+}
+
+
+.container {
+	margin: 60px auto;
+	max-width: 900px;
+	padding: 10px;	
+}
+.bio {	
+	position: relative;
+	padding: 5px;
+}
+
+/*BANNER*/
+ul.banner {
+	margin-left: 0;
+	padding-left: 0;
+
+}
+.banner li {
+	display: inline-block;
+	width: 33%;
+}
+.banner li img {
+	width: 100%;
+	border-radius: 15px;
+}
+.banner-image {
+	position: relative;
+	color: white;
+}
+
+div.banner-image {border-radius: 25px;}
+
+/*VIDEO*/
+.video { text-align: center; }
+
+/*HOMETOWN*/
+ul.hometown-banner {
+	margin-left: 0;
+	padding-left: 0;
+
+}
+.hometown-banner li {
+	display: inline-block;
+	width: 49%;
+}
+.hometown-banner li img {
+	width: 100%;
+	border-radius: 5px;
+}
+ul.home-banner {
+	margin-left: 0;
+	padding-left: 0;
+}
+.home-banner li {
+	display: inline-block;
+	width: 49%;
+	margin:3px;
+}
+.home-banner li img {
+	width: 100%;
+	border-radius: 5px;
+	max-height: 300px;
+}
+/*HOMETOWN-MAP*/
+.map { width: 100%; }
+.map img { max-width: 900px; }
+
+/*FOOTER*/
+footer {
+	position:fixed;
+	bottom: 0px;
+	right:0px;
+	background-color: tomato;
+	width: 100%;
+	text-align: right;
+	padding: 5px 5px 5px 0px;
+}
+
+footer span {font-style: italic; font-weight: bold;}
+
+footer span::after {content: "Site By John Brilla!"; }

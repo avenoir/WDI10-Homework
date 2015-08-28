@@ -1,0 +1,19 @@
+body {
+    font-family: "Helvetica Neue";
+}
+
+a {
+    padding: 10px;
+    border-radius: 5px;
+    background: #3382a3;
+    color: white;
+    text-decoration: none;
+}
+
+a:hover {
+    background: #2232aa;
+}
+
+img {
+    width: 200px;
+}

@@ -1,55 +1,58 @@
 var mta = {
 
-	N : ["Times Square", "34th", "28th (N)", "23rd (N)", "Union Square", "8th (N)"],
-	L : ["8th (L)", "6th", "Union Square", "3rd", "1st"],
-	"6" :["Grand Central", "33rd", "28th (6)", "23rd (6)", "Union Square", "Astor Place"],
+    N: ["Times Square", "34th", "28th (N)", "23rd (N)", "Union Square", "8th (N)"],
+    L: ["8th (L)", "6th", "Union Square", "3rd", "1st"],
+    "6": ["Grand Central", "33rd", "28th (6)", "23rd (6)", "Union Square", "Astor Place"],
 
-	planTrip : function(fromLine, fromStop, toLine, toStop){
-		
-		//index variables
-		var fromStopIndex = mta[fromLine].indexOf(fromStop); 
-		toStopIndex = mta[toLine].indexOf(toStop); 
-		fromChangeIndex = mta[fromLine].indexOf("Union Square"); 
-		toChangeIndex = mta[toLine].indexOf("Union Square");
+    planTrip: function (fromLine, fromStop, toLine, toStop) {
 
-		//output variables
-		tripOutput = ["You must travel through the following stops on the " + fromLine + " line: "];
-		tripTwoOutput = ["Your journey continues through the following stops along the " + toLine + " line: "];
-		changeOutput = "Change at Union Square.";
+ //index variables
+        var toChangeIndex, tripOutput;
+        var fromStopIndex = mta[fromLine].indexOf(fromStop);
+        var toStopIndex = mta[toLine].indexOf(toStop);
+        var fromChangeIndex = mta[fromLine].indexOf("Union Square");
+        var toChangeIndex = mta[toLine].indexOf("Union Square");
 
-		//call plotChanges function for each leg of trip
-		firstLeg = mta.plotChanges(fromStopIndex, fromChangeIndex, fromLine);
-		secondLeg = mta.plotChanges(toChangeIndex, toStopIndex, toLine);
+ //output variables
+        var tripOutput = ["You must travel through the following stops on the " + fromLine + " line: "];
+        var tripTwoOutput = ["Your journey continues through the following stops along the " + toLine + " line: "];
+        var changeOutput = "Change at Union Square.";
 
-		//assemble output
-		console.log("From " + fromStop + " to " + toStop + ":")
+ //call plotChanges function for each leg of trip
+        var firstLeg = mta.plotChanges(fromStopIndex, fromChangeIndex, fromLine);
+        var secondLeg = mta.plotChanges(toChangeIndex, toStopIndex, toLine);
 
-		if (fromLine === toLine || toStop === "Union Square"){  
-			console.log(tripOutput + firstLeg.join(", ") + ", " + secondLeg + ".");
+ //assemble output
+        console.log("From " + fromStop + " to " + toStop + ":");
 
-		} else {
-			console.log(tripOutput + firstLeg.join(", ") + ".");
-			console.log(changeOutput);
-			console.log(tripTwoOutput + secondLeg.join(", ") + ".");
-		};
-		console.log(firstLeg.length + secondLeg.length + " stops in total.");
-	},
+        if (fromStop === toStop) {
+            console.log("0 Stops in total.");
+            return;
+        } else if (fromLine === toLine || toStop === "Union Square") {
+            console.log(tripOutput + firstLeg.join(", ") + ", " + secondLeg + ".");
+        } else {
+            console.log(tripOutput + firstLeg.join(", ") + ".");
+            console.log(changeOutput);
+            console.log(tripTwoOutput + secondLeg.join(", ") + ".");
+        }
+        console.log(firstLeg.length + secondLeg.length + " stops in total.");
+    },
 
-	plotChanges : function(from, to, line){
-		var output = [];
-		direction = from < to ? 1 : -1;
-			for (var i = from + direction ; (from < to ? i <= to : to <= i) ; i = i + direction) {
-				output.push(mta[line][i]);
-			};
-		return output;
-	}
+    plotChanges: function (from, to, line) {
+        var output = [];
+        var direction = (from < to ? 1 : -1);
+        for (var i = from + direction; (from < to ? i <= to : to <= i) ; i = i + direction) {
+            output.push(mta[line][i]);
+        }
+        return output;
+    }
 };
 
-mta.planTrip("N", "Times Square", "L", "1st");
+mta.planTrip("N", "Times Square", "N", "Times Square");
 
 mta.planTrip("N", "Times Square", "N" , "8th (N)");
 
-mta.planTrip("L" , "8th (L)" , "6" , "Grand Central"); 
+mta.planTrip("L" , "8th (L)" , "6" , "Grand Central");
 
 mta.planTrip("N", "Times Square" , "6" , "Astor Place");
 
@@ -57,9 +60,9 @@ mta.planTrip("N", "Times Square" , "6" , "Astor Place");
 // // MTA Lab
 // // Create a program that models a simple subway system.
 // var mta = [
-// 	{line: 'N', stops: ["Times Square", "34th", "28th (N)", "23rd (N)", "Union Square", "8th (N)"]},
-// 	{line: 'L', stops: ["8th (L)", "6th", "Union Square", "3rd", "1st"]},
-// 	{line: '6', stops: ["Grand Central", "33rd", "28th (6)", "23rd (6)", "Union Square", "Astor Place"]}
+// {line: 'N', stops: ["Times Square", "34th", "28th (N)", "23rd (N)", "Union Square", "8th (N)"]},
+// {line: 'L', stops: ["8th (L)", "6th", "Union Square", "3rd", "1st"]},
+// {line: '6', stops: ["Grand Central", "33rd", "28th (6)", "23rd (6)", "Union Square", "Astor Place"]}
 // ]
 // The program takes the line and stop that a user is getting on at and the line and stop that user is getting off at and prints the journey and the total number of stops for the trip in the console:
 

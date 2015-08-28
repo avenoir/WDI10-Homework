@@ -1,0 +1,126 @@
+.container {
+    width: 960px;
+    margin: 0 auto;
+}
+
+body {
+    font-family: "Helvetica", sans-serif;
+    margin: 0;
+    background: linear-gradient(to bottom, #efefef 0%,#e1e1e1 49.9%,#ffffff 50%,#f1f1f1 50.1%,#ffffff 100%,#f1f1f1 100%);
+}
+
+
+header nav {
+    background: #111;
+    border-bottom: 1px solid white;
+    padding: 30px; 0;
+    margin-bottom: 15px;
+    color: #ccc;
+}
+
+header nav ul {
+    list-style: none;
+    padding: 0;
+}
+
+header nav ul li {
+    display: inline-block;
+    margin-right: 30px;
+}
+
+.logo {
+    padding: 15px 0;
+}
+
+#socialMedia {
+    float: right;
+    padding: 15px 0;
+}
+
+#socialMedia ul {
+    margin: 0;
+}
+
+#socialMedia ul li {
+    display:inline-block;
+    width:60px;
+    height:60px;
+    background:blue;
+    text-indent:-9999em;
+}
+
+#socialMedia ul li.linkedIn {
+    background:url(../images/socialNav.png) 0px 64px;
+}
+#socialMedia ul li.twitter {
+    background:url(../images/socialNav.png) -60px 64px; 
+}
+
+#socialMedia ul li.facebook {
+    background:url(../images/socialNav.png) -120px 64px; 
+}
+
+#socialMedia ul li.rss {
+    background:url(../images/socialNav.png) -180px 64px; 
+}
+
+
+#socialMedia ul li.linkedIn:hover {
+    background:url(../images/socialNav.png) 0px 0px; 
+}
+
+#socialMedia ul li.twitter:hover {
+    background:url(../images/socialNav.png) -60px 0px; 
+}
+
+#socialMedia ul li.facebook:hover {
+    background:url(../images/socialNav.png) -120px 0px; 
+}
+
+#socialMedia ul li.rss:hover {
+    background:url(../images/socialNav.png) -180px 0px; 
+}
+
+.photoBanner img {
+    box-shadow: 0px 40px 60px -15px #000;
+    margin: 15px 0;
+}
+
+.quoteRequest {
+    position: relative;
+    margin: 30px 0;
+    padding: 0 15px;
+    border: 1px solid #bbb;
+    border-bottom: 1px solid white;
+    border-right: 1px solid white;
+}
+
+.quoteRequest p {
+    width: 80%;
+    display: inline-block;
+}
+
+.quoteRequest img {
+    padding-top: 10px;
+    position: absolute;
+    right: 0;
+    display: inline-block;
+}
+
+.homeBox {
+    width: 29.5%;
+    margin: 0 2.5%;
+    display: inline-block;
+}
+
+.homeBox:nth-child(1) {
+    margin-left: 0;
+}
+
+.homeBox:nth-child(3) {
+    margin-right: 0;
+}
+
+.homeBox img {
+    border: 5px solid #e2e2e2;
+}

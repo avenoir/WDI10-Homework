@@ -14,17 +14,37 @@ var catWalk = function() {
 	var oldTop = parseFloat(img1.style.top);
 
 	if ((pageWidth > oldLeft) && (pageHeight > oldTop)) {
+		img1.style.transform = "rotateY(0deg)";
 	  	var newLeft = oldLeft + 10;
 	  	var newTop = oldTop + 10;
 	  	img1.style.left = newLeft + 'px';
 	  	img1.style.top = newTop + 'px';
 	  }
 	  else {
+	  	img1.style.transform = "rotateY(180deg)";
 	  	var newLeft = 0;
 	  	var newTop = 0;
 	  	img1.style.left = newLeft + 'px';
 	  	img1.style.top = newTop + 'px';
+
+	  // img1.style.transform = "rotateY(180deg)";
+	  //       img1.style.left = parseInt(img1.style.left) - 10 + "px";
+	  //       img1.style.top = parseInt(img1.style.top) - 10 + "px";
+	  //       pageWidth -= 10;
+	  //       pageHeight -=10;
 	  }
+
+	// if ((parseInt(img1.style.left)) < -50){
+	 //        img1.style.transform = "rotateY(0deg)";
+	 //        img1.style.left = "-50px";
+	 //        window.innerWidth = 1219;
+  //    }
+	// else if (parseInt(img1.style.left) > (window.innerWidth - 240)) {
+	 //        img1.style.transform = "rotateY(180deg)";
+	 //        img1.style.left = parseInt(img1.style.left) - 10 + "px";
+	 //        window.innerWidth -= 10;
+  //    }
+
 };
 window.setInterval(catWalk, 100);
 
@@ -85,3 +105,4 @@ var fall = function() {
   img4.style.top = newTop + 'px';
 };
 window.setInterval(fall, 40);
+

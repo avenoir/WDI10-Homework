@@ -1,0 +1,25 @@
+/*.catflip {
+	filter: flipH;
+	transform: scaleX(-1);
+	display: none;
+}*/
+
+body {
+	background-image: url("http://hdpictureshq.com/sites/default/files/rainbows-images-hq-pictures-hd-17744.jpg");
+	background-size: cover;
+
+}
+
+#maincat {
+	z-index: 1;
+}
+.manycats {
+	width: 500px;
+	margin: 600px auto 0 auto;
+	z-index: -1;
+}
+.manycats img {
+	border-radius: 50%;
+	position: relative;
+	width: 100%;
+}
