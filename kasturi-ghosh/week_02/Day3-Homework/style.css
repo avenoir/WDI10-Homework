@@ -1,0 +1,13 @@
+body {
+	background-image: url("images/back.jpg");
+	background-size: cover;
+}
+
+.magic {
+	width: 300px;
+}
+/*<img class="firework" src="http://33.media.tumblr.com/tumblr_luzj1tb9sw1qbvovho1_500.gif">
+.firework {
+	bottom: 0;
+	left: 0;
+}*/

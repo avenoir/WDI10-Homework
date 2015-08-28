@@ -1,0 +1,16 @@
+// String methods
+
+charAt, charCodeAt, codePointAt		Return the character or character code at the specified position in string
+
+indexOf, lastIndexOf				Return the position of specified substring in the string or the last position of pecified substring respectively.
+
+startsWith, endsWith, includes		Returns whether or not the string starts, ends or contains a specified string.
+
+concat								Combines the text of two strins and returns a new string
+
+fromCharCode, fromCodePoint			Constructs a string from the specified sequence of unicode values
+
+split								Splits a string object into an array of strings y separating the string into substrings
+slice								Extracts a section of a string and returns a new string
+
+substring, substring

@@ -1,0 +1,176 @@
+nav {
+	background-color: black;
+	height: 65px;
+}
+
+nav a {
+	color: white;
+	display: inline-block;
+	text-decoration: none;
+	width: 90px;
+	line-height: 65px;
+	z-index: 1;
+	text-align: center;
+	
+}
+
+
+.navigation {
+	width: 1100px;
+	margin: auto;
+}
+#navroll {
+	width: 90px;
+	height:65px;
+	z-index: 1;
+	position: absolute;
+	opacity: 0;
+}
+
+#navroll:hover {
+	opacity: 1;
+}
+
+#blurb {
+	width: 100%;
+	height: 350px;
+	position: absolute;
+	z-index: -1;
+}
+
+#body {
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	margin-top: 350px;
+	z-index: -1;
+}
+
+.top img{
+	display: inline;
+	margin-top: 20px;
+	margin-bottom: 10px;
+}
+
+#main-content {
+	width: 1100px;
+	margin: auto;
+	z-index: 1;
+	
+}
+
+.social {
+	position: relative;
+	height: 54px;
+	float: right;
+}
+
+.photobanner{
+	width: 100%;
+}
+
+.imageshadow {
+	margin-top: -4px;
+}
+
+.quote {
+	width: 100%;
+	height: 90px;
+
+	border-top: 1px solid grey;
+	border-left: 1px solid grey;
+	border-right: 1px solid white;
+	border-bottom: 1px solid white;
+	z-index: 2;
+}
+
+.quote p {
+	width: 70%;
+	display: inline-block;
+	margin: 20px;
+}
+.quote img {
+	float: right;
+	margin-top: 20px;
+	margin-right: 15px
+}
+
+#homeboxes {
+	margin-bottom: 20px;
+}
+
+.home-box {
+	display: inline-block;
+	width: 33%;
+	height: 100%;
+	margin-top: 10px;
+}
+
+.home-box img {
+	width: 90%;
+	margin-left: 10px;
+	border: 7px solid gainsboro;
+}
+
+.home-box p {
+	margin-left: 15px;
+	text-decoration: none;
+}
+
+
+
+h2 {
+	margin: 0.6em;
+}
+
+footer {
+
+	background-color: black;
+	position: absolute;
+	height: 300px;
+	width: 100%;
+	color: grey;
+
+}
+
+.box-footer {
+	width: 1100px;
+	height: 300px;
+	margin: auto;
+}
+
+.blogroll {
+	display: inline-block;
+	width: 20%;
+}
+
+.blogroll h3 {
+	border-bottom: 1px solid grey;
+}
+
+.blogroll li {
+	display: block;
+	border-bottom: 1px solid grey;
+	list-style-type: none;
+}
+
+ul {
+	padding: 0;
+}
+
+.textwidget {
+	display: inline-block;
+	width: 40%;
+	height: 300px;
+	margin: auto;
+}
+
+.metawidget {
+	display: inline-block;
+	width: 20%;
+	margin: auto;
+}
+
+
+
+
