@@ -1,0 +1,6 @@
+CREATE TABLE movies (
+	id INTEGER PRIMARY KEY AUTOINCREMENT,
+	title TEXT,
+	plot TEXT,
+	image TEXT
+);

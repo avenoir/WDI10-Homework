@@ -1,0 +1,20 @@
+<% unless @list_of_movies.nil? %>
+	<% @list_of_movies.each do |movie| %>
+		<p>
+		<form>
+		<a href="/poster/<%= movie["Title"].tr(' ', '+') %>"><%= movie["Title"] %></a>
+		</form>
+		</p>
+		<!-- <img src=<% @images %>> -->
+	<% end %>
+	<hr>
+<% end %>
+
+<p>
+<div class="fuck">
+<form action="/mvi">
+	<input type="text" name="movie" placeholder="MOVIE NAME" autofocus>
+	<button>Search</button>
+</form>
+</div>
+</p>
