@@ -1,18 +1,24 @@
 @import url(http://fonts.googleapis.com/css?family=Poiret+One);
 body {
 	font-family: 'Poiret One', cursive;
-	background-image: url("http://7428.net/wp-content/uploads/2012/09/Dream-Movie-Background-3.jpg");
+	/*background-image: url("http://7428.net/wp-content/uploads/2012/09/Dream-Movie-Background-3.jpg");*/
+	background-image: url("http://i.imgur.com/uyeqTRM.jpg");
 	background-size: cover;
 }
 
 .container {
 	max-width: 960px;
 	text-align: center;
-	color: #E6CAAB;
+	color: black;
 	margin: 0 auto;
 	padding: 20px;
 	border-radius: 5px;
-	font-size: 2em;
+	font-size: 1.5em;
+	font-weight: bold;
+}
+
+nav {
+	text-align: right;
 }
 
 input {
@@ -41,4 +47,15 @@ button {
 	margin-top: 20px;
 	border: 2px solid black;
 	border-radius: 5px;
+}
+
+a {
+	color: #CC0000;
+	text-decoration: none;
+	font-size: 0.9em;
+	font-weight: bold;
+}
+
+a:hover {
+	font-size: 1.5em;
 }

@@ -2,17 +2,66 @@ require 'pry'
 require 'sinatra'
 require 'sinatra/reloader'
 require 'httparty'
+require 'sqlite3'
 
 get '/' do 
-	erb :movies
+	erb :home
 end
 
 get '/movies' do
-	# @movie_list = [];
-	@title = params[ :movietitle ].upcase
-	url = "http://omdbapi.com/?t=#{ @title }"
-	movie_info = HTTParty.get url
-	@poster = movie_info[ 'Poster' ]
-	# @movie_list << params[ :movietitle ] if /@title/.match('params[ :movietitle ]')
+
+	@title = params[ :movietitle ]
+	url = "http://omdbapi.com/?s=#{ @title }"
+
+	movie_info_list = HTTParty.get url
+	@title_list = movie_info_list[ 'Search' ]
+	
 	erb :movies
+end
+
+get '/poster' do
+
+	@title = params[ :movietitle ]
+
+	@saved = query_db "SELECT * FROM movies WHERE title='#{@title}' COLLATE NOCASE"
+
+    if @saved.empty?
+
+    	@message = "Loading poster from OMDB"
+
+		url = "http://omdbapi.com/?t=#{ @title }"
+
+		movie_info = HTTParty.get url
+		@poster = movie_info[ 'Poster' ]
+
+		query_db "INSERT INTO movies (title, image) VALUES ('#{@title}', '#{@poster}')"
+
+	else # already in the database, so no need to bother OMDB
+
+		@message = "Loading movie from Database"
+
+        @saved = @saved.first
+        @poster = @saved['image']
+        @title = @saved['title']
+
+    end
+
+	erb :poster
+end
+
+get '/saved' do    
+  @saved = query_db 'SELECT * FROM movies'
+  erb :'/saved'
+end
+
+def query_db( sql )
+	puts sql #runs the sql code
+
+	db = SQLite3::Database.new 'database.db'
+	db.results_as_hash = true
+
+	@data = db.execute sql
+	db.close
+
+	@data #return what we retrieved
 end
