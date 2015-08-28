@@ -28,13 +28,13 @@ get '/poster' do
     if @saved.empty?
 
     	@message = "Loading poster from OMDB"
-
 		url = "http://omdbapi.com/?t=#{ @title }"
 
 		movie_info = HTTParty.get url
 		@poster = movie_info[ 'Poster' ]
+		@year = movie_info[ 'Year' ]
 
-		query_db "INSERT INTO movies (title, image) VALUES ('#{@title}', '#{@poster}')"
+		query_db "INSERT INTO movies (title, year, image) VALUES ('#{@title}', '#{@year}', '#{@poster}')"
 
 	else # already in the database, so no need to bother OMDB
 
@@ -43,6 +43,7 @@ get '/poster' do
         @saved = @saved.first
         @poster = @saved['image']
         @title = @saved['title']
+        @year = @saved['year']
 
     end
 

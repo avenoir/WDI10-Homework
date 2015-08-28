@@ -6,7 +6,7 @@
         <% @title_list.each do |list| %>
 
                 <div class="picture">
-                    <a href="/poster?movietitle=<%= list['Title'] %>"><%= list["Title"] %></a>
+                    <a href="/poster?movietitle=<%= list['Title'] %>"><%= list["Title"] %> : <%= list["Year"] %></a>
                 </div>
 
         <% end %>

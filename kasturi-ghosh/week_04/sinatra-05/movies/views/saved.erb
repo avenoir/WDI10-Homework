@@ -3,6 +3,6 @@
  <p><img class="feature" src="<%=@poster%>"></p> 
 
 <% @saved.each do |movie| %>
-  <p><%= movie['title'] %></p> 
+  <p><%= movie['title'] %>: <%= movie['year'] %></p> 
   <p><img class="feature" src="<%= movie['image'] %>"></p> 
 <% end %>

@@ -3,6 +3,7 @@
 	<% unless @poster.nil? %>
         <div class="picture">
             <img src="<%= @poster %>">
+            <p>Relased: <%= @year %></p>
             <p>"<%= @message %>"</p>
         </div>
     <% else %>

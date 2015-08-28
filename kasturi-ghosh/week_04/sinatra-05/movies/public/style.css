@@ -1,3 +1,4 @@
+
 @import url(http://fonts.googleapis.com/css?family=Poiret+One);
 body {
 	font-family: 'Poiret One', cursive;
@@ -15,6 +16,10 @@ body {
 	border-radius: 5px;
 	font-size: 1.5em;
 	font-weight: bold;
+}
+
+h1 {
+	color: pink;
 }
 
 nav {
@@ -50,7 +55,7 @@ button {
 }
 
 a {
-	color: #CC0000;
+	color: #B10A7F;
 	text-decoration: none;
 	font-size: 0.9em;
 	font-weight: bold;
