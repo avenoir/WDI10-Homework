@@ -2,7 +2,7 @@
 
 body {
 	font-family: 'Oswald', sans-serif;
-	background: url('http://i.imgur.com/QoU4TtR.jpg');
+	background: url('http://i.imgur.com/EVPNewb.jpg');
 	background: cover;
 }
 
@@ -14,7 +14,6 @@ a:visited {
 nav {
 	text-align: right;	
 	font-size: 20px;
-	padding: 
 }
 
 a {
@@ -27,7 +26,7 @@ h1 {
 }
 
 h2 {
-	color: #ABABAB;
+	color: #E5E5E5;
 	font-size: 35px;
 }
 
@@ -68,6 +67,9 @@ p {
 	h3 {
 		font-size: 16px
 	}
+	h4 {
+		font-size: 13px;
+	}
 	p {
 		font-size: 14px;
 		text-align: left;
@@ -75,4 +77,7 @@ p {
 	nav {
 		font-size: 14px;
 	}
+	img {
+		height: auto;
+		width: 100%;
 }	
