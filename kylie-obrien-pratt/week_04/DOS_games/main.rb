@@ -45,7 +45,7 @@ post '/games' do #links to new game form, creates new entry in table using info 
 end
 
 get '/games/:id' do #retrieve butterfly instance using butterfly id
-  @games = Game.find params[:id]
+  @game = Game.find params[:id]
   erb :'DOS_games/show'
 end
 
