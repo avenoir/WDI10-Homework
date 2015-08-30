@@ -1,0 +1,12 @@
+<h2>Edit Alien</h2>
+
+<form action="/aliens/<%= @alien.id %>" method="post">
+
+	<p><input type="text" name="species" placeholder="Species" value="<%= @alien.species %>"></p>
+	<p><input type="text" name="planet" placeholder="Planet" value="<%= @alien.planet %>"></p>
+	<p><input type="text" name="bio" placeholder="Bio" value="<%= @alien.bio %>"></p>
+	<p><input type="url" name="image" placeholder ="Image URL" value="<%= @alien.image %>"></p>	
+
+	<input type="submit" value="Update Alien">
+	
+</form>

@@ -1,0 +1,12 @@
+<h2><%= @alien['species'] %></h2>
+<h3>Home Planet: <%= @alien['planet'] %></h3>
+<h3>Bio: <%= @alien['bio'] %></h3>
+
+<% if @alien['image'] %>
+	<img class="feature" src="<%= @alien['image'] %>">
+<% end %>
+
+<p>
+	<a href="/aliens/<%= @alien['id'] %>/delete"> Delete </a>
+	<a href="/aliens/<%= @alien['id'] %>/edit"> Edit </a>
+</p>
