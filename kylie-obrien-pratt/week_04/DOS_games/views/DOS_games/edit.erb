@@ -1,0 +1,12 @@
+<h2>Edit Game</h2>
+<form action="/games/<%= @game.id %>" method="post">
+  <p><input type="text" name="name" placeholder="Name" value="<%= @game.name %>"></p>
+  <p><input type="text" name="year" placeholder="Year" value="<%= @game.year %>"></p>
+  <p><input type="text" name="creator" placeholder="Creator" value="<%= @game.creator %>"></p>
+  <p><input type="text" name="rating" placeholder="Rating" value="<%= @game.rating %>"></p>
+  <p><input type="text" name="synopsis" placeholder="Synopsis" value="<%= @game.synopsis %>"></p>
+  
+<!--   <p><input type="url" name="image" placeholder="Image URL" value="<%= @butterfly.image %>"></p>
+ -->
+  <input type="submit" value="Update game">
+</form>
