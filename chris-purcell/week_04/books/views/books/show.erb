@@ -1,0 +1,26 @@
+<div class="border">
+<h1> <%= @book.title %> </h1>
+<h3> By <%= @book.author %>. </h3>
+<% if @book.read == true %>
+<p> You have read this book already! </p>
+<% else %>
+<p> You have not yet read this book! Pick it up <a href="http://www.amazon.com.au/s/field-keywords=<%= @book.title.tr(' ', '+') %>+<%= @book.author.tr(' ', '+') %>">today!</a></p>
+<% end %>
+<div>
+<% if @book.cover %>
+<img src="<%= @book.cover %>">
+<% end %>
+
+<% if @book.summary %>
+<p> <%= @book.summary %>
+<% end %>
+</div
+<div>
+<p>
+<a href="/books/<%= @book.id %>/delete">Delete</a>
+</p>
+<p>
+<a href="/books/<%= @book.id %>/edit">Edit</a>
+</p>
+</div>
+</div>

@@ -32,18 +32,28 @@ end
 get '/movies/index' do
 	@movies = query_db('SELECT * from movies').first
 	erb :'movies/index'
-	@movies
 end
 
 get '/poster/:id' do
-	url = "http://omdbapi.com/?t=#{params[:id]}"
-	movie_infos = HTTParty.get url
-	@title = movie_infos["Title"]
-	@poster = movie_infos["Poster"]
-	@plot = movie_infos["Plot"]
-	@imdb_id = movie_infos["imdbID"]
+	@movies = query_db("SELECT * from movies WHERE title = '#{ params[:id]}'")
 
-	query_db("INSERT INTO movies (title, plot, image) VALUES ('#{ params[:id] }', '#{ @plot }', '#{ @poster }')")
+	if @movies.empty?
+		url = "http://omdbapi.com/?t=#{params[:id]}"
+		movie_infos = HTTParty.get url
+		@title = movie_infos["Title"]
+		@poster = movie_infos["Poster"]
+		@plot = movie_infos["Plot"]
+		@imdb_id = movie_infos["imdbID"]
+		query_db("INSERT INTO movies (title, plot, image) VALUES ('#{ params[:id] }', '#{ @plot }', '#{ @poster }')")
+	else 
+		@movies = @movies.first
+		binding.pry
+		@title = @movies["title"].tr('+', ' ')
+		@poster = @movies["image"]
+		@plot = @movies["plot"]
+		# @imdb_id = @movies["imdbID"]
+	end
+
 	erb :poster
 end
 

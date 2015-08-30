@@ -1,0 +1,11 @@
+body {
+	width: 100%;
+	background-color: pink;
+}
+
+input {
+	width: 160px;
+}
+.xtra {
+	height: 120px;
+}
