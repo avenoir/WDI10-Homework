@@ -1,0 +1,22 @@
+
+<h2>Group Name: <%= @kpop.group_name %></h2>
+<h3>Number of Members: <%= @kpop.num_members %></h3>
+
+<div class="copy">
+
+	<% if @kpop.image %>
+		<img class="feature" src="<%= @kpop.image %>">
+	<% end %>
+
+	<p><a href="/kpops/<%= @kpop.id %>/delete">Delete</a></p>
+	<p><a href="/kpops/<%= @kpop.id %>/edit">Edit</a></p>
+
+</div>
+
+
+
+
+
+
+
+
