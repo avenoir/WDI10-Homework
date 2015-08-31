@@ -1,0 +1,45 @@
+<link rel="stylesheet" href="assests/moves.css">
+
+<form action="/movies">
+    <input type="text" name="movie" placeholder = "Movie Name" autofocus>
+    <button>Search for a movie...</button>
+</form>
+
+<% unless @title.nil? %>
+<img src='<%= @poster %>'>
+
+<p id='title'>
+	<b>Title:</b>
+	<%= @title %>
+</p>
+
+<p id='genre'>
+	<b>Genre:</b>
+	<%= @genre %>
+</p>
+
+<p id='runtime'>
+	<b>Runtime:</b>
+	<%= @runtime %>
+</p>	
+
+<p id ='released'>
+	<b>Released:</b>
+	<%= @released %>
+</p>
+
+<p id ='director'>
+	<b>Director:</b>
+	<%= @director %>
+</p>	
+
+<p id ='writer'>
+	<b>Writer:</b>
+	<%= @writer %>
+</p>
+
+<p id='plot'>
+	<b>Rough plot:</b>
+	<%= @plot %>
+</p>
+<% end %>

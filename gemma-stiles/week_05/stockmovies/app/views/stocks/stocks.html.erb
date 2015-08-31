@@ -1,0 +1,13 @@
+<form action="/stocks">
+	<input type="text" name="stock" placeholder="stock symbol" autofocus>
+	<button>Find stock info</button>
+</form>
+
+<% unless @stock_symbol.nil? %>
+	<%= params[:stock] %>
+	= 
+	<strong><%= @price %></strong>.
+<% end %>
+
+
+
