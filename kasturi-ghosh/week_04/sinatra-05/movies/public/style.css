@@ -1,0 +1,66 @@
+
+@import url(http://fonts.googleapis.com/css?family=Poiret+One);
+body {
+	font-family: 'Poiret One', cursive;
+	/*background-image: url("http://7428.net/wp-content/uploads/2012/09/Dream-Movie-Background-3.jpg");*/
+	background-image: url("http://i.imgur.com/uyeqTRM.jpg");
+	background-size: cover;
+}
+
+.container {
+	max-width: 960px;
+	text-align: center;
+	color: black;
+	margin: 0 auto;
+	padding: 20px;
+	border-radius: 5px;
+	font-size: 1.5em;
+	font-weight: bold;
+}
+
+h1 {
+	color: pink;
+}
+
+nav {
+	text-align: right;
+}
+
+input {
+	font-family: 'Poiret One', cursive;
+	width: 33%
+	height: 50px;
+	font-size: 1em;
+	border-radius: 5px;
+	padding: 10px;
+	margin: 20px;
+}
+
+button {
+	font-family: 'Poiret One', cursive;
+	width: 20%
+	height: 50px;
+	font-size: 0.8em;
+	border-radius: 3px;
+	background-color: black;
+	color: #E6CAAB;
+	padding: 10px;
+	margin: 10px;
+}
+
+.picture img {
+	margin-top: 20px;
+	border: 2px solid black;
+	border-radius: 5px;
+}
+
+a {
+	color: #B10A7F;
+	text-decoration: none;
+	font-size: 0.9em;
+	font-weight: bold;
+}
+
+a:hover {
+	font-size: 1.5em;
+}

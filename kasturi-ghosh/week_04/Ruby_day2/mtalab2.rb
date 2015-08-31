@@ -19,7 +19,10 @@ def plan_trip ( departure_line, departure_stop, arrival_line, arrival_stop )
 	travel_line_arrv = []
 
 	# traveling on the same line
-	if departure_line == arrival_line 
+	if departure_line == arrival_line && departure_stop == arrival_stop
+		message = "No stops!"
+
+	elsif departure_line == arrival_line 
 
 		# in forward direction
 		if departure_index < arrival_index
