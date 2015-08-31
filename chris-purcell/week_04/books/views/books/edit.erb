@@ -1,0 +1,12 @@
+<div class="border">
+<h1> Currently editing <%= @book.title %> </h1>
+<form action="/books/<%= @book.id %>" method="post">
+	<p><input class="boxes" type="text" name="title" placeholder="Title" value="<%= @book.title %>"></p>
+	<p><input class="boxes" type="text" name="author" placeholder="Author" value ="<%= @book.author %>"></p>
+	<p><input class="boxes"type="url" name="cover" placeholder="Cover Image" value ="<%= @book.cover %>"></p>
+	<p><textarea class="boxes xtra" type="text" name="summary" placeholder="Summary"><%= @book.summary %></textarea></p>
+	<p><input class="boxes" type="boolean" name="read" placeholder="Have you read this?" value="<%= @book.read %>"></p>
+
+	<input type="submit" value="Edit Book">
+</form>
+</div>

@@ -1,0 +1,8 @@
+<div class="border">
+<h1> Featured Authors </h1>
+<div>
+<% @book.each do |book| %>
+<p><a href="http://www.goodreads.com/search?query=<%= book.author.tr(' ', '+') %>"><%= book.author %></a></p>
+<% end %>
+</div>
+</div>

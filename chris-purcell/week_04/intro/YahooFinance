@@ -1,0 +1,21 @@
+Last login: Wed Aug 26 10:54:40 on ttys001
+Chriss-MacBook-Pro:~ chrispurcell$ pry
+[1] pry(main)> info = YahooFinance.get_quotes YahooFinance::StandardQuote, @stock_symbol
+
+NameError: uninitialized constant YahooFinance
+from (pry):1:in `__pry__'
+[2] pry(main)> require 'yahoofinance'
+=> true
+[3] pry(main)> info = YahooFinance.get_quotes YahooFinance::StandardQuote, @stock_symbol
+
+=> {}
+[4] pry(main)> 
+[5] pry(main)> info
+=> {}
+[6] pry(main)> @stock_symbol = "GOOG" #in real life: params[:stock_symbol]
+=> "GOOG"
+[7] pry(main)> info = YahooFinance::get_quotes YahooFinance:: StandardQuote, @stock_symbol;
+
+[8] pry(main)> @price = info[@stock_symbol].lastTrade
+=> 582.06
+[9] pry(main)> 

@@ -1,0 +1,4 @@
+<% if (query_db("SELECT * from movies WHERE title = #{ @title }") == true) %>
+<img src=<%= query_db "SELECT poster from movies WHERE title = #{ @title }}"%>>
+<p><%= query_db "SELECT plot from movies WHERE title = #{ @title }" %></p>
+<% else %>

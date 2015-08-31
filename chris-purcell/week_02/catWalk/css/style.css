@@ -1,0 +1,78 @@
+body {
+	background-image: url("nicestroll.jpeg");
+}
+
+img:nth-of-type(1) {
+  	top: 200px;
+}
+
+.background {
+  	width: 100%;
+}
+
+.turnRight {
+-moz-transform: scale(1, 1);
+-webkit-transform: scale(1, 1);
+-o-transform: scale(1, 1);
+transform: scale(1, 1);
+filter: FlipH;
+}
+
+.turnLeft {
+    -moz-transform: scale(-1, 1);
+	-webkit-transform: scale(-1, 1);
+	-o-transform: scale(-1, 1);
+	transform: scale(-1, 1);
+	filter: FlipH;
+}
+
+.rain:nth-of-type(1) {
+	right: 130px;
+	top: 30px;
+}
+
+.rain:nth-of-type(2) {
+	right: 115px;
+}
+
+.rain:nth-of-type(3) {
+	right: 100px;
+	top: 33px;
+}
+
+.rain:nth-of-type(4) {
+	right: 85px;
+	top: 30px;
+}
+
+.rain:nth-of-type(5) {
+	right: 70px;
+}
+
+.rain:nth-of-type(6) {
+	right: 55px;
+}
+
+.rain:nth-of-type(7) {
+	right: 40px;
+	top: 35px;
+}
+
+.rain:nth-of-type(8) {
+	right: 25px;
+	top: 30px;
+}
+
+.rain:nth-of-type(9) {
+	right: 10px;
+
+}
+
+.rain:nth-of-type(10) {
+	right: 5px;
+}
+
+.rain:nth-of-type(11) {
+	right: 145px;
+	top: 35px;
+}

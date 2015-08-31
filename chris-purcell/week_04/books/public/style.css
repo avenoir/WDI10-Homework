@@ -1,0 +1,82 @@
+@import url(https://fonts.googleapis.com/css?family=Roboto:500italic,500);
+
+body {
+	
+	width: 100%;
+	background-color: none;
+	margin: 0 auto;
+	text-align: center;
+}
+
+textarea {
+	font-size: 18px;
+}
+
+p {
+	text-align: center;
+	max-width: 100%;
+}
+
+a { 
+	padding: 10px;
+}
+
+nav {
+	padding: 18px;
+	margin: 0 auto;
+	font-size: 22px;
+}
+div {
+	margin: auto;
+	background-color: cornsilk;
+	width: 500px;
+	margin: 0 auto;
+}
+
+
+
+input[type="submit"]{
+	width: 110px;
+}
+
+input {
+  
+}
+
+input:focus {
+  outline: none;
+}
+
+.border {
+	border: 3px solid aquamarine;
+}
+
+.boxes {
+  display: block;
+  margin: 0;
+  width: 50%;
+  font-family: sans-serif;
+  font-size: 18px;
+  appearance: none;
+  box-shadow: none;
+  border-radius: none;
+  resize: vertical;
+  display: inline-block;
+  padding: 10px;
+  border: solid 1px #fff;
+  box-shadow: inset 1px 1px 2px 0 #707070;
+  transition: box-shadow 0.3s;
+}
+
+.boxes:focus,
+.boxes.focus {
+  box-shadow: inset 1px 1px 2px 0 #c9c9c9;
+}
+
+.xtra {
+ 	vertical-align: top;
+ 	width: 50%;
+ 	resize:none;
+	display: inline-block;
+	resize: vertical;
+}

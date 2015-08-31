@@ -1,0 +1,10 @@
+<div class="border">
+<h1> The Book List </h1>
+
+<% @book.each do |book| %>
+	<p>
+	<a href="/books/<%= book.id %>"><%= book.title %> by <%= book.author %>.</a>
+	<p>Currently Read? : <%= book.read %></p>
+	</p>
+<% end %>
+</div>
