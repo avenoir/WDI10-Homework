@@ -1,0 +1,24 @@
+<script>
+	$('.logo').css('margin-top', '1%');
+</script>
+
+<%= erb :home %>
+<% if @length > 1 %>
+	<ol>
+	<% @movie_list_array.each do |element| %>
+		<li><a href="/posters?movie_title=<%= element['Title'] %>"><%= element['Title'] %></a></li>
+	<% end %>
+	</ol>
+<% else %>
+	<div class="movie-profile">
+		<div class="poster">
+			<img src="<%= @poster %>" alt="No Image :(">
+		</div>
+		<div class="movie-description">
+			<p>IMDb ID: <%= @imdbID%></p>
+			<p>Movie Title: <%= @title || @title_uniq%></p>
+			<p>Genre: <%= @genre || @movie.first['genre']%></p>
+			<p>Plot: <%= @plot %></p>
+		</div>
+	</div>
+<% end %>

@@ -1,0 +1,22 @@
+<div class="sailor_new">
+	<% if @sailor.headshot %>
+		<img class="feature" src="<%= @sailor.headshot %>" alt="">
+	<% end %>
+	<!-- <img class="sailormoon" src="/images/sailormoon3.png" alt=""> -->
+	<% if @sailor.costume == "Moon" %>
+		<img class="sailormoon" src="/images/sailormoon3.png" alt="">
+	<% elsif @sailor.costume == "Mercury" %>
+		<img class="sailormoon" src="/images/sailormercury.png" alt="">
+	<% elsif @sailor.costume == "Jupiter" %>
+		<img class="sailormoon" src="/images/Sailor Jupiter.png" alt="">
+	<% end %>
+</div>
+
+<h2><strong>Sailor <%= @sailor.name %></strong><h2>
+<h2>Super Power: <%= @sailor.superpower %><h2>
+<h2>Clan: <%= @sailor.costume %><h2>
+
+<p>
+<a href="/sailors/<%= @sailor.id %>/delete">Delete</a>
+<a href="/sailors/<%= @sailor.id %>/edit">Edit</a>
+</p>

@@ -1,0 +1,60 @@
+@import url(https://fonts.googleapis.com/css?family=Chewy);
+@import url(https://fonts.googleapis.com/css?family=Roboto);
+
+.container {
+	/*max-width: 960px;*/
+	max-width: 70vw;
+	margin: auto;
+	text-align: center;
+	font-family: 'Roboto', sans-serif;
+}
+
+.logo {
+	font-family: 'Chewy', cursive;
+	font-size: 100px;
+	color: rgba(14,37,242,0.85);
+	text-shadow: -1px 1px 0 rgba(64,65,68,0.5);
+	margin-top: 23%;
+/*	-webkit-animation: slide 1s 1 normal linear;*/
+	transition: margin-top 1.4s ease-in-out;
+	text-decoration: none;
+}
+
+.transition {
+	margin-top: 1%;
+}
+
+/*@-webkit-keyframes slide {
+	0% { margin-top: 15%;}
+	50% { margin-top: 10%;}
+	100% { margin-top: 5%;}
+}
+*/
+
+ol {
+	list-style-type: none;
+	text-align: left;
+	margin-top: 2em;
+}
+
+.movie-profile {
+	margin-top: 2em;
+	display: flex;
+}
+
+.poster {
+	flex: 1;
+}
+
+.movie-description {
+	flex: 2;
+}
+
+p {
+	margin: 0 0 1.5em 85px;
+	text-align: left;
+}
+
+span {
+	color: rgba(152,249,236,0.9);
+}
