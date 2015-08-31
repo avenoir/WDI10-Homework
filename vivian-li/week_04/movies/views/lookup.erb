@@ -1,0 +1,23 @@
+  <% unless @poster.nil? %>
+
+  <div class="moviePoster">
+	<img src ="<%=@poster%>"> 
+ </div>
+<p>Movie : <%=@title1%></p>
+    <p>IMDBID : <%=@imdbid %></p>
+    <p>Message: <%=@message%></p>
+
+    
+<% end %>
+
+
+
+
+
+ <form action="/lookup"> 
+ <input type="text" name="movietitle" placeholder ="Movie Title Here"> 
+
+   <input type="submit" value="Go">
+
+
+</form>

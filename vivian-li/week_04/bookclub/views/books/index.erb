@@ -1,0 +1,11 @@
+<h1>All Books</h1>
+
+<% @books.each do |book| %>
+  <div class = "list" > 
+  <p>
+    <a href="/books/<%= book.id %>">
+      <%= book.title %>
+    </a>
+  </p>
+  </div>
+<% end %>
