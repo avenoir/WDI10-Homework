@@ -1,0 +1,10 @@
+<h3 class="header">Editing TAIME</h3>
+
+<form action="/guitars/<%=@guitar.id%>" method="POST">
+	
+	<p><input class="input_form" type="text" placeholder="guitar name" name="name" value="<%=@guitar.name%>"></p>
+	<p><input class="input_form" type="text" placeholder="guitarist" name="guitarist" value="<%=@guitar.guitarist%>"></p>
+	<p><input class="input_form" type="url" placeholder="image URL" name="image" value="<%=@guitar.image%>"></p>
+
+	<input type="submit" value="Plis Pres to update">
+</form>

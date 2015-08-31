@@ -1,0 +1,18 @@
+<div class="show_container">
+
+<h2 class="header">This is guitar plis</h2>
+
+<p class="guitar_show_desc">Guitar is a : <%= @guitar.name %></p>
+<p class="guitar_show_desc">The most famous musician to play it is/was : <%= @guitar.guitarist %></p>
+<p class="guitar_show_desc">Look at it, LOOOK AT IT : </p> <img class="guitar_show" src="<%=@guitar.image%>" alt="">
+
+<a class="btn btn-danger" onclick="return confirm('are you sure?')" href="/guitars/delete/<%=@guitar.id%>">Delete this poor guy</a>
+
+<a class="btn btn-info" href="/guitars/edit/<%=@guitar.id%>">Edit this guy</a>
+
+<a class="iframe_click btn btn-info" target="iframe_a" href="https://8tracks.com/explore/<%= @guitarist %>"> Click for More </a>
+
+<iframe class="iframe" name="iframe_a" src="" style="border: 0; width:100%; height:300px"></iframe>
+
+</div>
+
