@@ -1,0 +1,14 @@
+
+<form action="/magic">
+	<input class="user_input" type="text" name="question" placeholder="What is your question?" autofocus>
+	<input type="submit" value="Submit Question">
+</form>
+
+<% if @question %>
+	<p>You question is: <strong><%= @question %></strong></p>
+	<p>Answer: <strong><%= @answers.sample %></strong></p>
+<% end %>
+
+
+
+

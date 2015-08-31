@@ -1,0 +1,29 @@
+
+<% @title = params[:title] %>
+<% url = "http://omdbapi.com/?s=#{ @title }" %>
+<% movie_info = HTTParty.get url %>
+	
+<% @title_list = movie_info["Search"] %>
+<% poster = movie_info["Poster"] %>
+
+<% unless @title.empty? %>
+	<h2>Here are the results: </h2>
+
+	<% i = 0 %>
+	<% while i < @title_list.length do %>
+
+		<% url = "http://omdbapi.com/?t=#{ @title_list[i]['Title'] }" %>
+		<% pic = HTTParty.get url %>
+		
+		<!-- if there is only one result, display the poster directly -->
+		<% if @title_list.length === 1 %>
+			<img src="<%= pic['Poster'] %>">
+		
+		<!-- othewise, make each result as a link, direct it to its poster -->
+		<% else %>
+			<p><a href="<%= pic['Poster'] %>"><%= i+1 %>. <%= @title_list[i]["Title"] %></a></p>
+		<% end %>
+		
+		<% i = i+1 %>
+	<% end %>
+<% end %>
