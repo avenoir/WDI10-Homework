@@ -1,0 +1,53 @@
+* {
+  font-family: "Belgrano", serif;
+}
+
+h1, h2, h3, h4, h5 {
+  font-family: "Lato", sans-serif;
+}
+
+.container {
+  width: 480px;
+  margin: 0 auto;
+}
+
+/////////////////////////////////////////////////
+// NAVIGATION //
+
+.global-nav {
+  ul {
+    list-style: none;
+    padding: 5px;
+    li {
+      display: inline-block;
+      margin: 0;
+      margin-right: 10px;
+      text-align: left;
+    }
+  }
+}
+
+/////////////////////////////////////////////////
+
+/////////////////////////////////////////////////
+// EDIT PAGE //
+
+#edit-booze-form {
+  h4 {
+    margin: 0;
+  }
+
+  input, #edit-description {
+    width: 300px;
+    display: block;
+    margin: 10px 0;
+    border: 1px solid #ddd;
+    padding: 10px;
+  }
+
+  #edit-description {
+    height: 80px;
+  }
+}
+
+/////////////////////////////////////////////////

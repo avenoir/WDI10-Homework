@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Our Basic Sinatra App</title>
+</head>
+<body>
+    <h1>Welcome to this thing</h1>
+
+    <h2> SEARCH! </h2>
+
+    <form action="/search">
+        <input type="text" name="title">
+        <input type="submit" value="Search">
+    </form>
+
+    <%= yield %> <!-- This is is in search.erb etc -->
+
+</body>
+</html>
+
