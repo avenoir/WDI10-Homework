@@ -1,0 +1,120 @@
+@import url(https://fonts.googleapis.com/css?family=Architects+Daughter);
+
+body {
+	background-image: url("https://cf.geekdo-images.com/images/pic2570797_md.jpg");
+	font-family: 'Architects Daughter', cursive;
+	background-size: cover;
+	background-repeat: none;
+	margin: 0 auto;
+	color: #FFA22D;
+}
+
+.container {
+	max-width: 960px;
+	padding: 10px;
+}
+
+nav {
+	text-align: right;
+	padding: 10px;
+}
+
+h1 {
+	color: red;
+}
+
+h2 {
+	text-align: center;
+}
+
+.large {
+	font-size: 1.5em;
+}
+
+.center {
+	text-align: center;
+}
+
+.left {
+	position: absolute;
+	left: 70px;
+}
+
+.right {
+	position: relative;
+	left: 60%;
+}
+
+img {
+	border-radius: 3%;
+	border: 2px solid red;
+}
+
+a {
+	text-decoration: none;
+	padding: 5px;
+	color: gray;
+}
+
+.entry {
+	padding: 5px;
+	margin: 5px;
+	width: 300px;
+	height: 25px;
+	border-radius: 5%;
+	background-color: yellow;
+	font-family: 'Architects Daughter', cursive;
+	font-size: 1.2em;
+}
+
+.entry:hover {
+	color: red;
+	font-size: 1.5em;
+	background-color: gray;
+}
+
+.button {
+	padding: 10px;
+	margin-left: 40px;
+	margin-bottom: 10px;
+	font-family: 'Architects Daughter', cursive;
+	font-size: 1.2em;
+	background-color: gray;
+	border-radius: 5%;
+	color: white;
+
+}
+
+.button:hover {
+	font-size: 1.5em;
+	background-color: red;
+}
+
+
+a:hover {
+	color: pink;
+	font-size: 1.5em;
+}
+
+.delete {
+	text-align: center;
+}
+
+.delete p {
+	font-size: 1.2em;
+}
+
+.delete button {
+	background-color: yellow;
+	color: gray;
+}
+
+.delete button:hover {
+	background-color: red;
+	color: white;
+}
+
+.message {
+	color: red;
+	font-size: 1.5em;
+}

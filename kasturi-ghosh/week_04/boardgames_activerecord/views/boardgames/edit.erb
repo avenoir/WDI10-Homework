@@ -1,0 +1,16 @@
+<h2>Edit '<%= @boardgame.name %>'</h2>
+<form class="center" action="/boardgames/<%= @boardgame.id %>" method="post">
+	<p><input class="entry" type="text" name="name" placeholder="Name" value="<%= @boardgame.name %>" required></p>
+	<p><input  class="entry" type="text" name="designers" placeholder="Designer(s) comma separated" value="<%= @boardgame.designers %>"></p>
+	<p><input  class="entry" type="text" name="year" placeholder="Year Published" value="<%= @boardgame.year %>"></p>
+	<p><input  class="entry" type="text" name="players" placeholder="Number of Players" value="<%= @boardgame.players %>"></p>
+	<p><input  class="entry" type="text" name="time" placeholder="Duration of Game in minutes" value="<%= @boardgame.time %>"></p>
+	<p><input  class="entry" type="text" name="website" placeholder="Website" value="<%= @boardgame.website %>"></p>
+	<p><input  class="entry" type="url" name="image" placeholder="Image URL" value="<%= @boardgame.image %>"></p>
+
+	<input class="button" type="submit" value="Update '<%= @boardgame.name %>'">
+	
+</form>
+<form class="center" action="/boardgames/<%= @boardgame.id %>">
+	<input class="button" type="submit" value="Cancel">
+</form>

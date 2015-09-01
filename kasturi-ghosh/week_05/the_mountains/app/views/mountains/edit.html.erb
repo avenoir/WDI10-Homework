@@ -1,0 +1,15 @@
+<h2>Edit Mt. <%= @mountain.name %></h2>
+
+<form action="/mountains/<%= @mountain.id %>" method="post">
+	<p>Name: <input class="entry" type="text" name="mountain[name]" value="<%= @mountain.name %>" placeholder="name" required="true"></p>
+	<p>Image: <input class="entry" type="text" name="mountain[image]" value="<%= @mountain.image %>" placeholder="image URL"></p>
+	<p>Location: <input class="entry" type="text" name="mountain[location]" value="<%= @mountain.location %>" placeholder="country"></p>
+	<p>Height: <input class="entry" type="text" name="mountain[height]" value="<%= @mountain.height %>" placeholder="in meters"></p>
+	<p>First ascender: <input class="entry" type="text" name="mountain[first_climber]" value="<%= @mountain.first_climber %>" placeholder="name of mountaineer(s)"></p>
+
+	<input class="button" type="submit" value="Update Mt. <%= @mountain.name %>">
+</form>
+
+<form action="/mountains/<%= @mountain.id %>">
+	<input class="button" type="submit" value="Cancel">
+</form>

@@ -1,0 +1,24 @@
+
+<h2>Mt. <%= @mountain.name %></h2>
+
+<% if @mountain.location != "" %>
+	<p>Location: <%= @mountain.location %></p>
+<% end %>
+<% if @mountain.height != "" %>
+	<p>Height above sea level: <%= @mountain.height %>meters</p>
+<% end %>
+<% if @mountain.first_climber != "" %>
+	<p>First ascender: <%= @mountain.first_climber %></p>
+<% end %>
+
+<% if @mountain.image %>
+	<%= image_tag @mountain.image, :class => 'feature' %>
+<% end %>
+
+<div class="controls">
+	<%= link_to('Edit Mountain', mountain_edit_path(@mountain.id)) %>
+	<form action="/mountains"><input type="submit" value="Back"></form>
+	<%= button_to('Destroy Mountain', mountain_path(@mountain.id), :method => 'delete') %>
+	
+</div>
+

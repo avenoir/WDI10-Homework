@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>TheMountains</title>
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+
+<div class="container">
+	<nav>
+		<%= link_to 'Database', mountains_path %>
+		<%= link_to 'Add Mountains', mountains_new_path %>
+	</nav>
+	<%= yield %>
+</div>
+
+</body>
+</html>
