@@ -1,0 +1,2242 @@
+
+
+Started GET "/" for ::1 at 2015-09-01 19:53:45 +1000
+
+ActiveRecord::PendingMigrationError (
+
+Migrations are pending. To resolve this issue, run:
+
+	bin/rake db:migrate RAILS_ENV=development
+
+):
+  activerecord (4.2.4) lib/active_record/migration.rb:392:in `check_pending!'
+  activerecord (4.2.4) lib/active_record/migration.rb:373:in `call'
+  actionpack (4.2.4) lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+  activesupport (4.2.4) lib/active_support/callbacks.rb:88:in `__run_callbacks__'
+  activesupport (4.2.4) lib/active_support/callbacks.rb:778:in `_run_call_callbacks'
+  activesupport (4.2.4) lib/active_support/callbacks.rb:81:in `run_callbacks'
+  actionpack (4.2.4) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (4.2.4) lib/action_dispatch/middleware/reloader.rb:73:in `call'
+  actionpack (4.2.4) lib/action_dispatch/middleware/remote_ip.rb:78:in `call'
+  actionpack (4.2.4) lib/action_dispatch/middleware/debug_exceptions.rb:17:in `call'
+  web-console (2.2.1) lib/web_console/middleware.rb:39:in `call'
+  actionpack (4.2.4) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.4) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.4) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.4) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.4) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.4) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.4) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.4) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.4) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.4) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.4) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.4) lib/action_dispatch/middleware/static.rb:116:in `call'
+  rack (1.6.4) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.4) lib/rails/engine.rb:518:in `call'
+  railties (4.2.4) lib/rails/application.rb:165:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  rack (1.6.4) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.4) lib/rack/handler/webrick.rb:88:in `service'
+  /Users/guychamberlain/.rvm/rubies/ruby-2.2.3/lib/ruby/2.2.0/webrick/httpserver.rb:138:in `service'
+  /Users/guychamberlain/.rvm/rubies/ruby-2.2.3/lib/ruby/2.2.0/webrick/httpserver.rb:94:in `run'
+  /Users/guychamberlain/.rvm/rubies/ruby-2.2.3/lib/ruby/2.2.0/webrick/server.rb:294:in `block in start_thread'
+
+
+  Rendered /Users/guychamberlain/.rvm/gems/ruby-2.2.3/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_source.erb (1.9ms)
+  Rendered /Users/guychamberlain/.rvm/gems/ruby-2.2.3/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.4ms)
+  Rendered /Users/guychamberlain/.rvm/gems/ruby-2.2.3/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.0ms)
+  Rendered /Users/guychamberlain/.rvm/gems/ruby-2.2.3/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (52.3ms)
+  Rendered /Users/guychamberlain/.rvm/gems/ruby-2.2.3/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (0.3ms)
+  Rendered /Users/guychamberlain/.rvm/gems/ruby-2.2.3/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.5ms)
+  Rendered /Users/guychamberlain/.rvm/gems/ruby-2.2.3/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/guychamberlain/.rvm/gems/ruby-2.2.3/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/guychamberlain/.rvm/gems/ruby-2.2.3/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (50.3ms)
+  Rendered /Users/guychamberlain/.rvm/gems/ruby-2.2.3/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (0.3ms)
+  Rendered /Users/guychamberlain/.rvm/gems/ruby-2.2.3/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.5ms)
+  Rendered /Users/guychamberlain/.rvm/gems/ruby-2.2.3/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (115.9ms)
+  [1m[36m (1.1ms)[0m  [1mCREATE TABLE "schema_migrations" ("version" varchar NOT NULL) [0m
+  [1m[35m (0.0ms)[0m  select sqlite_version(*)
+  [1m[36m (1.1ms)[0m  [1mCREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.1ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+Migrating to CreateOceans (20150901053600)
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.4ms)[0m  CREATE TABLE "oceans" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) 
+SQLite3::SQLException: table "oceans" already exists: CREATE TABLE "oceans" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) 
+  [1m[36m (0.0ms)[0m  [1mrollback transaction[0m
+
+
+Started GET "/" for ::1 at 2015-09-01 19:55:02 +1000
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+
+ActiveRecord::PendingMigrationError (
+
+Migrations are pending. To resolve this issue, run:
+
+	bin/rake db:migrate RAILS_ENV=development
+
+):
+  activerecord (4.2.4) lib/active_record/migration.rb:392:in `check_pending!'
+  activerecord (4.2.4) lib/active_record/migration.rb:373:in `call'
+  actionpack (4.2.4) lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+  activesupport (4.2.4) lib/active_support/callbacks.rb:88:in `__run_callbacks__'
+  activesupport (4.2.4) lib/active_support/callbacks.rb:778:in `_run_call_callbacks'
+  activesupport (4.2.4) lib/active_support/callbacks.rb:81:in `run_callbacks'
+  actionpack (4.2.4) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (4.2.4) lib/action_dispatch/middleware/reloader.rb:73:in `call'
+  actionpack (4.2.4) lib/action_dispatch/middleware/remote_ip.rb:78:in `call'
+  actionpack (4.2.4) lib/action_dispatch/middleware/debug_exceptions.rb:17:in `call'
+  web-console (2.2.1) lib/web_console/middleware.rb:39:in `call'
+  actionpack (4.2.4) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.4) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.4) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.4) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.4) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.4) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.4) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.4) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.4) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.4) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.4) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.4) lib/action_dispatch/middleware/static.rb:116:in `call'
+  rack (1.6.4) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.4) lib/rails/engine.rb:518:in `call'
+  railties (4.2.4) lib/rails/application.rb:165:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  rack (1.6.4) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.4) lib/rack/handler/webrick.rb:88:in `service'
+  /Users/guychamberlain/.rvm/rubies/ruby-2.2.3/lib/ruby/2.2.0/webrick/httpserver.rb:138:in `service'
+  /Users/guychamberlain/.rvm/rubies/ruby-2.2.3/lib/ruby/2.2.0/webrick/httpserver.rb:94:in `run'
+  /Users/guychamberlain/.rvm/rubies/ruby-2.2.3/lib/ruby/2.2.0/webrick/server.rb:294:in `block in start_thread'
+
+
+  Rendered /Users/guychamberlain/.rvm/gems/ruby-2.2.3/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_source.erb (2.3ms)
+  Rendered /Users/guychamberlain/.rvm/gems/ruby-2.2.3/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.5ms)
+  Rendered /Users/guychamberlain/.rvm/gems/ruby-2.2.3/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.9ms)
+  Rendered /Users/guychamberlain/.rvm/gems/ruby-2.2.3/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (50.6ms)
+  Rendered /Users/guychamberlain/.rvm/gems/ruby-2.2.3/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (0.3ms)
+  Rendered /Users/guychamberlain/.rvm/gems/ruby-2.2.3/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/guychamberlain/.rvm/gems/ruby-2.2.3/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.5ms)
+  Rendered /Users/guychamberlain/.rvm/gems/ruby-2.2.3/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/guychamberlain/.rvm/gems/ruby-2.2.3/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (43.7ms)
+  Rendered /Users/guychamberlain/.rvm/gems/ruby-2.2.3/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (0.3ms)
+  Rendered /Users/guychamberlain/.rvm/gems/ruby-2.2.3/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.4ms)
+  Rendered /Users/guychamberlain/.rvm/gems/ruby-2.2.3/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (92.5ms)
+
+
+Started GET "/" for ::1 at 2015-09-01 19:55:03 +1000
+  [1m[35mActiveRecord::SchemaMigration Load (0.1ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+
+ActiveRecord::PendingMigrationError (
+
+Migrations are pending. To resolve this issue, run:
+
+	bin/rake db:migrate RAILS_ENV=development
+
+):
+  activerecord (4.2.4) lib/active_record/migration.rb:392:in `check_pending!'
+  activerecord (4.2.4) lib/active_record/migration.rb:373:in `call'
+  actionpack (4.2.4) lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+  activesupport (4.2.4) lib/active_support/callbacks.rb:88:in `__run_callbacks__'
+  activesupport (4.2.4) lib/active_support/callbacks.rb:778:in `_run_call_callbacks'
+  activesupport (4.2.4) lib/active_support/callbacks.rb:81:in `run_callbacks'
+  actionpack (4.2.4) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (4.2.4) lib/action_dispatch/middleware/reloader.rb:73:in `call'
+  actionpack (4.2.4) lib/action_dispatch/middleware/remote_ip.rb:78:in `call'
+  actionpack (4.2.4) lib/action_dispatch/middleware/debug_exceptions.rb:17:in `call'
+  web-console (2.2.1) lib/web_console/middleware.rb:39:in `call'
+  actionpack (4.2.4) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.4) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.4) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.4) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.4) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.4) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.4) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.4) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.4) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.4) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.4) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.4) lib/action_dispatch/middleware/static.rb:116:in `call'
+  rack (1.6.4) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.4) lib/rails/engine.rb:518:in `call'
+  railties (4.2.4) lib/rails/application.rb:165:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  rack (1.6.4) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.4) lib/rack/handler/webrick.rb:88:in `service'
+  /Users/guychamberlain/.rvm/rubies/ruby-2.2.3/lib/ruby/2.2.0/webrick/httpserver.rb:138:in `service'
+  /Users/guychamberlain/.rvm/rubies/ruby-2.2.3/lib/ruby/2.2.0/webrick/httpserver.rb:94:in `run'
+  /Users/guychamberlain/.rvm/rubies/ruby-2.2.3/lib/ruby/2.2.0/webrick/server.rb:294:in `block in start_thread'
+
+
+  Rendered /Users/guychamberlain/.rvm/gems/ruby-2.2.3/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_source.erb (2.1ms)
+  Rendered /Users/guychamberlain/.rvm/gems/ruby-2.2.3/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.8ms)
+  Rendered /Users/guychamberlain/.rvm/gems/ruby-2.2.3/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.8ms)
+  Rendered /Users/guychamberlain/.rvm/gems/ruby-2.2.3/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (47.0ms)
+  Rendered /Users/guychamberlain/.rvm/gems/ruby-2.2.3/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (0.4ms)
+  Rendered /Users/guychamberlain/.rvm/gems/ruby-2.2.3/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/guychamberlain/.rvm/gems/ruby-2.2.3/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/guychamberlain/.rvm/gems/ruby-2.2.3/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/guychamberlain/.rvm/gems/ruby-2.2.3/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (42.7ms)
+  Rendered /Users/guychamberlain/.rvm/gems/ruby-2.2.3/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (0.3ms)
+  Rendered /Users/guychamberlain/.rvm/gems/ruby-2.2.3/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.4ms)
+  Rendered /Users/guychamberlain/.rvm/gems/ruby-2.2.3/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (95.2ms)
+
+
+Started GET "/" for ::1 at 2015-09-01 19:57:43 +1000
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+
+ActiveRecord::PendingMigrationError (
+
+Migrations are pending. To resolve this issue, run:
+
+	bin/rake db:migrate RAILS_ENV=development
+
+):
+  activerecord (4.2.4) lib/active_record/migration.rb:392:in `check_pending!'
+  activerecord (4.2.4) lib/active_record/migration.rb:373:in `call'
+  actionpack (4.2.4) lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+  activesupport (4.2.4) lib/active_support/callbacks.rb:88:in `__run_callbacks__'
+  activesupport (4.2.4) lib/active_support/callbacks.rb:778:in `_run_call_callbacks'
+  activesupport (4.2.4) lib/active_support/callbacks.rb:81:in `run_callbacks'
+  actionpack (4.2.4) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (4.2.4) lib/action_dispatch/middleware/reloader.rb:73:in `call'
+  actionpack (4.2.4) lib/action_dispatch/middleware/remote_ip.rb:78:in `call'
+  actionpack (4.2.4) lib/action_dispatch/middleware/debug_exceptions.rb:17:in `call'
+  web-console (2.2.1) lib/web_console/middleware.rb:39:in `call'
+  actionpack (4.2.4) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.4) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.4) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.4) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.4) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.4) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.4) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.4) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.4) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.4) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.4) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.4) lib/action_dispatch/middleware/static.rb:116:in `call'
+  rack (1.6.4) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.4) lib/rails/engine.rb:518:in `call'
+  railties (4.2.4) lib/rails/application.rb:165:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  rack (1.6.4) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.4) lib/rack/handler/webrick.rb:88:in `service'
+  /Users/guychamberlain/.rvm/rubies/ruby-2.2.3/lib/ruby/2.2.0/webrick/httpserver.rb:138:in `service'
+  /Users/guychamberlain/.rvm/rubies/ruby-2.2.3/lib/ruby/2.2.0/webrick/httpserver.rb:94:in `run'
+  /Users/guychamberlain/.rvm/rubies/ruby-2.2.3/lib/ruby/2.2.0/webrick/server.rb:294:in `block in start_thread'
+
+
+  Rendered /Users/guychamberlain/.rvm/gems/ruby-2.2.3/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_source.erb (1.7ms)
+  Rendered /Users/guychamberlain/.rvm/gems/ruby-2.2.3/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.1ms)
+  Rendered /Users/guychamberlain/.rvm/gems/ruby-2.2.3/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.6ms)
+  Rendered /Users/guychamberlain/.rvm/gems/ruby-2.2.3/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (42.2ms)
+  Rendered /Users/guychamberlain/.rvm/gems/ruby-2.2.3/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (0.3ms)
+  Rendered /Users/guychamberlain/.rvm/gems/ruby-2.2.3/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/guychamberlain/.rvm/gems/ruby-2.2.3/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/guychamberlain/.rvm/gems/ruby-2.2.3/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.2ms)
+  Rendered /Users/guychamberlain/.rvm/gems/ruby-2.2.3/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (42.1ms)
+  Rendered /Users/guychamberlain/.rvm/gems/ruby-2.2.3/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (0.2ms)
+  Rendered /Users/guychamberlain/.rvm/gems/ruby-2.2.3/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.6ms)
+  Rendered /Users/guychamberlain/.rvm/gems/ruby-2.2.3/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (91.9ms)
+
+
+Started GET "/" for ::1 at 2015-09-01 20:06:15 +1000
+
+ActiveRecord::PendingMigrationError (
+
+Migrations are pending. To resolve this issue, run:
+
+	bin/rake db:migrate RAILS_ENV=development
+
+):
+  activerecord (4.2.4) lib/active_record/migration.rb:392:in `check_pending!'
+  activerecord (4.2.4) lib/active_record/migration.rb:373:in `call'
+  actionpack (4.2.4) lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+  activesupport (4.2.4) lib/active_support/callbacks.rb:88:in `__run_callbacks__'
+  activesupport (4.2.4) lib/active_support/callbacks.rb:778:in `_run_call_callbacks'
+  activesupport (4.2.4) lib/active_support/callbacks.rb:81:in `run_callbacks'
+  actionpack (4.2.4) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (4.2.4) lib/action_dispatch/middleware/reloader.rb:73:in `call'
+  actionpack (4.2.4) lib/action_dispatch/middleware/remote_ip.rb:78:in `call'
+  actionpack (4.2.4) lib/action_dispatch/middleware/debug_exceptions.rb:17:in `call'
+  web-console (2.2.1) lib/web_console/middleware.rb:39:in `call'
+  actionpack (4.2.4) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.4) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.4) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.4) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.4) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.4) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.4) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.4) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.4) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.4) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.4) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.4) lib/action_dispatch/middleware/static.rb:116:in `call'
+  rack (1.6.4) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.4) lib/rails/engine.rb:518:in `call'
+  railties (4.2.4) lib/rails/application.rb:165:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  rack (1.6.4) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.4) lib/rack/handler/webrick.rb:88:in `service'
+  /Users/guychamberlain/.rvm/rubies/ruby-2.2.3/lib/ruby/2.2.0/webrick/httpserver.rb:138:in `service'
+  /Users/guychamberlain/.rvm/rubies/ruby-2.2.3/lib/ruby/2.2.0/webrick/httpserver.rb:94:in `run'
+  /Users/guychamberlain/.rvm/rubies/ruby-2.2.3/lib/ruby/2.2.0/webrick/server.rb:294:in `block in start_thread'
+
+
+  Rendered /Users/guychamberlain/.rvm/gems/ruby-2.2.3/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_source.erb (1.8ms)
+  Rendered /Users/guychamberlain/.rvm/gems/ruby-2.2.3/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.1ms)
+  Rendered /Users/guychamberlain/.rvm/gems/ruby-2.2.3/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.9ms)
+  Rendered /Users/guychamberlain/.rvm/gems/ruby-2.2.3/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (41.5ms)
+  Rendered /Users/guychamberlain/.rvm/gems/ruby-2.2.3/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (0.5ms)
+  Rendered /Users/guychamberlain/.rvm/gems/ruby-2.2.3/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/guychamberlain/.rvm/gems/ruby-2.2.3/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/guychamberlain/.rvm/gems/ruby-2.2.3/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.2ms)
+  Rendered /Users/guychamberlain/.rvm/gems/ruby-2.2.3/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (50.6ms)
+  Rendered /Users/guychamberlain/.rvm/gems/ruby-2.2.3/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (0.2ms)
+  Rendered /Users/guychamberlain/.rvm/gems/ruby-2.2.3/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.4ms)
+  Rendered /Users/guychamberlain/.rvm/gems/ruby-2.2.3/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (99.0ms)
+
+
+Started GET "/" for ::1 at 2015-09-01 20:06:20 +1000
+
+ActiveRecord::PendingMigrationError (
+
+Migrations are pending. To resolve this issue, run:
+
+	bin/rake db:migrate RAILS_ENV=development
+
+):
+  activerecord (4.2.4) lib/active_record/migration.rb:392:in `check_pending!'
+  activerecord (4.2.4) lib/active_record/migration.rb:373:in `call'
+  actionpack (4.2.4) lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+  activesupport (4.2.4) lib/active_support/callbacks.rb:88:in `__run_callbacks__'
+  activesupport (4.2.4) lib/active_support/callbacks.rb:778:in `_run_call_callbacks'
+  activesupport (4.2.4) lib/active_support/callbacks.rb:81:in `run_callbacks'
+  actionpack (4.2.4) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (4.2.4) lib/action_dispatch/middleware/reloader.rb:73:in `call'
+  actionpack (4.2.4) lib/action_dispatch/middleware/remote_ip.rb:78:in `call'
+  actionpack (4.2.4) lib/action_dispatch/middleware/debug_exceptions.rb:17:in `call'
+  web-console (2.2.1) lib/web_console/middleware.rb:39:in `call'
+  actionpack (4.2.4) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.4) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.4) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.4) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.4) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.4) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.4) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.4) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.4) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.4) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.4) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.4) lib/action_dispatch/middleware/static.rb:116:in `call'
+  rack (1.6.4) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.4) lib/rails/engine.rb:518:in `call'
+  railties (4.2.4) lib/rails/application.rb:165:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  rack (1.6.4) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.4) lib/rack/handler/webrick.rb:88:in `service'
+  /Users/guychamberlain/.rvm/rubies/ruby-2.2.3/lib/ruby/2.2.0/webrick/httpserver.rb:138:in `service'
+  /Users/guychamberlain/.rvm/rubies/ruby-2.2.3/lib/ruby/2.2.0/webrick/httpserver.rb:94:in `run'
+  /Users/guychamberlain/.rvm/rubies/ruby-2.2.3/lib/ruby/2.2.0/webrick/server.rb:294:in `block in start_thread'
+
+
+  Rendered /Users/guychamberlain/.rvm/gems/ruby-2.2.3/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_source.erb (2.1ms)
+  Rendered /Users/guychamberlain/.rvm/gems/ruby-2.2.3/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.2ms)
+  Rendered /Users/guychamberlain/.rvm/gems/ruby-2.2.3/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.3ms)
+  Rendered /Users/guychamberlain/.rvm/gems/ruby-2.2.3/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (54.6ms)
+  Rendered /Users/guychamberlain/.rvm/gems/ruby-2.2.3/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (0.3ms)
+  Rendered /Users/guychamberlain/.rvm/gems/ruby-2.2.3/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.2ms)
+  Rendered /Users/guychamberlain/.rvm/gems/ruby-2.2.3/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.2ms)
+  Rendered /Users/guychamberlain/.rvm/gems/ruby-2.2.3/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/guychamberlain/.rvm/gems/ruby-2.2.3/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (41.3ms)
+  Rendered /Users/guychamberlain/.rvm/gems/ruby-2.2.3/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (0.3ms)
+  Rendered /Users/guychamberlain/.rvm/gems/ruby-2.2.3/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.4ms)
+  Rendered /Users/guychamberlain/.rvm/gems/ruby-2.2.3/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (98.8ms)
+
+
+Started GET "/" for ::1 at 2015-09-01 20:06:43 +1000
+
+ActiveRecord::PendingMigrationError (
+
+Migrations are pending. To resolve this issue, run:
+
+	bin/rake db:migrate RAILS_ENV=development
+
+):
+  activerecord (4.2.4) lib/active_record/migration.rb:392:in `check_pending!'
+  activerecord (4.2.4) lib/active_record/migration.rb:373:in `call'
+  actionpack (4.2.4) lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+  activesupport (4.2.4) lib/active_support/callbacks.rb:88:in `__run_callbacks__'
+  activesupport (4.2.4) lib/active_support/callbacks.rb:778:in `_run_call_callbacks'
+  activesupport (4.2.4) lib/active_support/callbacks.rb:81:in `run_callbacks'
+  actionpack (4.2.4) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (4.2.4) lib/action_dispatch/middleware/reloader.rb:73:in `call'
+  actionpack (4.2.4) lib/action_dispatch/middleware/remote_ip.rb:78:in `call'
+  actionpack (4.2.4) lib/action_dispatch/middleware/debug_exceptions.rb:17:in `call'
+  web-console (2.2.1) lib/web_console/middleware.rb:39:in `call'
+  actionpack (4.2.4) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.4) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.4) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.4) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.4) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.4) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.4) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.4) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.4) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.4) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.4) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.4) lib/action_dispatch/middleware/static.rb:116:in `call'
+  rack (1.6.4) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.4) lib/rails/engine.rb:518:in `call'
+  railties (4.2.4) lib/rails/application.rb:165:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  rack (1.6.4) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.4) lib/rack/handler/webrick.rb:88:in `service'
+  /Users/guychamberlain/.rvm/rubies/ruby-2.2.3/lib/ruby/2.2.0/webrick/httpserver.rb:138:in `service'
+  /Users/guychamberlain/.rvm/rubies/ruby-2.2.3/lib/ruby/2.2.0/webrick/httpserver.rb:94:in `run'
+  /Users/guychamberlain/.rvm/rubies/ruby-2.2.3/lib/ruby/2.2.0/webrick/server.rb:294:in `block in start_thread'
+
+
+  Rendered /Users/guychamberlain/.rvm/gems/ruby-2.2.3/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_source.erb (4.9ms)
+  Rendered /Users/guychamberlain/.rvm/gems/ruby-2.2.3/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (4.0ms)
+  Rendered /Users/guychamberlain/.rvm/gems/ruby-2.2.3/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.5ms)
+  Rendered /Users/guychamberlain/.rvm/gems/ruby-2.2.3/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (67.7ms)
+  Rendered /Users/guychamberlain/.rvm/gems/ruby-2.2.3/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (0.3ms)
+  Rendered /Users/guychamberlain/.rvm/gems/ruby-2.2.3/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.7ms)
+  Rendered /Users/guychamberlain/.rvm/gems/ruby-2.2.3/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.5ms)
+  Rendered /Users/guychamberlain/.rvm/gems/ruby-2.2.3/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.9ms)
+  Rendered /Users/guychamberlain/.rvm/gems/ruby-2.2.3/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (46.0ms)
+  Rendered /Users/guychamberlain/.rvm/gems/ruby-2.2.3/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (0.3ms)
+  Rendered /Users/guychamberlain/.rvm/gems/ruby-2.2.3/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (1.1ms)
+  Rendered /Users/guychamberlain/.rvm/gems/ruby-2.2.3/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (108.1ms)
+
+
+Started GET "/" for ::1 at 2015-09-01 20:08:59 +1000
+
+ActiveRecord::PendingMigrationError (
+
+Migrations are pending. To resolve this issue, run:
+
+	bin/rake db:migrate RAILS_ENV=development
+
+):
+  activerecord (4.2.4) lib/active_record/migration.rb:392:in `check_pending!'
+  activerecord (4.2.4) lib/active_record/migration.rb:373:in `call'
+  actionpack (4.2.4) lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+  activesupport (4.2.4) lib/active_support/callbacks.rb:88:in `__run_callbacks__'
+  activesupport (4.2.4) lib/active_support/callbacks.rb:778:in `_run_call_callbacks'
+  activesupport (4.2.4) lib/active_support/callbacks.rb:81:in `run_callbacks'
+  actionpack (4.2.4) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (4.2.4) lib/action_dispatch/middleware/reloader.rb:73:in `call'
+  actionpack (4.2.4) lib/action_dispatch/middleware/remote_ip.rb:78:in `call'
+  actionpack (4.2.4) lib/action_dispatch/middleware/debug_exceptions.rb:17:in `call'
+  web-console (2.2.1) lib/web_console/middleware.rb:39:in `call'
+  actionpack (4.2.4) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.4) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.4) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.4) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.4) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.4) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.4) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.4) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.4) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.4) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.4) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.4) lib/action_dispatch/middleware/static.rb:116:in `call'
+  rack (1.6.4) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.4) lib/rails/engine.rb:518:in `call'
+  railties (4.2.4) lib/rails/application.rb:165:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  rack (1.6.4) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.4) lib/rack/handler/webrick.rb:88:in `service'
+  /Users/guychamberlain/.rvm/rubies/ruby-2.2.3/lib/ruby/2.2.0/webrick/httpserver.rb:138:in `service'
+  /Users/guychamberlain/.rvm/rubies/ruby-2.2.3/lib/ruby/2.2.0/webrick/httpserver.rb:94:in `run'
+  /Users/guychamberlain/.rvm/rubies/ruby-2.2.3/lib/ruby/2.2.0/webrick/server.rb:294:in `block in start_thread'
+
+
+  Rendered /Users/guychamberlain/.rvm/gems/ruby-2.2.3/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_source.erb (3.2ms)
+  Rendered /Users/guychamberlain/.rvm/gems/ruby-2.2.3/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.0ms)
+  Rendered /Users/guychamberlain/.rvm/gems/ruby-2.2.3/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.0ms)
+  Rendered /Users/guychamberlain/.rvm/gems/ruby-2.2.3/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (43.1ms)
+  Rendered /Users/guychamberlain/.rvm/gems/ruby-2.2.3/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (0.8ms)
+  Rendered /Users/guychamberlain/.rvm/gems/ruby-2.2.3/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.5ms)
+  Rendered /Users/guychamberlain/.rvm/gems/ruby-2.2.3/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.5ms)
+  Rendered /Users/guychamberlain/.rvm/gems/ruby-2.2.3/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.8ms)
+  Rendered /Users/guychamberlain/.rvm/gems/ruby-2.2.3/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (40.6ms)
+  Rendered /Users/guychamberlain/.rvm/gems/ruby-2.2.3/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (0.2ms)
+  Rendered /Users/guychamberlain/.rvm/gems/ruby-2.2.3/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.3ms)
+  Rendered /Users/guychamberlain/.rvm/gems/ruby-2.2.3/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (89.8ms)
+
+
+Started GET "/" for ::1 at 2015-09-01 20:09:00 +1000
+
+ActiveRecord::PendingMigrationError (
+
+Migrations are pending. To resolve this issue, run:
+
+	bin/rake db:migrate RAILS_ENV=development
+
+):
+  activerecord (4.2.4) lib/active_record/migration.rb:392:in `check_pending!'
+  activerecord (4.2.4) lib/active_record/migration.rb:373:in `call'
+  actionpack (4.2.4) lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+  activesupport (4.2.4) lib/active_support/callbacks.rb:88:in `__run_callbacks__'
+  activesupport (4.2.4) lib/active_support/callbacks.rb:778:in `_run_call_callbacks'
+  activesupport (4.2.4) lib/active_support/callbacks.rb:81:in `run_callbacks'
+  actionpack (4.2.4) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (4.2.4) lib/action_dispatch/middleware/reloader.rb:73:in `call'
+  actionpack (4.2.4) lib/action_dispatch/middleware/remote_ip.rb:78:in `call'
+  actionpack (4.2.4) lib/action_dispatch/middleware/debug_exceptions.rb:17:in `call'
+  web-console (2.2.1) lib/web_console/middleware.rb:39:in `call'
+  actionpack (4.2.4) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.4) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.4) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.4) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.4) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.4) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.4) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.4) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.4) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.4) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.4) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.4) lib/action_dispatch/middleware/static.rb:116:in `call'
+  rack (1.6.4) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.4) lib/rails/engine.rb:518:in `call'
+  railties (4.2.4) lib/rails/application.rb:165:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  rack (1.6.4) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.4) lib/rack/handler/webrick.rb:88:in `service'
+  /Users/guychamberlain/.rvm/rubies/ruby-2.2.3/lib/ruby/2.2.0/webrick/httpserver.rb:138:in `service'
+  /Users/guychamberlain/.rvm/rubies/ruby-2.2.3/lib/ruby/2.2.0/webrick/httpserver.rb:94:in `run'
+  /Users/guychamberlain/.rvm/rubies/ruby-2.2.3/lib/ruby/2.2.0/webrick/server.rb:294:in `block in start_thread'
+
+
+  Rendered /Users/guychamberlain/.rvm/gems/ruby-2.2.3/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_source.erb (1.8ms)
+  Rendered /Users/guychamberlain/.rvm/gems/ruby-2.2.3/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.5ms)
+  Rendered /Users/guychamberlain/.rvm/gems/ruby-2.2.3/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.9ms)
+  Rendered /Users/guychamberlain/.rvm/gems/ruby-2.2.3/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (51.2ms)
+  Rendered /Users/guychamberlain/.rvm/gems/ruby-2.2.3/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (0.3ms)
+  Rendered /Users/guychamberlain/.rvm/gems/ruby-2.2.3/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/guychamberlain/.rvm/gems/ruby-2.2.3/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/guychamberlain/.rvm/gems/ruby-2.2.3/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/guychamberlain/.rvm/gems/ruby-2.2.3/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (40.8ms)
+  Rendered /Users/guychamberlain/.rvm/gems/ruby-2.2.3/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (0.3ms)
+  Rendered /Users/guychamberlain/.rvm/gems/ruby-2.2.3/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.3ms)
+  Rendered /Users/guychamberlain/.rvm/gems/ruby-2.2.3/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (86.7ms)
+  [1m[36m (1.8ms)[0m  [1mCREATE TABLE "schema_migrations" ("version" varchar NOT NULL) [0m
+  [1m[35m (0.1ms)[0m  select sqlite_version(*)
+  [1m[36m (1.0ms)[0m  [1mCREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.1ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+Migrating to CreateOceans (20150901053600)
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.4ms)[0m  CREATE TABLE "oceans" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) 
+SQLite3::SQLException: table "oceans" already exists: CREATE TABLE "oceans" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) 
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+
+
+Started GET "/" for ::1 at 2015-09-01 20:10:12 +1000
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+
+ActiveRecord::PendingMigrationError (
+
+Migrations are pending. To resolve this issue, run:
+
+	bin/rake db:migrate RAILS_ENV=development
+
+):
+  activerecord (4.2.4) lib/active_record/migration.rb:392:in `check_pending!'
+  activerecord (4.2.4) lib/active_record/migration.rb:373:in `call'
+  actionpack (4.2.4) lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+  activesupport (4.2.4) lib/active_support/callbacks.rb:88:in `__run_callbacks__'
+  activesupport (4.2.4) lib/active_support/callbacks.rb:778:in `_run_call_callbacks'
+  activesupport (4.2.4) lib/active_support/callbacks.rb:81:in `run_callbacks'
+  actionpack (4.2.4) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (4.2.4) lib/action_dispatch/middleware/reloader.rb:73:in `call'
+  actionpack (4.2.4) lib/action_dispatch/middleware/remote_ip.rb:78:in `call'
+  actionpack (4.2.4) lib/action_dispatch/middleware/debug_exceptions.rb:17:in `call'
+  web-console (2.2.1) lib/web_console/middleware.rb:39:in `call'
+  actionpack (4.2.4) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.4) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.4) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.4) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.4) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.4) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.4) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.4) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.4) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.4) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.4) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.4) lib/action_dispatch/middleware/static.rb:116:in `call'
+  rack (1.6.4) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.4) lib/rails/engine.rb:518:in `call'
+  railties (4.2.4) lib/rails/application.rb:165:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  rack (1.6.4) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.4) lib/rack/handler/webrick.rb:88:in `service'
+  /Users/guychamberlain/.rvm/rubies/ruby-2.2.3/lib/ruby/2.2.0/webrick/httpserver.rb:138:in `service'
+  /Users/guychamberlain/.rvm/rubies/ruby-2.2.3/lib/ruby/2.2.0/webrick/httpserver.rb:94:in `run'
+  /Users/guychamberlain/.rvm/rubies/ruby-2.2.3/lib/ruby/2.2.0/webrick/server.rb:294:in `block in start_thread'
+
+
+  Rendered /Users/guychamberlain/.rvm/gems/ruby-2.2.3/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_source.erb (1.9ms)
+  Rendered /Users/guychamberlain/.rvm/gems/ruby-2.2.3/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.5ms)
+  Rendered /Users/guychamberlain/.rvm/gems/ruby-2.2.3/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.7ms)
+  Rendered /Users/guychamberlain/.rvm/gems/ruby-2.2.3/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (46.3ms)
+  Rendered /Users/guychamberlain/.rvm/gems/ruby-2.2.3/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (0.7ms)
+  Rendered /Users/guychamberlain/.rvm/gems/ruby-2.2.3/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/guychamberlain/.rvm/gems/ruby-2.2.3/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/guychamberlain/.rvm/gems/ruby-2.2.3/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/guychamberlain/.rvm/gems/ruby-2.2.3/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (52.9ms)
+  Rendered /Users/guychamberlain/.rvm/gems/ruby-2.2.3/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (0.3ms)
+  Rendered /Users/guychamberlain/.rvm/gems/ruby-2.2.3/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.4ms)
+  Rendered /Users/guychamberlain/.rvm/gems/ruby-2.2.3/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (120.2ms)
+
+
+Started GET "/" for ::1 at 2015-09-01 20:12:22 +1000
+
+ActionController::RoutingError (uninitialized constant OceansController):
+  activesupport (4.2.4) lib/active_support/inflector/methods.rb:261:in `const_get'
+  activesupport (4.2.4) lib/active_support/inflector/methods.rb:261:in `block in constantize'
+  activesupport (4.2.4) lib/active_support/inflector/methods.rb:259:in `each'
+  activesupport (4.2.4) lib/active_support/inflector/methods.rb:259:in `inject'
+  activesupport (4.2.4) lib/active_support/inflector/methods.rb:259:in `constantize'
+  actionpack (4.2.4) lib/action_dispatch/routing/route_set.rb:72:in `controller_reference'
+  actionpack (4.2.4) lib/action_dispatch/routing/route_set.rb:62:in `controller'
+  actionpack (4.2.4) lib/action_dispatch/routing/route_set.rb:41:in `serve'
+  actionpack (4.2.4) lib/action_dispatch/journey/router.rb:43:in `block in serve'
+  actionpack (4.2.4) lib/action_dispatch/journey/router.rb:30:in `each'
+  actionpack (4.2.4) lib/action_dispatch/journey/router.rb:30:in `serve'
+  actionpack (4.2.4) lib/action_dispatch/routing/route_set.rb:821:in `call'
+  rack (1.6.4) lib/rack/etag.rb:24:in `call'
+  rack (1.6.4) lib/rack/conditionalget.rb:25:in `call'
+  rack (1.6.4) lib/rack/head.rb:13:in `call'
+  actionpack (4.2.4) lib/action_dispatch/middleware/params_parser.rb:27:in `call'
+  actionpack (4.2.4) lib/action_dispatch/middleware/flash.rb:260:in `call'
+  rack (1.6.4) lib/rack/session/abstract/id.rb:225:in `context'
+  rack (1.6.4) lib/rack/session/abstract/id.rb:220:in `call'
+  actionpack (4.2.4) lib/action_dispatch/middleware/cookies.rb:560:in `call'
+  activerecord (4.2.4) lib/active_record/query_cache.rb:36:in `call'
+  activerecord (4.2.4) lib/active_record/connection_adapters/abstract/connection_pool.rb:653:in `call'
+  activerecord (4.2.4) lib/active_record/migration.rb:377:in `call'
+  actionpack (4.2.4) lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+  activesupport (4.2.4) lib/active_support/callbacks.rb:88:in `__run_callbacks__'
+  activesupport (4.2.4) lib/active_support/callbacks.rb:778:in `_run_call_callbacks'
+  activesupport (4.2.4) lib/active_support/callbacks.rb:81:in `run_callbacks'
+  actionpack (4.2.4) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (4.2.4) lib/action_dispatch/middleware/reloader.rb:73:in `call'
+  actionpack (4.2.4) lib/action_dispatch/middleware/remote_ip.rb:78:in `call'
+  actionpack (4.2.4) lib/action_dispatch/middleware/debug_exceptions.rb:17:in `call'
+  web-console (2.2.1) lib/web_console/middleware.rb:39:in `call'
+  actionpack (4.2.4) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.4) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.4) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.4) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.4) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.4) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.4) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.4) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.4) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.4) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.4) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.4) lib/action_dispatch/middleware/static.rb:116:in `call'
+  rack (1.6.4) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.4) lib/rails/engine.rb:518:in `call'
+  railties (4.2.4) lib/rails/application.rb:165:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  rack (1.6.4) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.4) lib/rack/handler/webrick.rb:88:in `service'
+  /Users/guychamberlain/.rvm/rubies/ruby-2.2.3/lib/ruby/2.2.0/webrick/httpserver.rb:138:in `service'
+  /Users/guychamberlain/.rvm/rubies/ruby-2.2.3/lib/ruby/2.2.0/webrick/httpserver.rb:94:in `run'
+  /Users/guychamberlain/.rvm/rubies/ruby-2.2.3/lib/ruby/2.2.0/webrick/server.rb:294:in `block in start_thread'
+
+
+  Rendered /Users/guychamberlain/.rvm/gems/ruby-2.2.3/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.4ms)
+  Rendered /Users/guychamberlain/.rvm/gems/ruby-2.2.3/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/routes/_route.html.erb (1.4ms)
+  Rendered /Users/guychamberlain/.rvm/gems/ruby-2.2.3/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/routes/_table.html.erb (12.5ms)
+  Rendered /Users/guychamberlain/.rvm/gems/ruby-2.2.3/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (13.7ms)
+  Rendered /Users/guychamberlain/.rvm/gems/ruby-2.2.3/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (98.3ms)
+  Rendered /Users/guychamberlain/.rvm/gems/ruby-2.2.3/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (0.2ms)
+  Rendered /Users/guychamberlain/.rvm/gems/ruby-2.2.3/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.6ms)
+  Rendered /Users/guychamberlain/.rvm/gems/ruby-2.2.3/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/guychamberlain/.rvm/gems/ruby-2.2.3/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/guychamberlain/.rvm/gems/ruby-2.2.3/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (47.5ms)
+  Rendered /Users/guychamberlain/.rvm/gems/ruby-2.2.3/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (0.2ms)
+  Rendered /Users/guychamberlain/.rvm/gems/ruby-2.2.3/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.6ms)
+  Rendered /Users/guychamberlain/.rvm/gems/ruby-2.2.3/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (100.2ms)
+
+
+Started GET "/" for ::1 at 2015-09-01 20:16:33 +1000
+
+LoadError (Unable to autoload constant OceansController, expected /Users/guychamberlain/Projects/oceans/app/controllers/oceans_controller.rb to define it):
+  activesupport (4.2.4) lib/active_support/dependencies.rb:495:in `load_missing_constant'
+  activesupport (4.2.4) lib/active_support/dependencies.rb:184:in `const_missing'
+  activesupport (4.2.4) lib/active_support/inflector/methods.rb:261:in `const_get'
+  activesupport (4.2.4) lib/active_support/inflector/methods.rb:261:in `block in constantize'
+  activesupport (4.2.4) lib/active_support/inflector/methods.rb:259:in `each'
+  activesupport (4.2.4) lib/active_support/inflector/methods.rb:259:in `inject'
+  activesupport (4.2.4) lib/active_support/inflector/methods.rb:259:in `constantize'
+  activesupport (4.2.4) lib/active_support/dependencies.rb:566:in `get'
+  activesupport (4.2.4) lib/active_support/dependencies.rb:597:in `constantize'
+  actionpack (4.2.4) lib/action_dispatch/routing/route_set.rb:72:in `controller_reference'
+  actionpack (4.2.4) lib/action_dispatch/routing/route_set.rb:62:in `controller'
+  actionpack (4.2.4) lib/action_dispatch/routing/route_set.rb:41:in `serve'
+  actionpack (4.2.4) lib/action_dispatch/journey/router.rb:43:in `block in serve'
+  actionpack (4.2.4) lib/action_dispatch/journey/router.rb:30:in `each'
+  actionpack (4.2.4) lib/action_dispatch/journey/router.rb:30:in `serve'
+  actionpack (4.2.4) lib/action_dispatch/routing/route_set.rb:821:in `call'
+  rack (1.6.4) lib/rack/etag.rb:24:in `call'
+  rack (1.6.4) lib/rack/conditionalget.rb:25:in `call'
+  rack (1.6.4) lib/rack/head.rb:13:in `call'
+  actionpack (4.2.4) lib/action_dispatch/middleware/params_parser.rb:27:in `call'
+  actionpack (4.2.4) lib/action_dispatch/middleware/flash.rb:260:in `call'
+  rack (1.6.4) lib/rack/session/abstract/id.rb:225:in `context'
+  rack (1.6.4) lib/rack/session/abstract/id.rb:220:in `call'
+  actionpack (4.2.4) lib/action_dispatch/middleware/cookies.rb:560:in `call'
+  activerecord (4.2.4) lib/active_record/query_cache.rb:36:in `call'
+  activerecord (4.2.4) lib/active_record/connection_adapters/abstract/connection_pool.rb:653:in `call'
+  activerecord (4.2.4) lib/active_record/migration.rb:377:in `call'
+  actionpack (4.2.4) lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+  activesupport (4.2.4) lib/active_support/callbacks.rb:88:in `__run_callbacks__'
+  activesupport (4.2.4) lib/active_support/callbacks.rb:778:in `_run_call_callbacks'
+  activesupport (4.2.4) lib/active_support/callbacks.rb:81:in `run_callbacks'
+  actionpack (4.2.4) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (4.2.4) lib/action_dispatch/middleware/reloader.rb:73:in `call'
+  actionpack (4.2.4) lib/action_dispatch/middleware/remote_ip.rb:78:in `call'
+  actionpack (4.2.4) lib/action_dispatch/middleware/debug_exceptions.rb:17:in `call'
+  web-console (2.2.1) lib/web_console/middleware.rb:39:in `call'
+  actionpack (4.2.4) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.4) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.4) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.4) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.4) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.4) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.4) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.4) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.4) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.4) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.4) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.4) lib/action_dispatch/middleware/static.rb:116:in `call'
+  rack (1.6.4) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.4) lib/rails/engine.rb:518:in `call'
+  railties (4.2.4) lib/rails/application.rb:165:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  rack (1.6.4) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.4) lib/rack/handler/webrick.rb:88:in `service'
+  /Users/guychamberlain/.rvm/rubies/ruby-2.2.3/lib/ruby/2.2.0/webrick/httpserver.rb:138:in `service'
+  /Users/guychamberlain/.rvm/rubies/ruby-2.2.3/lib/ruby/2.2.0/webrick/httpserver.rb:94:in `run'
+  /Users/guychamberlain/.rvm/rubies/ruby-2.2.3/lib/ruby/2.2.0/webrick/server.rb:294:in `block in start_thread'
+
+
+  Rendered /Users/guychamberlain/.rvm/gems/ruby-2.2.3/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_source.erb (2.9ms)
+  Rendered /Users/guychamberlain/.rvm/gems/ruby-2.2.3/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.9ms)
+  Rendered /Users/guychamberlain/.rvm/gems/ruby-2.2.3/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.0ms)
+  Rendered /Users/guychamberlain/.rvm/gems/ruby-2.2.3/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (50.7ms)
+  Rendered /Users/guychamberlain/.rvm/gems/ruby-2.2.3/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (0.5ms)
+  Rendered /Users/guychamberlain/.rvm/gems/ruby-2.2.3/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.2ms)
+  Rendered /Users/guychamberlain/.rvm/gems/ruby-2.2.3/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.2ms)
+  Rendered /Users/guychamberlain/.rvm/gems/ruby-2.2.3/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/guychamberlain/.rvm/gems/ruby-2.2.3/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (36.7ms)
+  Rendered /Users/guychamberlain/.rvm/gems/ruby-2.2.3/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (0.3ms)
+  Rendered /Users/guychamberlain/.rvm/gems/ruby-2.2.3/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.3ms)
+  Rendered /Users/guychamberlain/.rvm/gems/ruby-2.2.3/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (89.4ms)
+
+
+Started GET "/" for ::1 at 2015-09-01 20:17:31 +1000
+
+LoadError (Unable to autoload constant OceansController, expected /Users/guychamberlain/Projects/oceans/app/controllers/oceans_controller.rb to define it):
+  activesupport (4.2.4) lib/active_support/dependencies.rb:495:in `load_missing_constant'
+  activesupport (4.2.4) lib/active_support/dependencies.rb:184:in `const_missing'
+  activesupport (4.2.4) lib/active_support/inflector/methods.rb:261:in `const_get'
+  activesupport (4.2.4) lib/active_support/inflector/methods.rb:261:in `block in constantize'
+  activesupport (4.2.4) lib/active_support/inflector/methods.rb:259:in `each'
+  activesupport (4.2.4) lib/active_support/inflector/methods.rb:259:in `inject'
+  activesupport (4.2.4) lib/active_support/inflector/methods.rb:259:in `constantize'
+  activesupport (4.2.4) lib/active_support/dependencies.rb:566:in `get'
+  activesupport (4.2.4) lib/active_support/dependencies.rb:597:in `constantize'
+  actionpack (4.2.4) lib/action_dispatch/routing/route_set.rb:72:in `controller_reference'
+  actionpack (4.2.4) lib/action_dispatch/routing/route_set.rb:62:in `controller'
+  actionpack (4.2.4) lib/action_dispatch/routing/route_set.rb:41:in `serve'
+  actionpack (4.2.4) lib/action_dispatch/journey/router.rb:43:in `block in serve'
+  actionpack (4.2.4) lib/action_dispatch/journey/router.rb:30:in `each'
+  actionpack (4.2.4) lib/action_dispatch/journey/router.rb:30:in `serve'
+  actionpack (4.2.4) lib/action_dispatch/routing/route_set.rb:821:in `call'
+  rack (1.6.4) lib/rack/etag.rb:24:in `call'
+  rack (1.6.4) lib/rack/conditionalget.rb:25:in `call'
+  rack (1.6.4) lib/rack/head.rb:13:in `call'
+  actionpack (4.2.4) lib/action_dispatch/middleware/params_parser.rb:27:in `call'
+  actionpack (4.2.4) lib/action_dispatch/middleware/flash.rb:260:in `call'
+  rack (1.6.4) lib/rack/session/abstract/id.rb:225:in `context'
+  rack (1.6.4) lib/rack/session/abstract/id.rb:220:in `call'
+  actionpack (4.2.4) lib/action_dispatch/middleware/cookies.rb:560:in `call'
+  activerecord (4.2.4) lib/active_record/query_cache.rb:36:in `call'
+  activerecord (4.2.4) lib/active_record/connection_adapters/abstract/connection_pool.rb:653:in `call'
+  activerecord (4.2.4) lib/active_record/migration.rb:377:in `call'
+  actionpack (4.2.4) lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+  activesupport (4.2.4) lib/active_support/callbacks.rb:88:in `__run_callbacks__'
+  activesupport (4.2.4) lib/active_support/callbacks.rb:778:in `_run_call_callbacks'
+  activesupport (4.2.4) lib/active_support/callbacks.rb:81:in `run_callbacks'
+  actionpack (4.2.4) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (4.2.4) lib/action_dispatch/middleware/reloader.rb:73:in `call'
+  actionpack (4.2.4) lib/action_dispatch/middleware/remote_ip.rb:78:in `call'
+  actionpack (4.2.4) lib/action_dispatch/middleware/debug_exceptions.rb:17:in `call'
+  web-console (2.2.1) lib/web_console/middleware.rb:39:in `call'
+  actionpack (4.2.4) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.4) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.4) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.4) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.4) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.4) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.4) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.4) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.4) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.4) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.4) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.4) lib/action_dispatch/middleware/static.rb:116:in `call'
+  rack (1.6.4) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.4) lib/rails/engine.rb:518:in `call'
+  railties (4.2.4) lib/rails/application.rb:165:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  rack (1.6.4) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.4) lib/rack/handler/webrick.rb:88:in `service'
+  /Users/guychamberlain/.rvm/rubies/ruby-2.2.3/lib/ruby/2.2.0/webrick/httpserver.rb:138:in `service'
+  /Users/guychamberlain/.rvm/rubies/ruby-2.2.3/lib/ruby/2.2.0/webrick/httpserver.rb:94:in `run'
+  /Users/guychamberlain/.rvm/rubies/ruby-2.2.3/lib/ruby/2.2.0/webrick/server.rb:294:in `block in start_thread'
+
+
+  Rendered /Users/guychamberlain/.rvm/gems/ruby-2.2.3/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_source.erb (5.2ms)
+  Rendered /Users/guychamberlain/.rvm/gems/ruby-2.2.3/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (4.4ms)
+  Rendered /Users/guychamberlain/.rvm/gems/ruby-2.2.3/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (8.5ms)
+  Rendered /Users/guychamberlain/.rvm/gems/ruby-2.2.3/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (70.4ms)
+  Rendered /Users/guychamberlain/.rvm/gems/ruby-2.2.3/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (0.5ms)
+  Rendered /Users/guychamberlain/.rvm/gems/ruby-2.2.3/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.2ms)
+  Rendered /Users/guychamberlain/.rvm/gems/ruby-2.2.3/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/guychamberlain/.rvm/gems/ruby-2.2.3/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.5ms)
+  Rendered /Users/guychamberlain/.rvm/gems/ruby-2.2.3/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (43.0ms)
+  Rendered /Users/guychamberlain/.rvm/gems/ruby-2.2.3/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (0.6ms)
+  Rendered /Users/guychamberlain/.rvm/gems/ruby-2.2.3/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.3ms)
+  Rendered /Users/guychamberlain/.rvm/gems/ruby-2.2.3/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (99.9ms)
+
+
+Started GET "/" for ::1 at 2015-09-01 20:19:41 +1000
+Processing by OceansController#index as HTML
+  [1m[36mOcean Load (1.8ms)[0m  [1mSELECT "oceans".* FROM "oceans"[0m
+  Rendered oceans/index.html.erb within layouts/application (13.6ms)
+Completed 200 OK in 1723ms (Views: 1666.2ms | ActiveRecord: 2.2ms)
+
+
+Started GET "/assets/ocean.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-09-01 20:19:43 +1000
+
+
+Started GET "/assets/jquery.self-d03a5518f45df77341bdbe6201ba3bfa547ebba8ed64f0ea56bfa5f96ea7c074.js?body=1" for ::1 at 2015-09-01 20:19:43 +1000
+
+
+Started GET "/assets/jquery_ujs.self-ca5248a2fad13d6bd58ea121318d642f195f0b2dd818b30615f785ff365e8d1f.js?body=1" for ::1 at 2015-09-01 20:19:43 +1000
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2015-09-01 20:19:43 +1000
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2015-09-01 20:19:43 +1000
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2015-09-01 20:19:43 +1000
+
+
+Started GET "/assets/ocean.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-09-01 20:19:43 +1000
+
+
+Started GET "/oceans/new" for ::1 at 2015-09-01 20:19:52 +1000
+Processing by OceansController#new as HTML
+  Rendered oceans/new.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 46ms (Views: 45.5ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/oceans" for ::1 at 2015-09-01 20:24:58 +1000
+Processing by OceansController#create as HTML
+  Parameters: {"ocean"=>{"name"=>"Atlantic", "image"=>"https://upload.wikimedia.org/wikipedia/commons/e/e0/Clouds_over_the_Atlantic_Ocean.jpg", "km_square"=>"76762000", "max_depth"=>""}}
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.5ms)[0m  [1mINSERT INTO "oceans" ("name", "image", "km_square") VALUES (?, ?, ?)[0m  [["name", "Atlantic"], ["image", "https://upload.wikimedia.org/wikipedia/commons/e/e0/Clouds_over_the_Atlantic_Ocean.jpg"], ["km_square", 76762000]]
+  [1m[35m (0.8ms)[0m  commit transaction
+Redirected to http://localhost:3000/oceans
+Completed 302 Found in 13ms (ActiveRecord: 1.4ms)
+
+
+Started GET "/oceans" for ::1 at 2015-09-01 20:24:58 +1000
+Processing by OceansController#index as HTML
+  [1m[36mOcean Load (0.2ms)[0m  [1mSELECT "oceans".* FROM "oceans"[0m
+  Rendered oceans/index.html.erb within layouts/application (1.2ms)
+Completed 200 OK in 51ms (Views: 50.0ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/oceans/2" for ::1 at 2015-09-01 20:26:23 +1000
+Processing by OceansController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[35mOcean Load (0.2ms)[0m  SELECT  "oceans".* FROM "oceans" WHERE "oceans"."id" = ? LIMIT 1  [["id", 2]]
+  Rendered oceans/show.html.erb within layouts/application (2.1ms)
+Completed 200 OK in 47ms (Views: 36.9ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/oceans/2" for ::1 at 2015-09-01 20:27:52 +1000
+Processing by OceansController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mOcean Load (0.1ms)[0m  [1mSELECT  "oceans".* FROM "oceans" WHERE "oceans"."id" = ? LIMIT 1[0m  [["id", 2]]
+  Rendered oceans/show.html.erb within layouts/application (1.2ms)
+Completed 200 OK in 97ms (Views: 95.6ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/assets/ocean.self-f287d59d7a1b6953fd9ae46c02b5528208de0477d244b1ab8a42277a9d53fa30.css?body=1" for ::1 at 2015-09-01 20:27:52 +1000
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2015-09-01 20:27:52 +1000
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2015-09-01 20:27:52 +1000
+
+
+Started GET "/assets/jquery.self-d03a5518f45df77341bdbe6201ba3bfa547ebba8ed64f0ea56bfa5f96ea7c074.js?body=1" for ::1 at 2015-09-01 20:27:52 +1000
+
+
+Started GET "/assets/jquery_ujs.self-ca5248a2fad13d6bd58ea121318d642f195f0b2dd818b30615f785ff365e8d1f.js?body=1" for ::1 at 2015-09-01 20:27:52 +1000
+
+
+Started GET "/assets/ocean.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-09-01 20:27:52 +1000
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2015-09-01 20:27:52 +1000
+
+
+Started GET "/oceans/2" for ::1 at 2015-09-01 20:27:59 +1000
+Processing by OceansController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[35mOcean Load (0.2ms)[0m  SELECT  "oceans".* FROM "oceans" WHERE "oceans"."id" = ? LIMIT 1  [["id", 2]]
+  Rendered oceans/show.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 34ms (Views: 32.7ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/ocean.self-f287d59d7a1b6953fd9ae46c02b5528208de0477d244b1ab8a42277a9d53fa30.css?body=1" for ::1 at 2015-09-01 20:27:59 +1000
+
+
+Started GET "/assets/ocean.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-09-01 20:27:59 +1000
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2015-09-01 20:27:59 +1000
+
+
+Started GET "/assets/jquery.self-d03a5518f45df77341bdbe6201ba3bfa547ebba8ed64f0ea56bfa5f96ea7c074.js?body=1" for ::1 at 2015-09-01 20:27:59 +1000
+
+
+Started GET "/assets/jquery_ujs.self-ca5248a2fad13d6bd58ea121318d642f195f0b2dd818b30615f785ff365e8d1f.js?body=1" for ::1 at 2015-09-01 20:27:59 +1000
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2015-09-01 20:27:59 +1000
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2015-09-01 20:27:59 +1000
+
+
+Started GET "/oceans/2" for ::1 at 2015-09-01 20:28:38 +1000
+Processing by OceansController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mOcean Load (0.1ms)[0m  [1mSELECT  "oceans".* FROM "oceans" WHERE "oceans"."id" = ? LIMIT 1[0m  [["id", 2]]
+  Rendered oceans/show.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 43ms (Views: 42.0ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/assets/ocean.self-ec60913025117ff8c7050b179ec07561d97bc0a17228d3ecec69b0d78796157f.css?body=1" for ::1 at 2015-09-01 20:28:38 +1000
+
+
+Started GET "/assets/jquery.self-d03a5518f45df77341bdbe6201ba3bfa547ebba8ed64f0ea56bfa5f96ea7c074.js?body=1" for ::1 at 2015-09-01 20:28:38 +1000
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2015-09-01 20:28:38 +1000
+
+
+Started GET "/assets/jquery_ujs.self-ca5248a2fad13d6bd58ea121318d642f195f0b2dd818b30615f785ff365e8d1f.js?body=1" for ::1 at 2015-09-01 20:28:38 +1000
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2015-09-01 20:28:38 +1000
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2015-09-01 20:28:38 +1000
+
+
+Started GET "/assets/ocean.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-09-01 20:28:38 +1000
+
+
+Started GET "/oceans" for ::1 at 2015-09-01 20:28:52 +1000
+Processing by OceansController#index as HTML
+  [1m[35mOcean Load (0.1ms)[0m  SELECT "oceans".* FROM "oceans"
+  Rendered oceans/index.html.erb within layouts/application (1.2ms)
+Completed 200 OK in 23ms (Views: 22.8ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/oceans/1" for ::1 at 2015-09-01 20:28:54 +1000
+Processing by OceansController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mOcean Load (0.2ms)[0m  [1mSELECT  "oceans".* FROM "oceans" WHERE "oceans"."id" = ? LIMIT 1[0m  [["id", 1]]
+  Rendered oceans/show.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 35ms (Views: 33.2ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/oceans/1/edit" for ::1 at 2015-09-01 20:30:31 +1000
+Processing by OceansController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mOcean Load (0.1ms)[0m  SELECT  "oceans".* FROM "oceans" WHERE "oceans"."id" = ? LIMIT 1  [["id", 1]]
+  Rendered oceans/edit.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 32ms (Views: 30.8ms | ActiveRecord: 0.1ms)
+
+
+Started POST "/oceans/1" for ::1 at 2015-09-01 20:30:38 +1000
+Processing by OceansController#update as HTML
+  Parameters: {"ocean"=>{"name"=>"Pacific", "image"=>"https://upload.wikimedia.org/wikipedia/commons/f/f6/Pacific_Ocean_-_en.png", "km_square"=>"1000", "max_depth"=>"1000"}, "id"=>"1"}
+  [1m[36mOcean Load (0.2ms)[0m  [1mSELECT  "oceans".* FROM "oceans" WHERE "oceans"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35m (0.3ms)[0m  begin transaction
+  [1m[36mSQL (0.5ms)[0m  [1mUPDATE "oceans" SET "image" = ? WHERE "oceans"."id" = ?[0m  [["image", "https://upload.wikimedia.org/wikipedia/commons/f/f6/Pacific_Ocean_-_en.png"], ["id", 1]]
+  [1m[35m (0.8ms)[0m  commit transaction
+Redirected to http://localhost:3000/oceans/1
+Completed 302 Found in 6ms (ActiveRecord: 1.8ms)
+
+
+Started GET "/oceans/1" for ::1 at 2015-09-01 20:30:38 +1000
+Processing by OceansController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mOcean Load (0.1ms)[0m  [1mSELECT  "oceans".* FROM "oceans" WHERE "oceans"."id" = ? LIMIT 1[0m  [["id", 1]]
+  Rendered oceans/show.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 44ms (Views: 43.2ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/oceans/1" for ::1 at 2015-09-01 20:32:10 +1000
+Processing by OceansController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mOcean Load (0.2ms)[0m  SELECT  "oceans".* FROM "oceans" WHERE "oceans"."id" = ? LIMIT 1  [["id", 1]]
+  Rendered oceans/show.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 38ms (Views: 36.1ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/oceans" for ::1 at 2015-09-01 20:32:12 +1000
+Processing by OceansController#index as HTML
+  [1m[36mOcean Load (0.3ms)[0m  [1mSELECT "oceans".* FROM "oceans"[0m
+  Rendered oceans/index.html.erb within layouts/application (1.2ms)
+Completed 200 OK in 33ms (Views: 32.3ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/oceans/new" for ::1 at 2015-09-01 20:34:11 +1000
+Processing by OceansController#new as HTML
+  Rendered oceans/new.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 34ms (Views: 33.3ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/oceans" for ::1 at 2015-09-01 20:34:21 +1000
+Processing by OceansController#create as HTML
+  Parameters: {"ocean"=>{"name"=>"Indian", "image"=>"https://upload.wikimedia.org/wikipedia/commons/d/d3/Indian_Ocean-CIA_WFB_Map.png", "km_square"=>"", "max_depth"=>""}}
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.6ms)[0m  [1mINSERT INTO "oceans" ("name", "image") VALUES (?, ?)[0m  [["name", "Indian"], ["image", "https://upload.wikimedia.org/wikipedia/commons/d/d3/Indian_Ocean-CIA_WFB_Map.png"]]
+  [1m[35m (0.7ms)[0m  commit transaction
+Redirected to http://localhost:3000/oceans
+Completed 302 Found in 4ms (ActiveRecord: 1.4ms)
+
+
+Started GET "/oceans" for ::1 at 2015-09-01 20:34:21 +1000
+Processing by OceansController#index as HTML
+  [1m[36mOcean Load (0.2ms)[0m  [1mSELECT "oceans".* FROM "oceans"[0m
+  Rendered oceans/index.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 31ms (Views: 30.1ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/oceans/2" for ::1 at 2015-09-01 20:35:12 +1000
+Processing by OceansController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[35mOcean Load (0.1ms)[0m  SELECT  "oceans".* FROM "oceans" WHERE "oceans"."id" = ? LIMIT 1  [["id", 2]]
+  Rendered oceans/show.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 31ms (Views: 30.1ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/oceans/2/edit" for ::1 at 2015-09-01 20:35:40 +1000
+Processing by OceansController#edit as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mOcean Load (0.1ms)[0m  [1mSELECT  "oceans".* FROM "oceans" WHERE "oceans"."id" = ? LIMIT 1[0m  [["id", 2]]
+  Rendered oceans/edit.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 29ms (Views: 28.2ms | ActiveRecord: 0.1ms)
+
+
+Started POST "/oceans/2" for ::1 at 2015-09-01 20:35:47 +1000
+Processing by OceansController#update as HTML
+  Parameters: {"ocean"=>{"name"=>"Atlantic", "image"=>"https://upload.wikimedia.org/wikipedia/commons/4/47/Atlantic_Ocean_-_en.png", "km_square"=>"76762000", "max_depth"=>""}, "id"=>"2"}
+  [1m[35mOcean Load (0.1ms)[0m  SELECT  "oceans".* FROM "oceans" WHERE "oceans"."id" = ? LIMIT 1  [["id", 2]]
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  UPDATE "oceans" SET "image" = ? WHERE "oceans"."id" = ?  [["image", "https://upload.wikimedia.org/wikipedia/commons/4/47/Atlantic_Ocean_-_en.png"], ["id", 2]]
+  [1m[36m (0.7ms)[0m  [1mcommit transaction[0m
+Redirected to http://localhost:3000/oceans/2
+Completed 302 Found in 4ms (ActiveRecord: 1.2ms)
+
+
+Started GET "/oceans/2" for ::1 at 2015-09-01 20:35:47 +1000
+Processing by OceansController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[35mOcean Load (0.1ms)[0m  SELECT  "oceans".* FROM "oceans" WHERE "oceans"."id" = ? LIMIT 1  [["id", 2]]
+  Rendered oceans/show.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 37ms (Views: 35.9ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/oceans" for ::1 at 2015-09-01 20:35:56 +1000
+Processing by OceansController#index as HTML
+  [1m[36mOcean Load (0.2ms)[0m  [1mSELECT "oceans".* FROM "oceans"[0m
+  Rendered oceans/index.html.erb within layouts/application (1.6ms)
+Completed 200 OK in 46ms (Views: 45.1ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/oceans/new" for ::1 at 2015-09-01 20:38:11 +1000
+Processing by OceansController#new as HTML
+  Rendered oceans/new.html.erb within layouts/application (0.0ms)
+Completed 200 OK in 29ms (Views: 28.5ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/oceans" for ::1 at 2015-09-01 20:38:17 +1000
+Processing by OceansController#create as HTML
+  Parameters: {"ocean"=>{"name"=>"Southern", "image"=>"", "km_square"=>"", "max_depth"=>""}}
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.5ms)[0m  [1mINSERT INTO "oceans" ("name", "image") VALUES (?, ?)[0m  [["name", "Southern"], ["image", ""]]
+  [1m[35m (0.9ms)[0m  commit transaction
+Redirected to http://localhost:3000/oceans
+Completed 302 Found in 5ms (ActiveRecord: 1.5ms)
+
+
+Started GET "/oceans" for ::1 at 2015-09-01 20:38:17 +1000
+Processing by OceansController#index as HTML
+  [1m[36mOcean Load (0.2ms)[0m  [1mSELECT "oceans".* FROM "oceans"[0m
+  Rendered oceans/index.html.erb within layouts/application (1.1ms)
+Completed 200 OK in 31ms (Views: 30.3ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/oceans/new" for ::1 at 2015-09-01 20:38:19 +1000
+Processing by OceansController#new as HTML
+  Rendered oceans/new.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 28ms (Views: 28.0ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/oceans" for ::1 at 2015-09-01 20:38:25 +1000
+Processing by OceansController#create as HTML
+  Parameters: {"ocean"=>{"name"=>"Northern", "image"=>"", "km_square"=>"", "max_depth"=>""}}
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "oceans" ("name", "image") VALUES (?, ?)[0m  [["name", "Northern"], ["image", ""]]
+  [1m[35m (0.8ms)[0m  commit transaction
+Redirected to http://localhost:3000/oceans
+Completed 302 Found in 4ms (ActiveRecord: 1.1ms)
+
+
+Started GET "/oceans" for ::1 at 2015-09-01 20:38:25 +1000
+Processing by OceansController#index as HTML
+  [1m[36mOcean Load (0.2ms)[0m  [1mSELECT "oceans".* FROM "oceans"[0m
+  Rendered oceans/index.html.erb within layouts/application (1.1ms)
+Completed 200 OK in 30ms (Views: 29.2ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/oceans/4" for ::1 at 2015-09-01 20:38:42 +1000
+Processing by OceansController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[35mOcean Load (0.1ms)[0m  SELECT  "oceans".* FROM "oceans" WHERE "oceans"."id" = ? LIMIT 1  [["id", 4]]
+  Rendered oceans/show.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 27ms (Views: 26.1ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/oceans/4/edit" for ::1 at 2015-09-01 20:39:32 +1000
+Processing by OceansController#edit as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mOcean Load (0.1ms)[0m  [1mSELECT  "oceans".* FROM "oceans" WHERE "oceans"."id" = ? LIMIT 1[0m  [["id", 4]]
+  Rendered oceans/edit.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 40ms (Views: 39.0ms | ActiveRecord: 0.1ms)
+
+
+Started POST "/oceans/4" for ::1 at 2015-09-01 20:39:38 +1000
+Processing by OceansController#update as HTML
+  Parameters: {"ocean"=>{"name"=>"Southern", "image"=>"https://upload.wikimedia.org/wikipedia/commons/1/11/Glass-of-water.jpg", "km_square"=>"", "max_depth"=>""}, "id"=>"4"}
+  [1m[35mOcean Load (0.1ms)[0m  SELECT  "oceans".* FROM "oceans" WHERE "oceans"."id" = ? LIMIT 1  [["id", 4]]
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  UPDATE "oceans" SET "image" = ? WHERE "oceans"."id" = ?  [["image", "https://upload.wikimedia.org/wikipedia/commons/1/11/Glass-of-water.jpg"], ["id", 4]]
+  [1m[36m (0.7ms)[0m  [1mcommit transaction[0m
+Redirected to http://localhost:3000/oceans/4
+Completed 302 Found in 4ms (ActiveRecord: 1.1ms)
+
+
+Started GET "/oceans/4" for ::1 at 2015-09-01 20:39:38 +1000
+Processing by OceansController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[35mOcean Load (0.1ms)[0m  SELECT  "oceans".* FROM "oceans" WHERE "oceans"."id" = ? LIMIT 1  [["id", 4]]
+  Rendered oceans/show.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 28ms (Views: 27.3ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/oceans" for ::1 at 2015-09-01 20:39:58 +1000
+Processing by OceansController#index as HTML
+  [1m[36mOcean Load (0.2ms)[0m  [1mSELECT "oceans".* FROM "oceans"[0m
+  Rendered oceans/index.html.erb within layouts/application (1.3ms)
+Completed 200 OK in 30ms (Views: 29.7ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/oceans/5" for ::1 at 2015-09-01 20:40:00 +1000
+Processing by OceansController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[35mOcean Load (0.2ms)[0m  SELECT  "oceans".* FROM "oceans" WHERE "oceans"."id" = ? LIMIT 1  [["id", 5]]
+  Rendered oceans/show.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 31ms (Views: 28.8ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/oceans/5/edit" for ::1 at 2015-09-01 20:41:18 +1000
+Processing by OceansController#edit as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mOcean Load (0.2ms)[0m  [1mSELECT  "oceans".* FROM "oceans" WHERE "oceans"."id" = ? LIMIT 1[0m  [["id", 5]]
+  Rendered oceans/edit.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 27ms (Views: 25.4ms | ActiveRecord: 0.2ms)
+
+
+Started POST "/oceans/5" for ::1 at 2015-09-01 20:41:23 +1000
+Processing by OceansController#update as HTML
+  Parameters: {"ocean"=>{"name"=>"Northern", "image"=>"https://lauracrean.files.wordpress.com/2013/05/ocean-waves-foam_w725_h544.jpg", "km_square"=>"", "max_depth"=>""}, "id"=>"5"}
+  [1m[35mOcean Load (0.1ms)[0m  SELECT  "oceans".* FROM "oceans" WHERE "oceans"."id" = ? LIMIT 1  [["id", 5]]
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  UPDATE "oceans" SET "image" = ? WHERE "oceans"."id" = ?  [["image", "https://lauracrean.files.wordpress.com/2013/05/ocean-waves-foam_w725_h544.jpg"], ["id", 5]]
+  [1m[36m (0.6ms)[0m  [1mcommit transaction[0m
+Redirected to http://localhost:3000/oceans/5
+Completed 302 Found in 4ms (ActiveRecord: 1.1ms)
+
+
+Started GET "/oceans/5" for ::1 at 2015-09-01 20:41:23 +1000
+Processing by OceansController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[35mOcean Load (0.1ms)[0m  SELECT  "oceans".* FROM "oceans" WHERE "oceans"."id" = ? LIMIT 1  [["id", 5]]
+  Rendered oceans/show.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 30ms (Views: 29.0ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/oceans/5" for ::1 at 2015-09-01 20:42:21 +1000
+Processing by OceansController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mOcean Load (0.1ms)[0m  [1mSELECT  "oceans".* FROM "oceans" WHERE "oceans"."id" = ? LIMIT 1[0m  [["id", 5]]
+  Rendered oceans/show.html.erb within layouts/application (1.6ms)
+Completed 200 OK in 23ms (Views: 22.4ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/assets/ocean.self-ec60913025117ff8c7050b179ec07561d97bc0a17228d3ecec69b0d78796157f.css?body=1" for ::1 at 2015-09-01 20:42:22 +1000
+
+
+Started GET "/assets/jquery_ujs.self-ca5248a2fad13d6bd58ea121318d642f195f0b2dd818b30615f785ff365e8d1f.js?body=1" for ::1 at 2015-09-01 20:42:22 +1000
+
+
+Started GET "/assets/ocean.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-09-01 20:42:22 +1000
+
+
+Started GET "/assets/jquery.self-d03a5518f45df77341bdbe6201ba3bfa547ebba8ed64f0ea56bfa5f96ea7c074.js?body=1" for ::1 at 2015-09-01 20:42:22 +1000
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2015-09-01 20:42:22 +1000
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2015-09-01 20:42:22 +1000
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2015-09-01 20:42:22 +1000
+
+
+Started GET "/oceans/5" for ::1 at 2015-09-01 20:42:26 +1000
+Processing by OceansController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[35mOcean Load (0.1ms)[0m  SELECT  "oceans".* FROM "oceans" WHERE "oceans"."id" = ? LIMIT 1  [["id", 5]]
+  Rendered oceans/show.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 31ms (Views: 29.6ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/assets/jquery_ujs.self-ca5248a2fad13d6bd58ea121318d642f195f0b2dd818b30615f785ff365e8d1f.js?body=1" for ::1 at 2015-09-01 20:42:26 +1000
+
+
+Started GET "/assets/jquery.self-d03a5518f45df77341bdbe6201ba3bfa547ebba8ed64f0ea56bfa5f96ea7c074.js?body=1" for ::1 at 2015-09-01 20:42:26 +1000
+
+
+Started GET "/assets/ocean.self-ec60913025117ff8c7050b179ec07561d97bc0a17228d3ecec69b0d78796157f.css?body=1" for ::1 at 2015-09-01 20:42:26 +1000
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2015-09-01 20:42:26 +1000
+
+
+Started GET "/assets/ocean.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-09-01 20:42:26 +1000
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2015-09-01 20:42:26 +1000
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2015-09-01 20:42:26 +1000
+
+
+Started GET "/oceans/5" for ::1 at 2015-09-01 20:42:48 +1000
+Processing by OceansController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mOcean Load (0.1ms)[0m  [1mSELECT  "oceans".* FROM "oceans" WHERE "oceans"."id" = ? LIMIT 1[0m  [["id", 5]]
+  Rendered oceans/show.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 28ms (Views: 27.0ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/assets/ocean.self-ec60913025117ff8c7050b179ec07561d97bc0a17228d3ecec69b0d78796157f.css?body=1" for ::1 at 2015-09-01 20:42:48 +1000
+
+
+Started GET "/assets/jquery_ujs.self-ca5248a2fad13d6bd58ea121318d642f195f0b2dd818b30615f785ff365e8d1f.js?body=1" for ::1 at 2015-09-01 20:42:48 +1000
+
+
+Started GET "/assets/ocean.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-09-01 20:42:48 +1000
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2015-09-01 20:42:48 +1000
+
+
+Started GET "/assets/jquery.self-d03a5518f45df77341bdbe6201ba3bfa547ebba8ed64f0ea56bfa5f96ea7c074.js?body=1" for ::1 at 2015-09-01 20:42:48 +1000
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2015-09-01 20:42:48 +1000
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2015-09-01 20:42:48 +1000
+
+
+Started GET "/oceans/5" for ::1 at 2015-09-01 20:42:50 +1000
+Processing by OceansController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[35mOcean Load (0.1ms)[0m  SELECT  "oceans".* FROM "oceans" WHERE "oceans"."id" = ? LIMIT 1  [["id", 5]]
+  Rendered oceans/show.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 24ms (Views: 23.2ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2015-09-01 20:42:50 +1000
+
+
+Started GET "/assets/jquery.self-d03a5518f45df77341bdbe6201ba3bfa547ebba8ed64f0ea56bfa5f96ea7c074.js?body=1" for ::1 at 2015-09-01 20:42:50 +1000
+
+
+Started GET "/assets/ocean.self-ec60913025117ff8c7050b179ec07561d97bc0a17228d3ecec69b0d78796157f.css?body=1" for ::1 at 2015-09-01 20:42:50 +1000
+
+
+Started GET "/assets/ocean.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-09-01 20:42:50 +1000
+
+
+Started GET "/assets/jquery_ujs.self-ca5248a2fad13d6bd58ea121318d642f195f0b2dd818b30615f785ff365e8d1f.js?body=1" for ::1 at 2015-09-01 20:42:50 +1000
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2015-09-01 20:42:50 +1000
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2015-09-01 20:42:50 +1000
+
+
+Started GET "/oceans" for ::1 at 2015-09-01 20:42:59 +1000
+Processing by OceansController#index as HTML
+  [1m[36mOcean Load (0.2ms)[0m  [1mSELECT "oceans".* FROM "oceans"[0m
+  Rendered oceans/index.html.erb within layouts/application (1.5ms)
+Completed 200 OK in 32ms (Views: 31.1ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/oceans/4" for ::1 at 2015-09-01 20:43:01 +1000
+Processing by OceansController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[35mOcean Load (0.1ms)[0m  SELECT  "oceans".* FROM "oceans" WHERE "oceans"."id" = ? LIMIT 1  [["id", 4]]
+  Rendered oceans/show.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 38ms (Views: 37.6ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/oceans/4" for ::1 at 2015-09-01 20:43:22 +1000
+Processing by OceansController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mOcean Load (0.1ms)[0m  [1mSELECT  "oceans".* FROM "oceans" WHERE "oceans"."id" = ? LIMIT 1[0m  [["id", 4]]
+  Rendered oceans/show.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 24ms (Views: 22.9ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/assets/ocean.self-ec60913025117ff8c7050b179ec07561d97bc0a17228d3ecec69b0d78796157f.css?body=1" for ::1 at 2015-09-01 20:43:22 +1000
+
+
+Started GET "/assets/jquery_ujs.self-ca5248a2fad13d6bd58ea121318d642f195f0b2dd818b30615f785ff365e8d1f.js?body=1" for ::1 at 2015-09-01 20:43:22 +1000
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2015-09-01 20:43:22 +1000
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2015-09-01 20:43:22 +1000
+
+
+Started GET "/assets/jquery.self-d03a5518f45df77341bdbe6201ba3bfa547ebba8ed64f0ea56bfa5f96ea7c074.js?body=1" for ::1 at 2015-09-01 20:43:22 +1000
+
+
+Started GET "/assets/ocean.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-09-01 20:43:22 +1000
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2015-09-01 20:43:22 +1000
+
+
+Started GET "/oceans" for ::1 at 2015-09-01 20:44:36 +1000
+Processing by OceansController#index as HTML
+  [1m[35mOcean Load (0.2ms)[0m  SELECT "oceans".* FROM "oceans"
+  Rendered oceans/index.html.erb within layouts/application (1.6ms)
+Completed 200 OK in 40ms (Views: 39.5ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/oceans/5" for ::1 at 2015-09-01 20:44:38 +1000
+Processing by OceansController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mOcean Load (0.1ms)[0m  [1mSELECT  "oceans".* FROM "oceans" WHERE "oceans"."id" = ? LIMIT 1[0m  [["id", 5]]
+  Rendered oceans/show.html.erb within layouts/application (1.5ms)
+Completed 200 OK in 38ms (Views: 36.9ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/oceans/3" for ::1 at 2015-09-01 20:44:45 +1000
+Processing by OceansController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[35mOcean Load (0.1ms)[0m  SELECT  "oceans".* FROM "oceans" WHERE "oceans"."id" = ? LIMIT 1  [["id", 3]]
+  Rendered oceans/show.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 30ms (Views: 29.0ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/oceans/4" for ::1 at 2015-09-01 20:44:51 +1000
+Processing by OceansController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mOcean Load (0.1ms)[0m  [1mSELECT  "oceans".* FROM "oceans" WHERE "oceans"."id" = ? LIMIT 1[0m  [["id", 4]]
+  Rendered oceans/show.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 33ms (Views: 32.5ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/oceans/5" for ::1 at 2015-09-01 20:44:56 +1000
+Processing by OceansController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[35mOcean Load (0.1ms)[0m  SELECT  "oceans".* FROM "oceans" WHERE "oceans"."id" = ? LIMIT 1  [["id", 5]]
+  Rendered oceans/show.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 41ms (Views: 40.4ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/oceans/1" for ::1 at 2015-09-01 20:45:15 +1000
+Processing by OceansController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mOcean Load (0.1ms)[0m  [1mSELECT  "oceans".* FROM "oceans" WHERE "oceans"."id" = ? LIMIT 1[0m  [["id", 1]]
+  Rendered oceans/show.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 30ms (Views: 29.4ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/" for ::1 at 2015-09-01 21:41:32 +1000
+Processing by OceansController#index as HTML
+  [1m[35mOcean Load (0.1ms)[0m  SELECT "oceans".* FROM "oceans"
+  Rendered oceans/index.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 60ms (Views: 58.8ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/assets/ocean.self-cb62e79979de6fd1fa382bd1254172b2bdad82a983c499dffaa98f27f6a006c6.css?body=1" for ::1 at 2015-09-01 21:41:32 +1000
+
+
+Started GET "/" for ::1 at 2015-09-01 21:41:49 +1000
+Processing by OceansController#index as HTML
+  [1m[36mOcean Load (0.1ms)[0m  [1mSELECT "oceans".* FROM "oceans"[0m
+  Rendered oceans/index.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 45ms (Views: 44.3ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/assets/ocean.self-681865b434b7951e1153089acd2f487875ad306502f411bb22350fbc8b874ae5.css?body=1" for ::1 at 2015-09-01 21:41:49 +1000
+
+
+Started GET "/assets/jquery_ujs.self-ca5248a2fad13d6bd58ea121318d642f195f0b2dd818b30615f785ff365e8d1f.js?body=1" for ::1 at 2015-09-01 21:41:49 +1000
+
+
+Started GET "/assets/jquery.self-d03a5518f45df77341bdbe6201ba3bfa547ebba8ed64f0ea56bfa5f96ea7c074.js?body=1" for ::1 at 2015-09-01 21:41:49 +1000
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2015-09-01 21:41:49 +1000
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2015-09-01 21:41:49 +1000
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2015-09-01 21:41:49 +1000
+
+
+Started GET "/assets/ocean.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-09-01 21:41:49 +1000
+
+
+Started GET "/" for ::1 at 2015-09-01 21:43:19 +1000
+Processing by OceansController#index as HTML
+  [1m[35mOcean Load (0.1ms)[0m  SELECT "oceans".* FROM "oceans"
+  Rendered oceans/index.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 38ms (Views: 37.1ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/assets/jquery_ujs.self-ca5248a2fad13d6bd58ea121318d642f195f0b2dd818b30615f785ff365e8d1f.js?body=1" for ::1 at 2015-09-01 21:43:19 +1000
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2015-09-01 21:43:19 +1000
+
+
+Started GET "/assets/ocean.self-cb62e79979de6fd1fa382bd1254172b2bdad82a983c499dffaa98f27f6a006c6.css?body=1" for ::1 at 2015-09-01 21:43:19 +1000
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2015-09-01 21:43:19 +1000
+
+
+Started GET "/assets/jquery.self-d03a5518f45df77341bdbe6201ba3bfa547ebba8ed64f0ea56bfa5f96ea7c074.js?body=1" for ::1 at 2015-09-01 21:43:19 +1000
+
+
+Started GET "/assets/ocean.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-09-01 21:43:19 +1000
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2015-09-01 21:43:19 +1000
+
+
+Started GET "/" for ::1 at 2015-09-01 21:46:52 +1000
+Processing by OceansController#index as HTML
+  [1m[36mOcean Load (0.1ms)[0m  [1mSELECT "oceans".* FROM "oceans"[0m
+  Rendered oceans/index.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 50ms (Views: 49.2ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/assets/ocean.self-4d072881823a0acc1ffebc7949cab0c7fa26de102ac255a7f8b25e6d59c1cd2c.css?body=1" for ::1 at 2015-09-01 21:46:52 +1000
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2015-09-01 21:46:52 +1000
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2015-09-01 21:46:52 +1000
+
+
+Started GET "/assets/jquery.self-d03a5518f45df77341bdbe6201ba3bfa547ebba8ed64f0ea56bfa5f96ea7c074.js?body=1" for ::1 at 2015-09-01 21:46:52 +1000
+
+
+Started GET "/assets/jquery_ujs.self-ca5248a2fad13d6bd58ea121318d642f195f0b2dd818b30615f785ff365e8d1f.js?body=1" for ::1 at 2015-09-01 21:46:52 +1000
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2015-09-01 21:46:52 +1000
+
+
+Started GET "/assets/ocean.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-09-01 21:46:52 +1000
+
+
+Started GET "/" for ::1 at 2015-09-01 21:47:22 +1000
+Processing by OceansController#index as HTML
+  [1m[35mOcean Load (0.2ms)[0m  SELECT "oceans".* FROM "oceans"
+  Rendered oceans/index.html.erb within layouts/application (1.5ms)
+Completed 200 OK in 51ms (Views: 50.4ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/ocean.self-3f806e6b3f5f2859674563577487db25f7be9510d3a48c6c752320d1499cd0ba.css?body=1" for ::1 at 2015-09-01 21:47:22 +1000
+
+
+Started GET "/assets/jquery.self-d03a5518f45df77341bdbe6201ba3bfa547ebba8ed64f0ea56bfa5f96ea7c074.js?body=1" for ::1 at 2015-09-01 21:47:22 +1000
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2015-09-01 21:47:22 +1000
+
+
+Started GET "/assets/ocean.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-09-01 21:47:22 +1000
+
+
+Started GET "/assets/jquery_ujs.self-ca5248a2fad13d6bd58ea121318d642f195f0b2dd818b30615f785ff365e8d1f.js?body=1" for ::1 at 2015-09-01 21:47:22 +1000
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2015-09-01 21:47:22 +1000
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2015-09-01 21:47:22 +1000
+
+
+Started GET "/" for ::1 at 2015-09-01 21:48:08 +1000
+Processing by OceansController#index as HTML
+  [1m[36mOcean Load (0.2ms)[0m  [1mSELECT "oceans".* FROM "oceans"[0m
+  Rendered oceans/index.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 56ms (Views: 54.7ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/ocean.self-8a4344cfca1f4be3310c297a821c67dde267c8cc2b1112c19086c0dab2072ffa.css?body=1" for ::1 at 2015-09-01 21:48:08 +1000
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2015-09-01 21:48:08 +1000
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2015-09-01 21:48:08 +1000
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2015-09-01 21:48:08 +1000
+
+
+Started GET "/assets/jquery_ujs.self-ca5248a2fad13d6bd58ea121318d642f195f0b2dd818b30615f785ff365e8d1f.js?body=1" for ::1 at 2015-09-01 21:48:08 +1000
+
+
+Started GET "/assets/ocean.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-09-01 21:48:08 +1000
+
+
+Started GET "/assets/jquery.self-d03a5518f45df77341bdbe6201ba3bfa547ebba8ed64f0ea56bfa5f96ea7c074.js?body=1" for ::1 at 2015-09-01 21:48:08 +1000
+
+
+Started GET "/oceans/1" for ::1 at 2015-09-01 21:48:43 +1000
+Processing by OceansController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mOcean Load (0.1ms)[0m  SELECT  "oceans".* FROM "oceans" WHERE "oceans"."id" = ? LIMIT 1  [["id", 1]]
+  Rendered oceans/show.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 53ms (Views: 52.2ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/oceans/1" for ::1 at 2015-09-01 21:48:43 +1000
+Processing by OceansController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mOcean Load (0.1ms)[0m  [1mSELECT  "oceans".* FROM "oceans" WHERE "oceans"."id" = ? LIMIT 1[0m  [["id", 1]]
+  Rendered oceans/show.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 35ms (Views: 33.6ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/assets/ocean.self-6c0c725056e63043f421f645daf6f3de2452f946c9e20ad0759170fc4115a800.css?body=1" for ::1 at 2015-09-01 21:48:43 +1000
+
+
+Started GET "/oceans/1/edit" for ::1 at 2015-09-01 21:48:48 +1000
+Processing by OceansController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mOcean Load (0.2ms)[0m  SELECT  "oceans".* FROM "oceans" WHERE "oceans"."id" = ? LIMIT 1  [["id", 1]]
+  Rendered oceans/edit.html.erb within layouts/application (0.2ms)
+Completed 200 OK in 32ms (Views: 30.6ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/oceans" for ::1 at 2015-09-01 21:48:54 +1000
+Processing by OceansController#index as HTML
+  [1m[36mOcean Load (0.2ms)[0m  [1mSELECT "oceans".* FROM "oceans"[0m
+  Rendered oceans/index.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 30ms (Views: 29.2ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/oceans/4" for ::1 at 2015-09-01 21:49:01 +1000
+Processing by OceansController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[35mOcean Load (0.1ms)[0m  SELECT  "oceans".* FROM "oceans" WHERE "oceans"."id" = ? LIMIT 1  [["id", 4]]
+  Rendered oceans/show.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 37ms (Views: 35.7ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/oceans/4" for ::1 at 2015-09-01 21:52:16 +1000
+Processing by OceansController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mOcean Load (0.1ms)[0m  [1mSELECT  "oceans".* FROM "oceans" WHERE "oceans"."id" = ? LIMIT 1[0m  [["id", 4]]
+  Rendered oceans/show.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 34ms (Views: 33.4ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/assets/ocean.self-6c0c725056e63043f421f645daf6f3de2452f946c9e20ad0759170fc4115a800.css?body=1" for ::1 at 2015-09-01 21:52:16 +1000
+
+
+Started GET "/assets/jquery_ujs.self-ca5248a2fad13d6bd58ea121318d642f195f0b2dd818b30615f785ff365e8d1f.js?body=1" for ::1 at 2015-09-01 21:52:16 +1000
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2015-09-01 21:52:16 +1000
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2015-09-01 21:52:16 +1000
+
+
+Started GET "/assets/ocean.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-09-01 21:52:16 +1000
+
+
+Started GET "/assets/jquery.self-d03a5518f45df77341bdbe6201ba3bfa547ebba8ed64f0ea56bfa5f96ea7c074.js?body=1" for ::1 at 2015-09-01 21:52:16 +1000
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2015-09-01 21:52:16 +1000
+
+
+Started GET "/oceans/4/edit" for ::1 at 2015-09-01 21:52:22 +1000
+Processing by OceansController#edit as HTML
+  Parameters: {"id"=>"4"}
+  [1m[35mOcean Load (0.1ms)[0m  SELECT  "oceans".* FROM "oceans" WHERE "oceans"."id" = ? LIMIT 1  [["id", 4]]
+  Rendered oceans/edit.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 34ms (Views: 32.7ms | ActiveRecord: 0.1ms)
+
+
+Started POST "/oceans/4" for ::1 at 2015-09-01 21:52:40 +1000
+Processing by OceansController#update as HTML
+  Parameters: {"ocean"=>{"name"=>"Southern", "image"=>"https://upload.wikimedia.org/wikipedia/commons/1/11/Glass-of-water.jpg", "km_square"=>"100,345,333", "max_depth"=>"10"}, "id"=>"4"}
+  [1m[36mOcean Load (0.2ms)[0m  [1mSELECT  "oceans".* FROM "oceans" WHERE "oceans"."id" = ? LIMIT 1[0m  [["id", 4]]
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mUPDATE "oceans" SET "km_square" = ?, "max_depth" = ? WHERE "oceans"."id" = ?[0m  [["km_square", 100], ["max_depth", 10], ["id", 4]]
+  [1m[35m (0.7ms)[0m  commit transaction
+Redirected to http://localhost:3000/oceans/4
+Completed 302 Found in 5ms (ActiveRecord: 1.2ms)
+
+
+Started GET "/oceans/4" for ::1 at 2015-09-01 21:52:40 +1000
+Processing by OceansController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mOcean Load (0.1ms)[0m  [1mSELECT  "oceans".* FROM "oceans" WHERE "oceans"."id" = ? LIMIT 1[0m  [["id", 4]]
+  Rendered oceans/show.html.erb within layouts/application (14.9ms)
+Completed 200 OK in 42ms (Views: 40.6ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/oceans/4/edit" for ::1 at 2015-09-01 21:52:46 +1000
+Processing by OceansController#edit as HTML
+  Parameters: {"id"=>"4"}
+  [1m[35mOcean Load (0.1ms)[0m  SELECT  "oceans".* FROM "oceans" WHERE "oceans"."id" = ? LIMIT 1  [["id", 4]]
+  Rendered oceans/edit.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 32ms (Views: 31.4ms | ActiveRecord: 0.1ms)
+
+
+Started POST "/oceans/4" for ::1 at 2015-09-01 21:52:55 +1000
+Processing by OceansController#update as HTML
+  Parameters: {"ocean"=>{"name"=>"Southern", "image"=>"https://upload.wikimedia.org/wikipedia/commons/1/11/Glass-of-water.jpg", "km_square"=>"123123123", "max_depth"=>"10"}, "id"=>"4"}
+  [1m[36mOcean Load (0.1ms)[0m  [1mSELECT  "oceans".* FROM "oceans" WHERE "oceans"."id" = ? LIMIT 1[0m  [["id", 4]]
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mUPDATE "oceans" SET "km_square" = ? WHERE "oceans"."id" = ?[0m  [["km_square", 123123123], ["id", 4]]
+  [1m[35m (1.2ms)[0m  commit transaction
+Redirected to http://localhost:3000/oceans/4
+Completed 302 Found in 5ms (ActiveRecord: 1.7ms)
+
+
+Started GET "/oceans/4" for ::1 at 2015-09-01 21:52:55 +1000
+Processing by OceansController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mOcean Load (0.1ms)[0m  [1mSELECT  "oceans".* FROM "oceans" WHERE "oceans"."id" = ? LIMIT 1[0m  [["id", 4]]
+  Rendered oceans/show.html.erb within layouts/application (1.7ms)
+Completed 200 OK in 34ms (Views: 33.3ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/oceans/4/edit" for ::1 at 2015-09-01 21:53:11 +1000
+Processing by OceansController#edit as HTML
+  Parameters: {"id"=>"4"}
+  [1m[35mOcean Load (0.1ms)[0m  SELECT  "oceans".* FROM "oceans" WHERE "oceans"."id" = ? LIMIT 1  [["id", 4]]
+  Rendered oceans/edit.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 37ms (Views: 36.5ms | ActiveRecord: 0.1ms)
+
+
+Started POST "/oceans/4" for ::1 at 2015-09-01 21:53:18 +1000
+Processing by OceansController#update as HTML
+  Parameters: {"ocean"=>{"name"=>"Southern ocean", "image"=>"https://upload.wikimedia.org/wikipedia/commons/1/11/Glass-of-water.jpg", "km_square"=>"123123123", "max_depth"=>"10"}, "id"=>"4"}
+  [1m[36mOcean Load (0.1ms)[0m  [1mSELECT  "oceans".* FROM "oceans" WHERE "oceans"."id" = ? LIMIT 1[0m  [["id", 4]]
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mUPDATE "oceans" SET "name" = ? WHERE "oceans"."id" = ?[0m  [["name", "Southern ocean"], ["id", 4]]
+  [1m[35m (0.8ms)[0m  commit transaction
+Redirected to http://localhost:3000/oceans/4
+Completed 302 Found in 4ms (ActiveRecord: 1.4ms)
+
+
+Started GET "/oceans/4" for ::1 at 2015-09-01 21:53:19 +1000
+Processing by OceansController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mOcean Load (0.1ms)[0m  [1mSELECT  "oceans".* FROM "oceans" WHERE "oceans"."id" = ? LIMIT 1[0m  [["id", 4]]
+  Rendered oceans/show.html.erb within layouts/application (1.5ms)
+Completed 200 OK in 27ms (Views: 25.8ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/oceans" for ::1 at 2015-09-01 21:53:24 +1000
+Processing by OceansController#index as HTML
+  [1m[35mOcean Load (0.2ms)[0m  SELECT "oceans".* FROM "oceans"
+  Rendered oceans/index.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 31ms (Views: 29.7ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/oceans/1" for ::1 at 2015-09-01 21:53:26 +1000
+Processing by OceansController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mOcean Load (0.1ms)[0m  [1mSELECT  "oceans".* FROM "oceans" WHERE "oceans"."id" = ? LIMIT 1[0m  [["id", 1]]
+  Rendered oceans/show.html.erb within layouts/application (1.8ms)
+Completed 200 OK in 35ms (Views: 33.7ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/oceans/1/edit" for ::1 at 2015-09-01 21:53:29 +1000
+Processing by OceansController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mOcean Load (0.1ms)[0m  SELECT  "oceans".* FROM "oceans" WHERE "oceans"."id" = ? LIMIT 1  [["id", 1]]
+  Rendered oceans/edit.html.erb within layouts/application (0.2ms)
+Completed 200 OK in 29ms (Views: 28.0ms | ActiveRecord: 0.1ms)
+
+
+Started POST "/oceans/1" for ::1 at 2015-09-01 21:53:33 +1000
+Processing by OceansController#update as HTML
+  Parameters: {"ocean"=>{"name"=>"Pacific ocean", "image"=>"https://upload.wikimedia.org/wikipedia/commons/f/f6/Pacific_Ocean_-_en.png", "km_square"=>"1000", "max_depth"=>"1000"}, "id"=>"1"}
+  [1m[36mOcean Load (0.1ms)[0m  [1mSELECT  "oceans".* FROM "oceans" WHERE "oceans"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mUPDATE "oceans" SET "name" = ? WHERE "oceans"."id" = ?[0m  [["name", "Pacific ocean"], ["id", 1]]
+  [1m[35m (0.9ms)[0m  commit transaction
+Redirected to http://localhost:3000/oceans/1
+Completed 302 Found in 4ms (ActiveRecord: 1.3ms)
+
+
+Started GET "/oceans/1" for ::1 at 2015-09-01 21:53:33 +1000
+Processing by OceansController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mOcean Load (0.1ms)[0m  [1mSELECT  "oceans".* FROM "oceans" WHERE "oceans"."id" = ? LIMIT 1[0m  [["id", 1]]
+  Rendered oceans/show.html.erb within layouts/application (1.4ms)
+Completed 200 OK in 36ms (Views: 34.7ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/oceans" for ::1 at 2015-09-01 21:53:35 +1000
+Processing by OceansController#index as HTML
+  [1m[35mOcean Load (0.2ms)[0m  SELECT "oceans".* FROM "oceans"
+  Rendered oceans/index.html.erb within layouts/application (1.2ms)
+Completed 200 OK in 31ms (Views: 30.1ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/oceans/3" for ::1 at 2015-09-01 21:53:37 +1000
+Processing by OceansController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mOcean Load (0.2ms)[0m  [1mSELECT  "oceans".* FROM "oceans" WHERE "oceans"."id" = ? LIMIT 1[0m  [["id", 3]]
+  Rendered oceans/show.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 24ms (Views: 23.3ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/oceans/3/edit" for ::1 at 2015-09-01 21:53:46 +1000
+Processing by OceansController#edit as HTML
+  Parameters: {"id"=>"3"}
+  [1m[35mOcean Load (0.1ms)[0m  SELECT  "oceans".* FROM "oceans" WHERE "oceans"."id" = ? LIMIT 1  [["id", 3]]
+  Rendered oceans/edit.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 27ms (Views: 26.2ms | ActiveRecord: 0.1ms)
+
+
+Started POST "/oceans/3" for ::1 at 2015-09-01 21:53:49 +1000
+Processing by OceansController#update as HTML
+  Parameters: {"ocean"=>{"name"=>"Indian ocean", "image"=>"https://upload.wikimedia.org/wikipedia/commons/d/d3/Indian_Ocean-CIA_WFB_Map.png", "km_square"=>"", "max_depth"=>""}, "id"=>"3"}
+  [1m[36mOcean Load (0.1ms)[0m  [1mSELECT  "oceans".* FROM "oceans" WHERE "oceans"."id" = ? LIMIT 1[0m  [["id", 3]]
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.4ms)[0m  [1mUPDATE "oceans" SET "name" = ? WHERE "oceans"."id" = ?[0m  [["name", "Indian ocean"], ["id", 3]]
+  [1m[35m (0.8ms)[0m  commit transaction
+Redirected to http://localhost:3000/oceans/3
+Completed 302 Found in 4ms (ActiveRecord: 1.3ms)
+
+
+Started GET "/oceans/3" for ::1 at 2015-09-01 21:53:49 +1000
+Processing by OceansController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mOcean Load (0.1ms)[0m  [1mSELECT  "oceans".* FROM "oceans" WHERE "oceans"."id" = ? LIMIT 1[0m  [["id", 3]]
+  Rendered oceans/show.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 29ms (Views: 28.7ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/oceans" for ::1 at 2015-09-01 21:53:53 +1000
+Processing by OceansController#index as HTML
+  [1m[35mOcean Load (0.1ms)[0m  SELECT "oceans".* FROM "oceans"
+  Rendered oceans/index.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 28ms (Views: 27.7ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/oceans/2" for ::1 at 2015-09-01 21:53:55 +1000
+Processing by OceansController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mOcean Load (0.1ms)[0m  [1mSELECT  "oceans".* FROM "oceans" WHERE "oceans"."id" = ? LIMIT 1[0m  [["id", 2]]
+  Rendered oceans/show.html.erb within layouts/application (1.4ms)
+Completed 200 OK in 30ms (Views: 28.5ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/oceans/2/edit" for ::1 at 2015-09-01 21:53:59 +1000
+Processing by OceansController#edit as HTML
+  Parameters: {"id"=>"2"}
+  [1m[35mOcean Load (0.1ms)[0m  SELECT  "oceans".* FROM "oceans" WHERE "oceans"."id" = ? LIMIT 1  [["id", 2]]
+  Rendered oceans/edit.html.erb within layouts/application (0.2ms)
+Completed 200 OK in 32ms (Views: 31.5ms | ActiveRecord: 0.1ms)
+
+
+Started POST "/oceans/2" for ::1 at 2015-09-01 21:54:03 +1000
+Processing by OceansController#update as HTML
+  Parameters: {"ocean"=>{"name"=>"Atlantic ocean", "image"=>"https://upload.wikimedia.org/wikipedia/commons/4/47/Atlantic_Ocean_-_en.png", "km_square"=>"76762000", "max_depth"=>""}, "id"=>"2"}
+  [1m[36mOcean Load (0.1ms)[0m  [1mSELECT  "oceans".* FROM "oceans" WHERE "oceans"."id" = ? LIMIT 1[0m  [["id", 2]]
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mUPDATE "oceans" SET "name" = ? WHERE "oceans"."id" = ?[0m  [["name", "Atlantic ocean"], ["id", 2]]
+  [1m[35m (0.8ms)[0m  commit transaction
+Redirected to http://localhost:3000/oceans/2
+Completed 302 Found in 4ms (ActiveRecord: 1.2ms)
+
+
+Started GET "/oceans/2" for ::1 at 2015-09-01 21:54:03 +1000
+Processing by OceansController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mOcean Load (0.1ms)[0m  [1mSELECT  "oceans".* FROM "oceans" WHERE "oceans"."id" = ? LIMIT 1[0m  [["id", 2]]
+  Rendered oceans/show.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 38ms (Views: 36.9ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/oceans" for ::1 at 2015-09-01 21:54:06 +1000
+Processing by OceansController#index as HTML
+  [1m[35mOcean Load (0.1ms)[0m  SELECT "oceans".* FROM "oceans"
+  Rendered oceans/index.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 31ms (Views: 30.8ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/oceans/5" for ::1 at 2015-09-01 21:54:08 +1000
+Processing by OceansController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mOcean Load (0.1ms)[0m  [1mSELECT  "oceans".* FROM "oceans" WHERE "oceans"."id" = ? LIMIT 1[0m  [["id", 5]]
+  Rendered oceans/show.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 25ms (Views: 24.1ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/oceans/5/edit" for ::1 at 2015-09-01 21:54:11 +1000
+Processing by OceansController#edit as HTML
+  Parameters: {"id"=>"5"}
+  [1m[35mOcean Load (0.2ms)[0m  SELECT  "oceans".* FROM "oceans" WHERE "oceans"."id" = ? LIMIT 1  [["id", 5]]
+  Rendered oceans/edit.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 28ms (Views: 26.4ms | ActiveRecord: 0.2ms)
+
+
+Started POST "/oceans/5" for ::1 at 2015-09-01 21:54:14 +1000
+Processing by OceansController#update as HTML
+  Parameters: {"ocean"=>{"name"=>"Northern ocean", "image"=>"https://lauracrean.files.wordpress.com/2013/05/ocean-waves-foam_w725_h544.jpg", "km_square"=>"", "max_depth"=>""}, "id"=>"5"}
+  [1m[36mOcean Load (0.1ms)[0m  [1mSELECT  "oceans".* FROM "oceans" WHERE "oceans"."id" = ? LIMIT 1[0m  [["id", 5]]
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mUPDATE "oceans" SET "name" = ? WHERE "oceans"."id" = ?[0m  [["name", "Northern ocean"], ["id", 5]]
+  [1m[35m (0.7ms)[0m  commit transaction
+Redirected to http://localhost:3000/oceans/5
+Completed 302 Found in 3ms (ActiveRecord: 1.1ms)
+
+
+Started GET "/oceans/5" for ::1 at 2015-09-01 21:54:15 +1000
+Processing by OceansController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mOcean Load (0.1ms)[0m  [1mSELECT  "oceans".* FROM "oceans" WHERE "oceans"."id" = ? LIMIT 1[0m  [["id", 5]]
+  Rendered oceans/show.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 26ms (Views: 25.0ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/oceans/5/edit" for ::1 at 2015-09-01 21:54:19 +1000
+Processing by OceansController#edit as HTML
+  Parameters: {"id"=>"5"}
+  [1m[35mOcean Load (0.1ms)[0m  SELECT  "oceans".* FROM "oceans" WHERE "oceans"."id" = ? LIMIT 1  [["id", 5]]
+  Rendered oceans/edit.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 31ms (Views: 30.5ms | ActiveRecord: 0.1ms)
+
+
+Started POST "/oceans/5" for ::1 at 2015-09-01 21:54:29 +1000
+Processing by OceansController#update as HTML
+  Parameters: {"ocean"=>{"name"=>"Northern ocean", "image"=>"https://lauracrean.files.wordpress.com/2013/05/ocean-waves-foam_w725_h544.jpg", "km_square"=>"345345345", "max_depth"=>"345345"}, "id"=>"5"}
+  [1m[36mOcean Load (0.1ms)[0m  [1mSELECT  "oceans".* FROM "oceans" WHERE "oceans"."id" = ? LIMIT 1[0m  [["id", 5]]
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.4ms)[0m  [1mUPDATE "oceans" SET "km_square" = ?, "max_depth" = ? WHERE "oceans"."id" = ?[0m  [["km_square", 345345345], ["max_depth", 345345], ["id", 5]]
+  [1m[35m (0.6ms)[0m  commit transaction
+Redirected to http://localhost:3000/oceans/5
+Completed 302 Found in 4ms (ActiveRecord: 1.2ms)
+
+
+Started GET "/oceans/5" for ::1 at 2015-09-01 21:54:29 +1000
+Processing by OceansController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mOcean Load (0.1ms)[0m  [1mSELECT  "oceans".* FROM "oceans" WHERE "oceans"."id" = ? LIMIT 1[0m  [["id", 5]]
+  Rendered oceans/show.html.erb within layouts/application (1.2ms)
+Completed 200 OK in 32ms (Views: 30.7ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/oceans/5/edit" for ::1 at 2015-09-01 21:54:35 +1000
+Processing by OceansController#edit as HTML
+  Parameters: {"id"=>"5"}
+  [1m[35mOcean Load (0.1ms)[0m  SELECT  "oceans".* FROM "oceans" WHERE "oceans"."id" = ? LIMIT 1  [["id", 5]]
+  Rendered oceans/edit.html.erb within layouts/application (0.2ms)
+Completed 200 OK in 33ms (Views: 32.5ms | ActiveRecord: 0.1ms)
+
+
+Started POST "/oceans/5" for ::1 at 2015-09-01 21:54:39 +1000
+Processing by OceansController#update as HTML
+  Parameters: {"ocean"=>{"name"=>"Northern ocean", "image"=>"https://lauracrean.files.wordpress.com/2013/05/ocean-waves-foam_w725_h544.jpg", "km_square"=>"345345345", "max_depth"=>"5"}, "id"=>"5"}
+  [1m[36mOcean Load (0.1ms)[0m  [1mSELECT  "oceans".* FROM "oceans" WHERE "oceans"."id" = ? LIMIT 1[0m  [["id", 5]]
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mUPDATE "oceans" SET "max_depth" = ? WHERE "oceans"."id" = ?[0m  [["max_depth", 5], ["id", 5]]
+  [1m[35m (1.0ms)[0m  commit transaction
+Redirected to http://localhost:3000/oceans/5
+Completed 302 Found in 4ms (ActiveRecord: 1.4ms)
+
+
+Started GET "/oceans/5" for ::1 at 2015-09-01 21:54:39 +1000
+Processing by OceansController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mOcean Load (0.1ms)[0m  [1mSELECT  "oceans".* FROM "oceans" WHERE "oceans"."id" = ? LIMIT 1[0m  [["id", 5]]
+  Rendered oceans/show.html.erb within layouts/application (1.2ms)
+Completed 200 OK in 28ms (Views: 26.8ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/oceans" for ::1 at 2015-09-01 21:54:45 +1000
+Processing by OceansController#index as HTML
+  [1m[35mOcean Load (0.2ms)[0m  SELECT "oceans".* FROM "oceans"
+  Rendered oceans/index.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 30ms (Views: 28.8ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/oceans/1" for ::1 at 2015-09-01 21:54:47 +1000
+Processing by OceansController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mOcean Load (0.1ms)[0m  [1mSELECT  "oceans".* FROM "oceans" WHERE "oceans"."id" = ? LIMIT 1[0m  [["id", 1]]
+  Rendered oceans/show.html.erb within layouts/application (1.5ms)
+Completed 200 OK in 34ms (Views: 33.2ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/oceans/1/edit" for ::1 at 2015-09-01 21:54:50 +1000
+Processing by OceansController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mOcean Load (0.1ms)[0m  SELECT  "oceans".* FROM "oceans" WHERE "oceans"."id" = ? LIMIT 1  [["id", 1]]
+  Rendered oceans/edit.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 29ms (Views: 27.1ms | ActiveRecord: 0.1ms)
+
+
+Started POST "/oceans/1" for ::1 at 2015-09-01 21:54:59 +1000
+Processing by OceansController#update as HTML
+  Parameters: {"ocean"=>{"name"=>"Pacific ocean", "image"=>"https://upload.wikimedia.org/wikipedia/commons/f/f6/Pacific_Ocean_-_en.png", "km_square"=>"1000777", "max_depth"=>"6"}, "id"=>"1"}
+  [1m[36mOcean Load (0.1ms)[0m  [1mSELECT  "oceans".* FROM "oceans" WHERE "oceans"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mUPDATE "oceans" SET "km_square" = ?, "max_depth" = ? WHERE "oceans"."id" = ?[0m  [["km_square", 1000777], ["max_depth", 6], ["id", 1]]
+  [1m[35m (0.6ms)[0m  commit transaction
+Redirected to http://localhost:3000/oceans/1
+Completed 302 Found in 4ms (ActiveRecord: 1.1ms)
+
+
+Started GET "/oceans/1" for ::1 at 2015-09-01 21:54:59 +1000
+Processing by OceansController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mOcean Load (0.1ms)[0m  [1mSELECT  "oceans".* FROM "oceans" WHERE "oceans"."id" = ? LIMIT 1[0m  [["id", 1]]
+  Rendered oceans/show.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 31ms (Views: 30.0ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/oceans" for ::1 at 2015-09-01 21:55:02 +1000
+Processing by OceansController#index as HTML
+  [1m[35mOcean Load (0.2ms)[0m  SELECT "oceans".* FROM "oceans"
+  Rendered oceans/index.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 34ms (Views: 33.3ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/oceans/2" for ::1 at 2015-09-01 21:55:04 +1000
+Processing by OceansController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mOcean Load (0.1ms)[0m  [1mSELECT  "oceans".* FROM "oceans" WHERE "oceans"."id" = ? LIMIT 1[0m  [["id", 2]]
+  Rendered oceans/show.html.erb within layouts/application (1.8ms)
+Completed 200 OK in 38ms (Views: 37.4ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/oceans/2/edit" for ::1 at 2015-09-01 21:55:07 +1000
+Processing by OceansController#edit as HTML
+  Parameters: {"id"=>"2"}
+  [1m[35mOcean Load (0.1ms)[0m  SELECT  "oceans".* FROM "oceans" WHERE "oceans"."id" = ? LIMIT 1  [["id", 2]]
+  Rendered oceans/edit.html.erb within layouts/application (0.2ms)
+Completed 200 OK in 30ms (Views: 29.1ms | ActiveRecord: 0.1ms)
+
+
+Started POST "/oceans/2" for ::1 at 2015-09-01 21:55:15 +1000
+Processing by OceansController#update as HTML
+  Parameters: {"ocean"=>{"name"=>"Atlantic ocean", "image"=>"https://upload.wikimedia.org/wikipedia/commons/4/47/Atlantic_Ocean_-_en.png", "km_square"=>"76762000", "max_depth"=>"6.5"}, "id"=>"2"}
+  [1m[36mOcean Load (0.1ms)[0m  [1mSELECT  "oceans".* FROM "oceans" WHERE "oceans"."id" = ? LIMIT 1[0m  [["id", 2]]
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mUPDATE "oceans" SET "max_depth" = ? WHERE "oceans"."id" = ?[0m  [["max_depth", 6], ["id", 2]]
+  [1m[35m (0.7ms)[0m  commit transaction
+Redirected to http://localhost:3000/oceans/2
+Completed 302 Found in 4ms (ActiveRecord: 1.0ms)
+
+
+Started GET "/oceans/2" for ::1 at 2015-09-01 21:55:15 +1000
+Processing by OceansController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mOcean Load (0.1ms)[0m  [1mSELECT  "oceans".* FROM "oceans" WHERE "oceans"."id" = ? LIMIT 1[0m  [["id", 2]]
+  Rendered oceans/show.html.erb within layouts/application (1.5ms)
+Completed 200 OK in 31ms (Views: 30.5ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/oceans" for ::1 at 2015-09-01 21:55:17 +1000
+Processing by OceansController#index as HTML
+  [1m[35mOcean Load (0.2ms)[0m  SELECT "oceans".* FROM "oceans"
+  Rendered oceans/index.html.erb within layouts/application (1.3ms)
+Completed 200 OK in 37ms (Views: 35.7ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/oceans/5" for ::1 at 2015-09-01 21:55:18 +1000
+Processing by OceansController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mOcean Load (0.1ms)[0m  [1mSELECT  "oceans".* FROM "oceans" WHERE "oceans"."id" = ? LIMIT 1[0m  [["id", 5]]
+  Rendered oceans/show.html.erb within layouts/application (3.0ms)
+Completed 200 OK in 31ms (Views: 30.5ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/oceans" for ::1 at 2015-09-01 21:55:21 +1000
+Processing by OceansController#index as HTML
+  [1m[35mOcean Load (0.2ms)[0m  SELECT "oceans".* FROM "oceans"
+  Rendered oceans/index.html.erb within layouts/application (1.1ms)
+Completed 200 OK in 35ms (Views: 34.3ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/oceans/4" for ::1 at 2015-09-01 21:55:22 +1000
+Processing by OceansController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mOcean Load (0.1ms)[0m  [1mSELECT  "oceans".* FROM "oceans" WHERE "oceans"."id" = ? LIMIT 1[0m  [["id", 4]]
+  Rendered oceans/show.html.erb within layouts/application (1.5ms)
+Completed 200 OK in 39ms (Views: 37.6ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/oceans" for ::1 at 2015-09-01 21:55:25 +1000
+Processing by OceansController#index as HTML
+  [1m[35mOcean Load (0.3ms)[0m  SELECT "oceans".* FROM "oceans"
+  Rendered oceans/index.html.erb within layouts/application (1.9ms)
+Completed 200 OK in 39ms (Views: 38.2ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/oceans/3" for ::1 at 2015-09-01 21:55:26 +1000
+Processing by OceansController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mOcean Load (0.1ms)[0m  [1mSELECT  "oceans".* FROM "oceans" WHERE "oceans"."id" = ? LIMIT 1[0m  [["id", 3]]
+  Rendered oceans/show.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 29ms (Views: 28.0ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/oceans/3/edit" for ::1 at 2015-09-01 21:55:30 +1000
+Processing by OceansController#edit as HTML
+  Parameters: {"id"=>"3"}
+  [1m[35mOcean Load (0.1ms)[0m  SELECT  "oceans".* FROM "oceans" WHERE "oceans"."id" = ? LIMIT 1  [["id", 3]]
+  Rendered oceans/edit.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 30ms (Views: 29.6ms | ActiveRecord: 0.1ms)
+
+
+Started POST "/oceans/3" for ::1 at 2015-09-01 21:55:37 +1000
+Processing by OceansController#update as HTML
+  Parameters: {"ocean"=>{"name"=>"Indian ocean", "image"=>"https://upload.wikimedia.org/wikipedia/commons/d/d3/Indian_Ocean-CIA_WFB_Map.png", "km_square"=>"765765", "max_depth"=>"3.7"}, "id"=>"3"}
+  [1m[36mOcean Load (0.1ms)[0m  [1mSELECT  "oceans".* FROM "oceans" WHERE "oceans"."id" = ? LIMIT 1[0m  [["id", 3]]
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.4ms)[0m  [1mUPDATE "oceans" SET "km_square" = ?, "max_depth" = ? WHERE "oceans"."id" = ?[0m  [["km_square", 765765], ["max_depth", 3], ["id", 3]]
+  [1m[35m (0.8ms)[0m  commit transaction
+Redirected to http://localhost:3000/oceans/3
+Completed 302 Found in 4ms (ActiveRecord: 1.3ms)
+
+
+Started GET "/oceans/3" for ::1 at 2015-09-01 21:55:38 +1000
+Processing by OceansController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mOcean Load (0.1ms)[0m  [1mSELECT  "oceans".* FROM "oceans" WHERE "oceans"."id" = ? LIMIT 1[0m  [["id", 3]]
+  Rendered oceans/show.html.erb within layouts/application (1.2ms)
+Completed 200 OK in 28ms (Views: 27.0ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/oceans" for ::1 at 2015-09-01 21:55:39 +1000
+Processing by OceansController#index as HTML
+  [1m[35mOcean Load (0.1ms)[0m  SELECT "oceans".* FROM "oceans"
+  Rendered oceans/index.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 32ms (Views: 31.3ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/oceans/2" for ::1 at 2015-09-01 21:55:41 +1000
+Processing by OceansController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mOcean Load (0.1ms)[0m  [1mSELECT  "oceans".* FROM "oceans" WHERE "oceans"."id" = ? LIMIT 1[0m  [["id", 2]]
+  Rendered oceans/show.html.erb within layouts/application (1.4ms)
+Completed 200 OK in 31ms (Views: 30.3ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/oceans" for ::1 at 2015-09-01 21:55:44 +1000
+Processing by OceansController#index as HTML
+  [1m[35mOcean Load (0.2ms)[0m  SELECT "oceans".* FROM "oceans"
+  Rendered oceans/index.html.erb within layouts/application (1.3ms)
+Completed 200 OK in 34ms (Views: 33.2ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/oceans/2" for ::1 at 2015-09-01 21:56:14 +1000
+Processing by OceansController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mOcean Load (0.1ms)[0m  [1mSELECT  "oceans".* FROM "oceans" WHERE "oceans"."id" = ? LIMIT 1[0m  [["id", 2]]
+  Rendered oceans/show.html.erb within layouts/application (1.5ms)
+Completed 200 OK in 37ms (Views: 35.8ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/oceans/2/edit" for ::1 at 2015-09-01 21:56:17 +1000
+Processing by OceansController#edit as HTML
+  Parameters: {"id"=>"2"}
+  [1m[35mOcean Load (0.1ms)[0m  SELECT  "oceans".* FROM "oceans" WHERE "oceans"."id" = ? LIMIT 1  [["id", 2]]
+  Rendered oceans/edit.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 27ms (Views: 26.1ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/oceans" for ::1 at 2015-09-01 21:56:28 +1000
+Processing by OceansController#index as HTML
+  [1m[36mOcean Load (0.1ms)[0m  [1mSELECT "oceans".* FROM "oceans"[0m
+  Rendered oceans/index.html.erb within layouts/application (1.1ms)
+Completed 200 OK in 34ms (Views: 32.9ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/" for ::1 at 2015-09-01 21:56:47 +1000
+Processing by OceansController#index as HTML
+  [1m[35mOcean Load (0.1ms)[0m  SELECT "oceans".* FROM "oceans"
+  Rendered oceans/index.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 24ms (Views: 23.4ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/oceans" for ::1 at 2015-09-01 21:56:53 +1000
+Processing by OceansController#index as HTML
+  [1m[36mOcean Load (0.2ms)[0m  [1mSELECT "oceans".* FROM "oceans"[0m
+  Rendered oceans/index.html.erb within layouts/application (1.4ms)
+Completed 200 OK in 43ms (Views: 42.2ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/oceans/2" for ::1 at 2015-09-01 21:56:56 +1000
+Processing by OceansController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[35mOcean Load (0.1ms)[0m  SELECT  "oceans".* FROM "oceans" WHERE "oceans"."id" = ? LIMIT 1  [["id", 2]]
+  Rendered oceans/show.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 40ms (Views: 39.3ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/oceans" for ::1 at 2015-09-01 21:57:03 +1000
+Processing by OceansController#index as HTML
+  [1m[36mOcean Load (0.1ms)[0m  [1mSELECT "oceans".* FROM "oceans"[0m
+  Rendered oceans/index.html.erb within layouts/application (1.3ms)
+Completed 200 OK in 46ms (Views: 44.8ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/oceans/2" for ::1 at 2015-09-01 21:57:04 +1000
+Processing by OceansController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[35mOcean Load (0.2ms)[0m  SELECT  "oceans".* FROM "oceans" WHERE "oceans"."id" = ? LIMIT 1  [["id", 2]]
+  Rendered oceans/show.html.erb within layouts/application (1.7ms)
+Completed 200 OK in 51ms (Views: 49.8ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/oceans" for ::1 at 2015-09-01 21:57:06 +1000
+Processing by OceansController#index as HTML
+  [1m[36mOcean Load (0.2ms)[0m  [1mSELECT "oceans".* FROM "oceans"[0m
+  Rendered oceans/index.html.erb within layouts/application (1.4ms)
+Completed 200 OK in 43ms (Views: 41.9ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/oceans/3" for ::1 at 2015-09-01 21:57:08 +1000
+Processing by OceansController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[35mOcean Load (0.1ms)[0m  SELECT  "oceans".* FROM "oceans" WHERE "oceans"."id" = ? LIMIT 1  [["id", 3]]
+  Rendered oceans/show.html.erb within layouts/application (2.2ms)
+Completed 200 OK in 39ms (Views: 38.0ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/oceans" for ::1 at 2015-09-01 21:57:10 +1000
+Processing by OceansController#index as HTML
+  [1m[36mOcean Load (0.2ms)[0m  [1mSELECT "oceans".* FROM "oceans"[0m
+  Rendered oceans/index.html.erb within layouts/application (1.4ms)
+Completed 200 OK in 39ms (Views: 38.2ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/oceans/4" for ::1 at 2015-09-01 21:57:12 +1000
+Processing by OceansController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[35mOcean Load (0.1ms)[0m  SELECT  "oceans".* FROM "oceans" WHERE "oceans"."id" = ? LIMIT 1  [["id", 4]]
+  Rendered oceans/show.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 49ms (Views: 47.0ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/oceans" for ::1 at 2015-09-01 21:57:19 +1000
+Processing by OceansController#index as HTML
+  [1m[36mOcean Load (0.2ms)[0m  [1mSELECT "oceans".* FROM "oceans"[0m
+  Rendered oceans/index.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 30ms (Views: 29.6ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/oceans/5" for ::1 at 2015-09-01 21:57:20 +1000
+Processing by OceansController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[35mOcean Load (0.1ms)[0m  SELECT  "oceans".* FROM "oceans" WHERE "oceans"."id" = ? LIMIT 1  [["id", 5]]
+  Rendered oceans/show.html.erb within layouts/application (1.4ms)
+Completed 200 OK in 33ms (Views: 32.0ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/oceans" for ::1 at 2015-09-01 21:57:31 +1000
+Processing by OceansController#index as HTML
+  [1m[36mOcean Load (0.2ms)[0m  [1mSELECT "oceans".* FROM "oceans"[0m
+  Rendered oceans/index.html.erb within layouts/application (1.1ms)
+Completed 200 OK in 36ms (Views: 35.4ms | ActiveRecord: 0.1ms)
