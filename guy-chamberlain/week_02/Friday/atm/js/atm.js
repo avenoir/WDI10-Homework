@@ -11,6 +11,7 @@ var Bank = {
 		var amt = parseFloat($("#checking-amount").val());
 		bal = Bank.getBal("#checking-balance");
 		bal += amt;
+		bal = bal.toFixed(2);
 		$("#checking-balance").html( "$" + bal);
 	},
 
@@ -18,6 +19,7 @@ var Bank = {
 		var amt = parseFloat($("#savings-amount").val());
 		bal = Bank.getBal("#savings-balance");
 		bal += amt;
+		bal = bal.toFixed(2);
 		$("#savings-balance").html( "$" + bal);
 	},
 
@@ -29,6 +31,7 @@ var Bank = {
 			if (  (bal - amt) * -1 <=  savingsBal ) {
 				// Take some out of savings
 				savingsBal -= (bal - amt) * -1;
+				savingsBal = savingsBal.toFixed(2);
 				$("#savings-balance").html( "$" + savingsBal);
 				$("#checking-balance").html( "$0" );
 			}	else {
@@ -36,6 +39,7 @@ var Bank = {
 			}
 		} else {
 			bal -= amt;
+			bal = bal.toFixed(2);
 			$("#checking-balance").html( "$" + bal);
 	  }
 	},
@@ -48,6 +52,7 @@ var Bank = {
 			if (  (bal - amt) * -1 <=  checkingBal ) {
 				// Take some out of checking
 				checkingBal -= (bal - amt) * -1;
+				checkingBal = checkingBal.toFixed(2);
 				$("#checking-balance").html( "$" + checkingBal);
 				$("#savings-balance").html( "$0" );
 			}	else {
@@ -55,6 +60,7 @@ var Bank = {
 			}
 		} else {
 			bal -= amt;
+			bal = bal.toFixed(2);
 			$("#savings-balance").html( "$" + bal);
 	  }
 	}
@@ -65,7 +71,5 @@ $("#checking-deposit").on("click", Bank.checkingDeposit)
 $("#checking-withdraw").on("click", Bank.checkingWithdraw);
 $("#savings-withdraw").on("click", Bank.savingsWithdraw);
 $("#savings-deposit").on("click", Bank.savingsDeposit)
-
-
 
 })

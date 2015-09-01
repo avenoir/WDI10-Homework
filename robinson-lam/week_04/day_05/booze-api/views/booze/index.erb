@@ -1,0 +1,10 @@
+<h2>All the Booze</h2>
+
+
+<% @booze.each do |booze| %>
+    <a href="/booze/<%= booze.id %>"><p>
+            <%= booze.name %>
+    </p></a>
+<% end %>
+
+<a href="booze/new">Add new Booze</a>

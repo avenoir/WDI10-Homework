@@ -1,0 +1,138 @@
+@import url(https://fonts.googleapis.com/css?family=Lobster);
+@import url(https://fonts.googleapis.com/css?family=Pacifico);
+
+
+.container{
+	max-width: 960px;
+	margin: 0 auto;
+	height: 100%;
+}
+
+body{
+	text-align: center;
+	background: url(http://www.hdwallpaperscool.com/wp-content/uploads/2015/05/fender-stratocaster-guitar-high-definition-wallpaper-download-fender-images-free.jpg);
+	background-repeat: no-repeat;
+
+}
+
+.header{
+	color: white;
+
+	font-family: 'Lobster', cursive;
+}
+
+nav{
+	background-color: #E9B656;
+	height: 60px;
+}
+
+.navtag{
+	margin-top: 10px;
+	font-family: 'Lobster', cursive;
+	font-size: 1.5em;
+}
+
+.navlink{
+	color: white;
+	padding: 5px 10px 5px 10px;
+	border-radius: 10px;
+}
+
+.navlink:hover{
+	background-color: #908A8A;
+	text-decoration: none;
+
+}
+
+.index_image{
+	/*border: 1px solid black;*/
+	margin:5px 20px 5px 20px;
+}
+
+.index_image img{
+	box-shadow: 5px 5px 3px #888888;
+	border-radius: 10px;
+	max-height: 250px;
+	max-width: 250px;
+	width: auto;
+    height: auto;
+
+
+}
+
+
+.index_image a{
+	font-family: 'Pacifico', cursive;
+	color: white;
+	font-size: 1.1em;
+	text-decoration: none;
+}
+
+.index_image a:hover{
+	background-color: white;
+	color: #888888;
+	border-radius: 10px;
+	text-decoration: none;
+}
+
+.index_image img {
+  -webkit-transition: -webkit-transform .8s ease-in-out;
+  transition: transform 1.5s ease-in-out;
+}
+.index_image img:hover {
+  -webkit-transform: rotate(360deg);
+  transform: rotateY(360deg);
+}
+
+.index_container{
+	display: inline-flex;
+	flex-wrap:wrap;
+	flex-direction: row;
+}
+
+.input_form{
+	border: 0;
+	height: 30px;
+	width: 150px;
+}
+
+.input_button{
+	border: 0;
+	background-color: #e5e1be;
+	height: 30px;
+	width: 150px;
+}
+
+.guitar_show{
+    display: block;
+    max-width:400px;
+     max-height:400px;
+    /*position: relative;*/
+    box-shadow: 10px 10px 5px #FFFFFF;
+   /* left: 400px;*/
+    width: auto;
+    height: auto;
+    margin: 0 auto;
+}
+
+.guitar_show_desc{
+	font-family: 'Pacifico', cursive;
+	color: white;
+	font-size: 1.4em;
+}
+
+.guitar_iframe_show{
+	display: inline-flex;
+	flex-wrap:wrap;
+	flex-direction: row;
+	margin: 20px 20px;
+}
+
+.show_container{
+	width: 960px;
+	margin: 0 auto;
+}
+
+.btn{
+	margin: 10px 10px
+}

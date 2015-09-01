@@ -1,0 +1,8 @@
+<h1>Saved Pictures in Database</h1>
+
+ <p><img class="feature" src="<%=@poster%>"></p> 
+
+<% @saved.each do |movie| %>
+  <p><%= movie['title'] %>: <%= movie['year'] %></p> 
+  <p><img class="feature" src="<%= movie['image'] %>"></p> 
+<% end %>

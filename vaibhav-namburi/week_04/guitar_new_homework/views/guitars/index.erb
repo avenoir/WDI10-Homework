@@ -1,0 +1,19 @@
+<h1 class="header">Here's what's in the database</h1>
+
+<div class="index_container" >
+
+<% @guitars.each do |data| %>
+
+<div class="index_image">
+	
+	<img  style="display:none" src="<%=data['image']%>" alt="">
+	<a class="index_a" href="guitars/<%=data['id']%>">
+	
+	<%= data["name"] %>
+	</a>
+
+</div>
+
+<%end%>
+
+</div>

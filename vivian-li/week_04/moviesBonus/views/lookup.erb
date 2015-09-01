@@ -1,0 +1,28 @@
+	<div class="movieTitle">
+		You Entered : <%= params[:movietitle] %>	
+	</div>
+  
+
+
+ <div class="movieInfo">
+ <% if @movie_info %>
+  <% @movie_info.each do |movie| %>
+    <p>
+    <a href="http://www.imdb.com/title/<%=movie["imdbID"]%>"><%=movie["Title"]%></a>
+    </p>
+  <% end %>
+<% end %>
+  
+</div>
+
+
+
+
+
+ <form action = "/lookup"> 
+ <input type="text" name="movietitle" placeholder ="Movie Title Here"> 
+
+   <input type="submit" value="Go">
+
+
+</form>

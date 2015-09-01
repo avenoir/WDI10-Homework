@@ -1,0 +1,26 @@
+<div class="status">
+
+	<% unless @title_list.nil? %>
+        <h2>Your search results: </h2>
+
+        <% @title_list.each do |list| %>
+
+                <div class="picture">
+                    <a href="/poster?movietitle=<%= list['Title'] %>"><%= list["Title"] %> : <%= list["Year"] %></a>
+                </div>
+
+        <% end %>
+
+    <% else %>
+        Enter a valid movie!
+    <% end %> 
+
+</div>
+
+<form action="/poster">
+    
+    <input type="text" name="movietitle" placeholder="title of the movie" autofocus>
+    <button>View Poster</button>
+
+</form>
+

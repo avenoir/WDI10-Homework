@@ -1,0 +1,27 @@
+body {
+	background-color: lime;
+	color: white;
+	text-align: center;
+}
+
+nav {
+	text-align: right;
+}
+
+a {
+	color: black;
+}
+
+.copy {
+	text-align: left;
+	color: white;
+	background-color: lime;
+	padding: 2em;
+	border-radius: 0.5em;
+	box-shadow: 2px 2px 10px black;
+}
+
+.container {
+	max-width: 960px;
+	margin: auto;
+}

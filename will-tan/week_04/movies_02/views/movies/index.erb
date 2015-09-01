@@ -1,0 +1,14 @@
+<h1>All Movies In My Database</h1>
+
+<ol>
+<% @movies.each do |movie| %>
+	<p>
+		<%= movie['id'] %>
+		<%= movie['title'] %>
+		<%= movie['genre'] %>
+		<%= movie['poster'] %>
+		<a href="/movies/<%= movie['id'] %>/delete">Delete</a>
+	</p>
+<% end %>
+</ol>
+

@@ -3,6 +3,9 @@ var rectangle = {
 	wid: 4
 };
 
+// take the input from the functions themselves & call the inputed information
+// do not tightly couple the program. allow it to be inputed.
+
 var isSquare = function(){
 	if (rectangle.leng === rectangle.wid){
 		return "this is a square";
@@ -22,7 +25,7 @@ var perimRect = function(){
 }
 
 var triangle = {
-	sideA: 3,
+	sideA: 20,
 	sideB: 4,
 	sideC: 4
 };
@@ -56,14 +59,20 @@ var isIsoscelese2 = function(){
 		}
 }
 	
-
+var s = ((triangle.sideA + triangle.sideB + triangle.sideC)/ 2); 
 var areaTriangle = function(){
-	var answer = ((triangle.sideA/2) * triangle.sideB);
+	var answer = Math.sqrt(s*(s - triangle.sideA)*(s - triangle.sideB)*(s - triangle.sideC)); // this is herons formula
 	return answer;
 }
 
 var isObtuse = function(){
 //need to find the hypotenuse & see if the longest side of the triangle is greater than the hypotenuse, if it is this is obtuse.
-// 
+	if (((triangle.sideA * triangle.sideA) + (triangle.sideB * triangle.sideB) < (triangle.sideC * triangle.sideC)) || ((triangle.sideA * triangle.sideA) + (triangle.sideC * triangle.sideC) < (triangle.sideB * triangle.sideB)) || ((triangle.sideC * triangle.sideC) + (triangle.sideB * triangle.sideB)) < (triangle.sideA * triangle.sideA)) {
+		return 'this is obtuse';
+	} else {
+		return 'this is not obtuse';
+	}
 }
+
+
 

@@ -1,0 +1,17 @@
+ <div class="info">    
+<h2>Book : <%= @book.title%></h2>
+<h3>Author : <%= @book.author%></h3>
+<h3>Type : <%= @book.booktype%></h3>
+<h3>Recommended by : <%= @book.name%></h3>
+</div>
+
+<% if @book.image %>
+<a href="<%= @book.link %>"><img class="feature" src="<%=@book.image%>"></a>
+<% end %>
+
+<p>
+<a href ="/books/<%= @book.id %>/delete">Delete</a>
+<a href ="/books/<%= @book.id %>/edit">Edit</a>
+</p>
+
+

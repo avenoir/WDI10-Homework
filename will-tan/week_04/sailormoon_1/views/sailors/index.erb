@@ -1,0 +1,14 @@
+<h1>All Sailors</h1>
+
+<% @sailors.each do |sailor| %>
+	<p>
+		<a href="/sailors/<%= sailor.id %>">
+			
+			<% if sailor.name == nil %>
+				<%= sailor.id %>
+			<% else %>
+				Sailor <%= sailor.name %>
+			<% end %> 
+		</a>
+	</p>
+<% end %>

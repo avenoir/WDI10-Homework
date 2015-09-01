@@ -1,0 +1,16 @@
+<h2>All kpops goes here</h2>
+
+<div class="copy">
+
+	<% @kpops.each do | kpop | %>
+
+		<p>
+			<a href="/kpops/<%= kpop.id %>">
+				<%= kpop.group_name %>
+			</a>
+		</p>
+	<% end %>
+
+</div>
+
+
