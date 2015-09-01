@@ -1,0 +1,19 @@
+body {
+	background-color: pink;
+	text-align: center;
+}
+
+
+
+.container {
+	max-width: 960px;
+}
+
+nav {
+	text-align: right;
+}
+
+
+a {
+	color: yellow;
+}

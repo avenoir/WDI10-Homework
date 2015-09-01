@@ -1,0 +1,12 @@
+
+<p>Name: <%= @mountain.name %></p>
+<p>Location: <%= @mountain.location %></p>
+
+<p>First Person: <%= @mountain.first_person %></p>
+
+<p><%= image_tag @mountain.image %></p>
+
+
+<p><%= link_to('Edit Mountain', mountain_edit_path(@mountain.id)) %></p>
+<p><%= button_to('Delete Mountain', mountain_path(@mountain.id), :method => 'delete') %></p>
+

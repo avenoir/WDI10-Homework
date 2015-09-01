@@ -1,0 +1,6 @@
+<h2>11 Greatest Mountains of the World</h2>
+
+<% @mountains.each do | mountain | %>
+	<p><%= link_to(mountain.name, mountain_path(mountain.id)) %></p>
+<% end %>
+
