@@ -1,0 +1,16 @@
+body {
+	margin: 0 auto;
+	max-width: 100%;
+	width: 960px;
+	background-color: cornsilk;
+	text-align: center;
+}
+
+nav {
+	padding: 10px;
+	margin: 10px;
+}
+
+a {
+	padding: 10px 10px 10px 10px;
+}

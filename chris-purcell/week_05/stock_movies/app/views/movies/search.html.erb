@@ -1,0 +1,13 @@
+
+<h1> Your Search Results </h1>
+<% unless @list_of_movies.empty?  %>
+	<% @list_of_movies.each do |movie| %>
+		<p>
+		<form>
+		<a href="/poster/<%= movie["Title"].tr(' ', '+') %>" name=><%= movie["Title"] %></a>
+		</form>
+		</p>
+	<% end %>
+	<% else %>
+	<p> NO RESULTS </p>
+<% end %>
