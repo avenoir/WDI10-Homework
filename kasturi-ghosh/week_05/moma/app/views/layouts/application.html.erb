@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Moma</title>
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+
+<div class="container">
+	<nav>
+		<%= link_to 'Artists', artists_path %>
+		<%= link_to 'New Artist', new_artist_path %>
+		<%= link_to 'Works', works_path %>
+		<%= link_to 'New Work', new_work_path %>
+	</nav>
+
+	<%= yield %>
+</div>
+
+</body>
+</html>
