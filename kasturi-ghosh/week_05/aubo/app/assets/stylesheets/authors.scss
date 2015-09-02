@@ -23,18 +23,6 @@ html {
 	margin: 10px;
 }
 
-.showbooks p {
-	text-align: center;
-}
-
-.showbooks img {
-	text-align: center;
-}
-
-.showbooks li {
-	text-align: center;
-}
-
 .picture {
 	position: absolute;
 }
@@ -75,6 +63,7 @@ a {
 
 a:hover {
 	font-size: 1.2em;
+	transition: font-size 0.6s ease;
 }
 
 ul {
