@@ -1,0 +1,11 @@
+<h2><%= @book.title %></h2>
+
+<ul>
+	<li>Author: <%= link_to(@book.author.name, author_path(@book.author)) if @book.author %></li>
+	<li>Series: <%= link_to(@book.series.name, series_path(@book.series)) if @book.series %></li>
+	<li>Genre: <%= @book.genre if @book.genre %></li>
+	<li>Pages: <%= @book.pages if @book.pages %>pgs</li>
+</ul>
+
+<%= link_to("Edit Book", edit_book_path(@book)) %>
+<%= button_to("Delete Book", book_path(@book), :method => 'delete') %>
