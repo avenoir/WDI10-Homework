@@ -1,0 +1,14 @@
+<h2> All the friggen artists </h2>
+
+<ul>
+	<% @artists.each do |artist| %>
+		<li> <%= link_to(artist.name, artist_path(artist.id)) %> 
+			<ul>
+				<li> <%= image_tag artist.image, :class => 'artist-image' %> </li>
+				<li> Nationality: <%= artist.nationality %> </li>
+				<li> DOB: <%= artist.dob %> </li>
+				<li> Period: <%= artist.period %> </li>
+			</ul>
+		</li>
+	<% end %>
+</ul>
