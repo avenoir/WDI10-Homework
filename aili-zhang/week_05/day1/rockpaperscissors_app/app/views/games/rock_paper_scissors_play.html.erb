@@ -1,0 +1,11 @@
+
+<form action="/games/rock_paper_scissors">
+	<input class="game_input" type="text" name="throw" placeholder="Please throw 'rock', 'paper' or 'scissors'." autofocus>
+	<input type="submit" value="Play">
+</form>
+
+<% if @user_input %>
+	<p>The app has thrown: <strong><%= @app %></strong></p>
+	<p>You have thrown: <strong><%= @user_input %></strong></p>
+	<p><strong><%= @result %></strong></p>
+<% end %>
