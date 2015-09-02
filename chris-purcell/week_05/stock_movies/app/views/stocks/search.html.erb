@@ -1,0 +1,7 @@
+<% unless @price.nil? %>
+	<p>Current Stock Price : <%= @stock_symbol %> $<%= @price %></p>
+<% end %>
+<form action="/stocks/search">
+	<input type="text" name="x" placeholder="STOCK NAME" autofocus>
+	<button>Calculate</button>
+</form>
