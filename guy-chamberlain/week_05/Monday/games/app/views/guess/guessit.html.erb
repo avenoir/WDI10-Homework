@@ -1,0 +1,10 @@
+<form action="/checkguess" >
+  <p>Pick a number between 1 and 10</p>
+  <select name="num">
+    <option>Choose...</option>
+    <% (1..10).each do |i| %>
+      <option value="<%= i %>"><%= i %></option>
+    <% end %>
+  </select>
+
+  <input type="submit" value="Submit">

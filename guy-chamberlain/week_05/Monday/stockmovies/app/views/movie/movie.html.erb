@@ -1,0 +1,14 @@
+
+
+<% unless @poster.nil? %>
+  <img src="<%= @poster %>">
+<% end %>
+
+<form action="/search">
+  <input type="text" name="name" placeholder="Movie name" autofocus>
+  <button>Search</button>
+</form>
+
+<br><br>
+<a href="/get_quote">Get a Stock Quote</a>
+
