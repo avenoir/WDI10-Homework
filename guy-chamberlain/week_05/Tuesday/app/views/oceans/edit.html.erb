@@ -1,0 +1,11 @@
+<h1>Edit ocean</h1>
+
+<form action="/oceans/<%= @ocean.id %>" method="post">
+	<p>Name: <input type="text" name="ocean[name]" value="<%= @ocean.name %>"></p>
+	<p>Image: <input type="URL" name="ocean[image]" value="<%= @ocean.image %>"></p>
+	<p>Km Square: <input type="text" name="ocean[km_square]" value="<%= @ocean.km_square %>"></p>
+	<p>Max Depth: <input type="text" name="ocean[max_depth]" value="<%= @ocean.max_depth %>"></p>
+	
+	<input type="submit" value="Update ocean">
+
+</form>

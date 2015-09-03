@@ -1,0 +1,13 @@
+<% unless @price.nil? %>
+  <%= @stock_symbol %>
+  is trading at 
+  <strong><%= @price %></strong>.
+<% end %>
+
+<form action="/get_quote">
+  <input type="text" name="stock_symbol" placeholder="Stock symbol" autofocus>
+  <button>Get Quote</button>
+</form>
+
+<br><br>
+<a href="/search">Search for a movie</a>

@@ -1,0 +1,3 @@
+<% for movie in @movielist['Search'] %>
+  <a href="/get_poster/<%= movie['imdbID'] %>"><%= movie['Title']%></a><br>
+<% end %>

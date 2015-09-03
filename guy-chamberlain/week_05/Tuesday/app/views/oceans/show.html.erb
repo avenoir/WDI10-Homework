@@ -1,0 +1,13 @@
+<h2><%= @ocean.name %> </h2>
+<p>km Square: <%= number_to_human @ocean.km_square %> </p>
+<p>Max Depth: <%= number_to_human @ocean.max_depth %>km </p>
+
+<% if @ocean.image %>
+	<%= image_tag @ocean.image %>
+<% end %>
+
+<div class"controls">
+	<%= link_to('Edit ocean', ocean_edit_path(@ocean.id)) %>
+	<br><br>
+	<%= button_to('Destroy ocean', ocean_path(@ocean.id), :method => 'delete') %>
+</div>

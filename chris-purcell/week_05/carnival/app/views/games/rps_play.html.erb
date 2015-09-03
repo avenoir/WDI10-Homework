@@ -1,0 +1,23 @@
+<h1> ROCK PAPER SCISSCORS </h1>
+
+<h2> Computer chose <%= @computer %>, you chose <%= @player %>, you <% if @computer.to_s == @player %>
+											draw!
+										 <% elsif @computer.to_s == 'rock' && @player == 'paper' %>
+										 	win!
+										 <% elsif @computer.to_s == 'paper' && @player == 'scissors' %>
+										 	win!
+										 <% elsif @computer.to_s == 'scissors' && @player == 'rock' %>
+										 	win!
+										 <% else %>
+										 	lose!
+										 <% end %>
+
+										 </h2>
+<p>
+	<div>
+		<form action="/games/rps_play">
+			<input class="boxes" type="text" name="throw" placeholder="ROCK, PAPER, OR SCISSORS?" autofocus>
+			<input type="submit">
+		</form>
+	</div>
+</p>
