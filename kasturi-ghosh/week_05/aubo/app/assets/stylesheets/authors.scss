@@ -13,6 +13,27 @@ html {
 	border-radius: 5px;
 }
 
+input {
+	padding: 10px;
+	margin: 5px;
+	border-radius: 5px;
+}
+
+input:hover {
+	background-color: gray;
+}
+
+label {
+	padding: 10px;
+	margin: 5px;
+	border-radius: 5px;
+}
+
+.submit {
+	margin: 20px;
+	padding: 10px;
+}
+
 .index {
 	padding: 15px;
 	margin: 10px;

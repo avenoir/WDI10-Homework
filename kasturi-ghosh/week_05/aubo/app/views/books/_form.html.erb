@@ -21,6 +21,6 @@
 	<%= f.select :author_id, Author.all.map { |author| [ author.name, author.id ] }, :include_blank => true %>
 </p>
 
-<%= f.submit %>
+<%= f.submit :class => 'submit' %>
 
 <% end %>
