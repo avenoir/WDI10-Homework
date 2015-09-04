@@ -4,6 +4,7 @@ body {
 	font-family: 'Oswald', sans-serif;
 	background: url('http://i.imgur.com/EVPNewb.jpg');
 	background: cover;
+	padding-left: 16px;
 }
 
 a:link, 
