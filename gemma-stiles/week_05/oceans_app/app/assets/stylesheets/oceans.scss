@@ -1,0 +1,71 @@
+@import url(https://fonts.googleapis.com/css?family=Varela+Round);
+
+html {
+	font-family: 'Varela Round', sans-serif; 
+	background-size: cover;
+	background: url('http://i.imgur.com/Lwjonvv.jpg');
+}
+
+.container {
+	max-width: 960px;
+	margin: auto;
+	background: rgba(255, 255, 255, 0.7);
+	padding: 1em;
+}
+
+h2 {
+	font-size: 28px;
+	padding-bottom: 30px;
+}
+
+p {
+	font-size: 20px;
+	padding-top: 30px;
+}
+
+nav {
+	text-align: right;
+}
+
+a:link, 
+a:visited {
+	color: black;
+}
+
+li {
+	display: inline;
+	padding: 0px 30px 0px 30px;
+	color: black;
+	font-size: 16px;
+}
+
+.buttons {
+	text-align: right;
+}
+
+.feature {
+	max-width:  100%;
+}
+
+@media (max-width: 500px) {
+	html {
+		background-size: fit;
+	}
+	nav {
+		font-size: 14px;
+	}
+	h2 {
+		font-size: 18px;
+	}
+	p {
+		font-size: 14px;
+	}
+	li {
+		display: block;
+		padding: 6px;
+		font-size: 12px;	
+	}
+	img {
+		max-width: auto;
+	}
+}	
