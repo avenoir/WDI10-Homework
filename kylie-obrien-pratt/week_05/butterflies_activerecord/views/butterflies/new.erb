@@ -1,0 +1,15 @@
+<h2>New Butterfly</h2>
+<form action="/butterflies" method="post">
+  <p><input type="text" name="name" placeholder="Name"></p>
+  <p><input type="text" name="family" placeholder="Family"></p>
+  <p><input type="url" name="image" placeholder="Image URL"></p>
+
+<!-- dropdown selector menu -->
+  <select name="plant_id">
+  	<% Plant.all.each do |plant| %>
+  	<option ><%=plant.name %></option>
+  	<% end %>
+  </select>
+
+  <input type="submit" value="Create butterfly">
+</form>

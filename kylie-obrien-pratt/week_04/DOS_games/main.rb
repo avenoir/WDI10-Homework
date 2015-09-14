@@ -1,5 +1,6 @@
 require 'sinatra'
 require 'sinatra/reloader'
+require 'sqlite3'
 require 'httparty'
 require 'active_record'
 
@@ -26,7 +27,7 @@ get '/games' do #url of choice
   erb :'DOS_games/index' #routing file
 end
 
-get '/games/new' do #gets new page, enter new butterfly
+get '/games/new' do #gets new page, enter new game
   erb :'DOS_games/new'
 end
 
@@ -41,7 +42,7 @@ post '/games' do #links to new game form, creates new entry in table using info 
 #params relates to post method, name is key in hash
   @game = Game.create :name => params[:name], :year => params[:year], :creator => params[:creator], :synopsis => params[:synopsis], :rating => params[:rating] #columns in db, form links to col names
 
-  redirect to "/games/#{ game.id }"
+  redirect to "/games/#{params[:id]}"
 end
 
 get '/games/:id' do #retrieve butterfly instance using butterfly id
@@ -71,11 +72,11 @@ post '/games/:id' do
 
   game.update :name => params[:name], :year => params[:year], :creator => params[:creator], :synopsis =>[:synopsis], :rating =>[:rating]
 
-  redirect to "/games/#{ game.id }"
+  redirect to "/games/#{params[:id]}"
 end
 
 get '/lookup' do 
-  @name = params[:name] #eg Jaws  what types in box
+  @name = params[:name].to_s.strip.capitalize#eg Doom, what's typed in box
   url = "http://thegamesdb.net/api/GetGamesList.php?name={ @name }"
   game_art = HTTParty.get url #website data
   @boxart = game_art['<boxart side="front" width="1530" height="2126">boxart/original/front/170-1.jpg</boxart>'] #just retrieve poster info, object in array
