@@ -1,0 +1,13 @@
+<% unless @result.nil %>
+The result you have conjured is <%strong %><%= @result %> %></strong>,
+<% end %>
+
+<form action="/calc">
+	<input type="number" name="x" placeholder="first value">
+	<input type="text" name="operation" placeholder="*, /, +, -">
+	<input type="number" name="y" placeholder="second value">
+	<button>Calculate</button>
+</form>
+
+<%= "!" * 25 %>
+<%= "this is echoing ERB" %>
