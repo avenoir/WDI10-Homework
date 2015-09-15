@@ -1,0 +1,50 @@
+@import url(https://fonts.googleapis.com/css?family=Shadows+Into+Light);
+
+body {
+	background: white;
+	background-size: cover;
+	background: url('http://i.imgur.com/26l1k3J.jpg');
+	opacity: 20%;
+}
+
+h1 {
+	font-color: black;
+	font-family: 'Shadows Into Light', cursive;
+	font-weight: bold;
+	text-align: center;
+	font-size: 65px;
+}
+
+
+img {
+	float: left;: right;
+	padding-right: 30px;
+	padding-left: 20px;
+}
+
+p {
+	font-family: 'Shadows Into Light', cursive;
+	text-align: left;
+	font-weight: bold;
+	max-width: 1200px;
+	font-size: 36px;
+}
+
+@media (max-width: 500px) {
+	body {
+		background-size: cover;
+	}
+
+	h1 {
+		font-size: 22px;
+	}
+
+	p {
+		font-size: 16px;
+	}
+
+	img {
+		width: auto;
+	}
+}
+ 
