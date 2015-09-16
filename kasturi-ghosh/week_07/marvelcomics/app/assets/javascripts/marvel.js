@@ -41,18 +41,17 @@ var searchMarvel = function (query) {
     apikey: 'c199f3f980787979a3713164f1aa82db'
     
   }).done(function (result) {
-  	if ( ! result ) {
+    var comicId;
+    if ( result.data.results.length !== 0 ) {
+      comicId = result.data.results[0].id;
+      searchComic(comicId);
+    } else {
   		$('#heading').empty();
-		$('#description').text( "Character not present in Marvel database" );
-		$('#results').removeAttr('src');
-		$('#img_link').removeAttr('href');
-  	} else {
-  		var comicId = result.data.results[0].id;	
-  		searchComic(comicId);
-  	}
-  	
+		  $('#description').text( "Character not present in Marvel database" );
+		  $('#results').removeAttr('src');
+		  $('#img_link').removeAttr('href').empty();
+    }
   });
-  event.preventDefault();
 };
 
 $( document ).ready( function () {
