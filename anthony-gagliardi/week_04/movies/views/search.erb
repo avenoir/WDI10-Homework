@@ -1,0 +1,7 @@
+<h2>Movie Title: <%= @title["Title"] %></h2>
+<h3>Year: <%= @title["Year"] %></h3>
+<p>Year: <%= @title["Poster"] %></p>
+
+<% if @title['Poster'] %>
+	<img class="feature" src="<%= @title['Poster'] %>">
+<% end %>
