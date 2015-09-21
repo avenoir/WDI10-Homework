@@ -1,0 +1,18 @@
+<h2><%= @book.title %></h2>
+
+<ul>
+
+	<% if @book.author %>
+		<li>Author: <%= link_to(@book.author.name, @book.author) %></li>
+	<% end %>
+
+
+	<li>Date of Publish: <%= @book.date_of_publish.strftime "%A, %e %B %Y" if @book.date_of_publish %></li>
+	<li>Genre: <%= @book.genre %></li>
+	<li>Cover: <%= image_tag @book.cover, :class => 'thumb' %></li>
+
+</ul>
+
+
+<%= link_to 'Edit', edit_book_path %>
+<%= button_to 'Delete', @book, :method => 'delete', :data => { :confirm => "Are you sure? " } %>
