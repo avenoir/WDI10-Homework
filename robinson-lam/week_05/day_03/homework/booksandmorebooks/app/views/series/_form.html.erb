@@ -1,0 +1,7 @@
+<%= form_for @series do |f| %>
+	<%= f.label :name %>
+	<%= f.text_field :name %>
+
+	<%= f.select :author_id, Author.all.map { |author| [ author.name, author.id ] }, :include_blank => true %>
+	<%= f.submit %>
+<% end %>

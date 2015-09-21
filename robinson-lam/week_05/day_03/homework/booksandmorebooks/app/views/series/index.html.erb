@@ -1,0 +1,9 @@
+<h2>All Series</h2>
+
+<ul>
+	<% @series.each do |series| %>
+		<li>
+			<%= link_to(series.name, series_path(series)) %>
+		</li>
+	<% end %>
+</ul>

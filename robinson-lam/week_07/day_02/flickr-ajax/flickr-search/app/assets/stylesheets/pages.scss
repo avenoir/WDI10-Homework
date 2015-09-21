@@ -1,0 +1,45 @@
+// Place all the styles related to the Pages controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+body {
+	font-family: "Proxima Nova", "Helvetica", "Arial", sans-serif;
+	margin: 0;
+	padding: 0;
+}
+
+.container {
+	width: 800px;
+	text-align: center;
+	margin: 0 auto;
+	padding: 20px;
+}
+
+#search {
+	margin: 20px;
+
+	input[type='text'] {
+		padding: 10px;
+		outline: none;
+		width: 200px;
+		margin: 0 10px;
+	}
+	button {
+		padding: 10px;
+		width: 100px;
+		background: #33aacf;
+		color: white;
+		border: none;
+	}
+}
+
+#results {
+	img {
+		max-height: 200px;
+		padding: 20px;
+		transition: all 0.3s ease-in-out;
+		cursor: pointer;
+		&:hover {
+			transform: scale(1.2);
+		}
+	}
+}

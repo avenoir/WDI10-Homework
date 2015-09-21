@@ -1,0 +1,15 @@
+<h2><%= @series.name %></h2>
+
+<ul>
+	<li>Author: <%= link_to(@series.author.name, author_path(@series.author)) if @series.author %></li>
+	<li>Books: 
+		<ul>
+			<% @series.books.each do |book| if @series.books %>
+				<li> <%= link_to(book.title, book_path(book)) %> </li>
+			<% end %>
+		</ul>
+	</li>
+</ul>
+
+<%= link_to("Edit Series", edit_series_path(@series)) %>
+<%= button_to("Delete Series", series_path(@series), :method => 'delete') %>
