@@ -1,0 +1,14 @@
+body {
+	background-color: grey;
+	color: white;
+	text-align: center;
+}
+
+a {
+	color: black;
+}
+
+.container {
+	max-width: 960px;
+	margin:auto;
+}

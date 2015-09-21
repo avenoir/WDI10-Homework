@@ -1,0 +1,14 @@
+<h2><%= @author.name %> </h2>
+
+<%= image_tag @author.image, :class => 'feature' %>
+
+Books written :
+<% @author.books.each do |book| %>
+	<%= link_to book.title + " ", book %>
+<% end %>
+
+<div>
+	<%= link_to 'Delete', @author, :method => 'delete', :data => { :confirm => 'Are you sure?'} %>
+	<%= link_to 'Edit', edit_author_path(@author) %>
+
+</div>
