@@ -1,0 +1,1 @@
+INSERT INTO aliens (id, species, planet) VALUES (0, "Cybermen", "Mondas");
