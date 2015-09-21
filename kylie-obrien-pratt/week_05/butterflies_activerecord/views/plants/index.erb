@@ -1,0 +1,13 @@
+<!-- shows list of all plants -->
+
+<h1>All Plants</h1>
+
+<h2>Coming soon</h2>
+
+<% @plants.each do |plant| %>
+  <p>
+    <a href="/plants/<%= plant['id'] %>">
+      <%= plant.name %>
+    </a>
+  </p>
+<% end %>

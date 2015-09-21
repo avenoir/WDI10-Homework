@@ -1,0 +1,16 @@
+<% unless @poster.nil? %>
+
+<div class="poster">
+  <img src="<%= @poster%>">
+</div>
+<p><%=@title%>
+</p>
+<% end%>
+
+
+
+
+<form action="/lookup">
+  <input type="text" name="movietitle" placeholder="Please enter your favourite movie here" autofocus>
+  <input type="submit" value="Go">
+</form>

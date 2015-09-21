@@ -1,0 +1,23 @@
+body {
+	background-color: lime;
+	color:white;
+	text-align: center;
+}
+
+nav {
+	text-align: right;
+}
+
+a {
+	color: black;
+}
+
+.copy {
+	text-align:left;
+	background-color: white;
+	color:black;
+	padding: 2em;
+	border-radius: 0.5em;
+	box-shadow: 0 0 5px black;
+}
+

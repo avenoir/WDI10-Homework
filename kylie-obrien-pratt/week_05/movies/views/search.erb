@@ -1,0 +1,22 @@
+
+
+<div class="search-info">
+<div class="search-title">Search Results</div>
+
+<% 
+  movies = []
+  series = []
+  games = []
+  @search_data["Search"].each do |result|
+    case result["Type"]
+    when "movie"
+      movies << result
+    when "series"
+      series.push result
+    when "game"
+      games.push result
+    end
+  end
+%>
+
+</div>
