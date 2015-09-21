@@ -25,6 +25,22 @@
   float: right;
 }
 
+#transferChecking {
+  border: 20px
+}
+
+#transferSavings {
+  border: 20px
+}
+
+.transfer {
+  margin: 0 auto;
+}
+
+h4 {
+  padding-top: 162px;
+}
+
 .account {
   background-color: #6C9A74;
   border: 1px solid #295A33;

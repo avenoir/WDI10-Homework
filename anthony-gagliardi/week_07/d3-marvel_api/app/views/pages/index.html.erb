@@ -1,0 +1,29 @@
+<div class="container">
+	<div class="row">
+
+		<div class="col-md-4 col-md-offset-4">
+			<h1 class="heading">Search Superhero</h1>
+			<form id="search">
+				<%= text_field_tag 'query', nil, :placeholder => 'Search Marvel', :autofocus => true %>
+				<%= button_tag 'Go', :id => 'search_marvel' %>
+			</form>
+		</div>
+
+	</div> <!-- CLOSING HEADER ROW -->
+</div> <!-- CLOSING HEADER CONTAINER -->
+
+<div class="container">
+	<div class="row" id="content">
+
+		<div class="col-md-4 col-md-offset-1">
+			<h1 class="name"><strong>Name:</strong> <%= @char[:name] %></h1>
+			<p class="paragraph"><strong>Description:</strong> <%= @char[:description] %></p>
+			<p class="paragraph"><strong>Total Comic Appearances:</strong> <%= @char[:comics][:available] %></p>
+		</div>
+
+		<div class="col-md-4 col-md-offset-1">
+			<img src="<%= @char[:thumbnail][:path] + "." + @char[:thumbnail][:extension] %>" class="portrait">
+		</div>
+	</div> <!-- CLOSING ROW -->
+</div> <!-- CLOSING CONTAINER -->
+

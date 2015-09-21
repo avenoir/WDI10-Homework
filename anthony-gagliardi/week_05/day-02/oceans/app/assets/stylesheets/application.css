@@ -1,0 +1,43 @@
+@import url(https://fonts.googleapis.com/css?family=Lato);
+
+body {
+	background-image: url('wallpaper.jpg');
+	background-repeat: no-repeat;
+	color: white;
+	font-family: 'Lato', sans-serif;
+}
+
+.container {
+	max-width: 100%;
+	margin: auto;
+	float: right;
+	padding: 10px 15px 15px 9px;
+}
+
+.nav {
+	text-align: center;
+	position: inline-block;
+}
+
+.container {
+	max-width: 100%;
+	margin: auto;
+}
+
+.feature {
+	max-width: 100%
+}
+
+.controls {
+	text-align: right;
+}
+
+h2 {
+  padding: 7px 0px 15px 15px;
+  font-size: 4em;
+}
+
+p {
+	padding-left: 20px;
+	font-size: 1.3em;
+}

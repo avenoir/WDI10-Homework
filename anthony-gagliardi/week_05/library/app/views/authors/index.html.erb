@@ -1,0 +1,5 @@
+<h1>Authors Index</h1>
+
+<% @authors.each do |author| %> <!-- Iterates all authors -->
+	<p><%= link_to author.name, author %></p> <!-- author.name = name .. author = destination/where to go -->
+<% end %>
