@@ -1,0 +1,45 @@
+<div class="center">
+	<h1><%= @boardgame.name %></h1>
+	<p>
+		<a href="/boardgames/<%= @boardgame.id %>/delete">Delete</a> 
+		<a href="/boardgames/<%= @boardgame.id %>/edit">Edit</a>
+	</p>
+</div>
+
+<div class="left"><% if @boardgame.image %>
+	<img class="feature" src="<%= @boardgame.image %>">
+<% end %>
+
+</div>
+
+<div class="right">
+	<% if @boardgame.designers != "" %>
+		<p><span class="large">Designer(s): <%= @boardgame.designers %></span></p>
+	<% end %>
+
+	<% if @boardgame.year != "" %>
+		<p><span class="large">Year Published: <%= @boardgame.year %></span></p>
+	<% end %>
+
+	<% if @boardgame.players != "" %>
+		<p><span class="large">Number of Players: <%= @boardgame.players %></span></p>
+	<% end %>
+
+	<% if @boardgame.time != "" %>
+		<p><span class="large">Duration of Game: <%= @boardgame.time %> minutes</span></p>
+	<% end %>
+
+	<% if @boardgame.website != "" %>
+		<p><span class="large">Website: <a href="<%= @boardgame.website %>"><%= @boardgame.name %></a></span></p>
+	<% end %>
+
+	<% if @saved != "" %>
+		<p><span class="large">Related: <%= @saved.name %></a></span></p>
+	<% end %>
+
+	<a href="/boardgames/<%= @nexter.previous.id %>">Previous</a>
+	<a href="/boardgames/<%= @nexter.next.id %>">Next</a>
+</div>
+
+
+

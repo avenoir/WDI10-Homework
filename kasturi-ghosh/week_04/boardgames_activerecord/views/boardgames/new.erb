@@ -1,0 +1,19 @@
+<h2>New Board Game</h2>
+<form class="center" action="/boardgames" method="post">
+	<div class="message"><%= @message %></div>
+	<p><input class="entry" type="text" name="name" placeholder="Name"></p>
+	<p><input class="entry" type="text" name="designers" placeholder="Designer(s) comma separated"></p>
+	<p><input class="entry" type="text" name="year" placeholder="Year Published"></p>
+	<p><input class="entry" type="text" name="players" placeholder="Number of Players"></p>
+	<p><input class="entry" type="text" name="time" placeholder="Duration of Game in minutes"></p>
+	<p><input class="entry" type="text" name="website" placeholder="Website"></p>
+	<p><input class="entry" type="url" name="image" placeholder="Image URL"></p>
+
+	<input class="button" type="submit" value="Add Board Game">
+	
+</form>
+
+</form>
+<form class="center" action="/boardgames">
+	<input class="button" type="submit" value="Cancel">
+</form>

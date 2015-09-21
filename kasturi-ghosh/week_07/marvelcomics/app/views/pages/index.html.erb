@@ -1,0 +1,16 @@
+<div id="bg"></div>
+<div id="display_form">
+	<h1>Search your favourite Marvel character</h1>
+
+	<form id="search">
+		<%= text_field_tag 'query', nil, :placeholder => 'Marvel Character', :autofocus => true %>
+		<%= button_tag 'Go', :id => 'search_marvel' %>
+	</form>
+
+	<div id="heading"></div>
+	<div id="description"></div>
+	<a id="img_link"></a>
+	<div></div>
+	<img id="results">
+	
+</div>

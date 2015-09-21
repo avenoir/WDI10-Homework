@@ -1,0 +1,15 @@
+<h2>Artists</h2>
+
+<ul>
+	<% @artists.each do |artist| %>
+		<li>
+			<ul>
+				<li><%= image_tag artist.image, :class => 'thumb' %></li>
+				<li>Name: <%= link_to artist.name, artist %></li>
+				<li>Nationality: <%= artist.nationality %></li>
+				<li>Data of Birth: <%= artist.dob.strftime "%A, %e %B %Y" if artist.dob%></li>
+				<li>Period: <%= artist.period %></li>
+			</ul>
+		</li>
+	<% end %>
+</ul>
