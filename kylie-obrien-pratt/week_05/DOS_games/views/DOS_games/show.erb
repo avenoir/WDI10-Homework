@@ -1,0 +1,12 @@
+<h2>Name: <%= @game.name %></h2>
+<h3>Year: <%= @game.year %></h3>
+<h3>Creator: <%= @game.creator %></h3>
+<h3>Rating: <%= @game.rating %></h3>
+<h4>Synopsis: <%= @game.synopsis %></h4>
+<% if @game.game_art %>
+<img class="feature" src="<%=@game.game_art%>"> </a>
+<% end %>
+<p>
+  <a href="/games/<%= @game.id %>/delete">Delete</a>
+  <a href="/games/<%= @game.id %>/edit">Edit</a>
+</p>

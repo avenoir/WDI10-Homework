@@ -1,0 +1,16 @@
+<h2><%= @ocean.name %></h2>
+<p>Location: <%= @ocean.location %></p>
+<p>Volume(km³): <%= number_to_human @ocean.volume %></p>
+<p>Coastline(km): <%= number_to_human @ocean.coastline %></p>
+
+
+<% if @ocean.image %>
+	<%= image_tag @ocean.image, :class => 'feature' %>
+<% end %>	
+
+<div class="buttons">
+	<%= link_to('Update ocean', ocean_edit_path(@ocean.id)) %>
+	<%= button_to('Drain Ocean', ocean_path(@ocean.id), :method => 'delete') %>
+</div>
+
+

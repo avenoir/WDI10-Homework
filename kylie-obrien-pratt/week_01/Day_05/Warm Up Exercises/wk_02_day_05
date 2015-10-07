@@ -1,0 +1,107 @@
+// Warmup exercise
+
+# 99 Bottles of Beer
+
+Write a program which prints out the lyrics to that beloved classic, that field-trip favorite: _99 Bottles of Beer on the Wall._
+
+## Requirements
+
+* The program should be called with `Beer.song`
+* The program should output text to the console
+* Each verse should be separated by a single blank line.
+
+## Extensions
+
+* Make the type of beer customizable
+* Allow the following function calls to work:
+  - ` Beer.song() ` - That should do the whole song
+  - ` Beer.song(45) ` - This should do from 45 down
+  - ` Beer.song(34, 12) ` - This should print from 34 to 12
+
+## Data
+
+Here's a sampling of the lyrics...
+
+```
+99 bottles of beer on the wall, 99 bottles of beer.
+Take one down and pass it around, 98 bottles of beer on the wall.
+
+98 bottles of beer on the wall, 98 bottles of beer.
+Take one down and pass it around, 97 bottles of beer on the wall.
+
+97 bottles of beer on the wall, 97 bottles of beer.
+Take one down and pass it around, 96 bottles of beer on the wall.
+```
+
+Then, at the end...
+
+```
+1 bottle of beer on the wall, 1 bottle of beer.
+Take it down and pass it around, no more bottles of beer on the wall.
+
+No more bottles of beer on the wall, no more bottles of beer.
+Go to the store and buy some more, 99 bottles of beer on the wall.
+```
+
+// create beer object
+
+var bottleEverythingUp = {
+	goodForYou: false,
+
+	formatQuantity: false(num)
+
+		if (num === 0) {
+		return "no more bottles of beer";
+		} else if {
+		(num === 1);
+		return "1 bottle of beer";
+		} else {
+		return num + "bottles of beer"
+		}
+}
+
+
+formatAction: function(num) {
+	if (num === 0) {
+		return "Go to the store and buy some more";
+	} else if (num === 1) {
+		return "take it down and pass it around";
+	} else {
+		return "take one down and pass it around";
+	}
+}
+
+decrementOrRefill: function(num) {
+	if the number is 0, return 99 or just return the number - 1
+
+	if (num ===0) {
+		return 99;
+	}
+	return (num - 1);
+}
+
+verse: function(num) {
+	var quantity = this.formatQuantity(num);
+	var action = this.formatAction(num);
+	var alteredNum = this.decrementOrRefill(num);
+	var remainder = this.formatQuantity(alteredNum)
+	console.log(quantity);
+	console.log(action);
+
+	var firstLine = quantity + " on the wall," + quantity + ".\n";
+	var secondLine = action + ", " + remainder + " on the wall.\n" //\n creates new line
+
+	return firstLine + secondLine;
+},
+
+sing: function(numStart, numFinish) {
+	if (numStart === undefined) {
+	numStart = 99;
+	} 
+	if (numFinish === 99)  {
+	num
+	}
+	for (var i = numStart; i >= numFinish; i--) {
+	console.log(this.verse(i));
+	}
+}

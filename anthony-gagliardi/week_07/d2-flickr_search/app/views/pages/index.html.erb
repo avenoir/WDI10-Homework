@@ -1,0 +1,10 @@
+<h1><img class="logo" src="assets/flickr.png" style="margin-left: -65px; height: 60px">Flickr Search</h1>
+
+<div>
+	<form id="search">
+		<%= text_field_tag 'query', nil, :placeholder => 'Search Flickr', :autofocus => true %>
+		<%= button_tag 'Go', :id => 'search_flicker' %>
+	</form>
+
+	<div class="results"></div>
+</div>

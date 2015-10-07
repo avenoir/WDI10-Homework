@@ -1,0 +1,12 @@
+<div id="bg"></div>
+<div id="display_form">
+	<h1>Flickr Search</h1>
+
+	<form id="search">
+		<%= text_field_tag 'query', nil, :placeholder => 'Butterflies', :autofocus => true %>
+		<%= button_tag 'Go', :id => 'search_flickr' %>
+	</form>
+
+	<div id="heading"></div>
+	<div id="results"></div>
+</div>

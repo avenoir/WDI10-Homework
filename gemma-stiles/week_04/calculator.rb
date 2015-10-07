@@ -25,7 +25,7 @@
 def prompt(message)
 	print message
 	gets.chomp  #implicit return
-end
+end	
 
 
 def display_menu

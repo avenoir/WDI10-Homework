@@ -1,0 +1,11 @@
+<h2><%= @oceans.name %></h2>
+<p>Sea location: <%= @oceans.location %></p>
+<p>Depth: <%= @oceans.depth %></p>
+
+<div class="controls">
+<%= link_to('Terraform ocean', oceans_edit_path(@ocean.id)) %>
+<!-- Makes link to terraform planet -->
+
+<%= button_to('Destroy ocean', oceans_path(@oceans.id), :method => 'delete') %>
+<!-- Makes button for destroy planet -->
+</div>

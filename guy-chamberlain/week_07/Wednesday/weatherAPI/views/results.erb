@@ -1,0 +1,9 @@
+<% for w in @weather['observations']['data'] %>
+		<p>	<%= w['local_date_time'] %>	
+			<%= w['cloud'] %>
+			<%= w['cloud_type'] %> 
+			<%= w['air_temp'] %> 
+			<%= w['weather'] %> 
+			</p>
+	  	<br>
+<% end %>

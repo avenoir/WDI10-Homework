@@ -1,0 +1,15 @@
+<%= form_for @book do |f| %>
+	<%= f.label :title %>
+	<%= f.text_field :title %>
+
+	<%= f.label :genre %>
+	<%= f.text_field :genre %>
+
+	<%= f.label :pages %>
+	<%= f.text_field :pages, :type => 'number' %>
+
+	<%= f.select :author_id, Author.all.map { |author| [ author.name, author.id ] }, :include_blank => true %>
+	<%= f.select :series_id, Series.all.map { |series| [ series.name, series.id ] }, :include_blank => true %>
+
+	<%= f.submit %>
+<% end %>

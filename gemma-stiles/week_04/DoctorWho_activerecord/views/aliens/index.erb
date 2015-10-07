@@ -1,0 +1,10 @@
+<h2>Aliens</h2>
+<h3>Below is an incomplete list of some of the Doctor's friends and foes. Please click on an alien species for more information.</h3>
+
+<% @aliens.each do |alien| %>
+  <p>	
+  	<a href="aliens/<%= alien['id'] %>">	
+		<%= alien['species'] %>
+	</a>
+  </p>		
+<% end %>

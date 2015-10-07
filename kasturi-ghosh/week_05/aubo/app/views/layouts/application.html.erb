@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Aubo</title>
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+
+<div class="container">
+<nav>
+	<ul>
+		<li><a href="/home">Home</a></li>
+		<li><%= link_to 'Authors', authors_path %></li>
+		<li><%= link_to 'Books', books_path %></li>
+		<li><%= link_to 'Add Authors', new_author_path %></li>
+		<li><%= link_to 'Add Books', new_book_path %></li>
+	</ul>
+</nav>
+	<%= yield %>
+</div>
+
+</body>
+</html>

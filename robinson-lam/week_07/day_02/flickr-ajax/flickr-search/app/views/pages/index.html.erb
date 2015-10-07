@@ -1,0 +1,8 @@
+	<h1>Flickr Search</h1>
+
+	<form id="search">
+		<%= text_field_tag 'query', nil, :placeholder => 'What are you looking for?', :autofocus => true %>
+		<%= button_tag 'Search', :id => 'search_flickr' %>
+	</form>
+
+	<div id="results"></div>

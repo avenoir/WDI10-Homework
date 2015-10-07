@@ -1,0 +1,10 @@
+<h1><%= @author.name %></h1>
+
+<p><%= image_tag @author.image, :class => 'feature' %></p>
+<p>Nationality: <%= @author.nationality %></p>
+<p>DoB: <%= @author.dob %></p>
+
+<div class="buttons">
+  <%= button_to 'Edit', edit_author_path(@author) %> <!-- BROKEN LINK -->
+  <%= button_to 'Delete', @author, :method => 'delete', :data => { :confirm => "Are you sure?" } %>
+</div>

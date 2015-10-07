@@ -1,0 +1,16 @@
+<h2><%= @author.name %></h2>
+
+<ul>
+	<li>Date of Birth: <%= @author.dob.strftime "%B %d, %Y" if @author.dob %></li>
+	<li>Signature: <%= image_tag @author.signature, :class => "thumb" if @author.signature %></li>
+	<li>Books: 
+		<ul>
+			<% @author.books.each do |book| %>
+				<li> <%= link_to(book.title, book_path(book)) %> </li>
+			<% end %>
+		</ul>
+	</li>
+</ul>
+
+<%= link_to("Edit Author", edit_author_path(@author)) %>
+<%= button_to("Delete Author", author_path(@author), :method => 'delete') %>

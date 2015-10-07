@@ -1,0 +1,7 @@
+<h2>List of all Mountains in Database (<%= @count %>)</h2>
+
+<ul>
+	<% @mountains.each do |mountain| %>
+	<li><%= link_to(mountain.name, mountain_path(mountain.id)) %></li>
+	<% end %>
+</ul>
