@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Hangman LAB</title>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+	<script src="js/main.js"></script>
+	<link rel="stylesheet" href="hangman.css">
+
+</head>
+	<div class="container">
+		<body>
+			<h1>Hangman LAB</h1>
+			
+			<!-- display message on top right, telling users to think of synonyms of which word  -->
+			<div class="choosing-word"></div>
+			
+			<!-- generate 26 alphabet letters for users to choose -->
+			<div class="generate-letters">
+				<div class="char">a</div>
+				<div class="char">b</div>
+				<div class="char">c</div>
+				<div class="char">d</div>
+				<div class="char">e</div>
+				<div class="char">f</div>
+				<div class="char">g</div>
+				<div class="char">h</div>
+				<div class="char">i</div>
+				<div class="char">j</div>
+				<div class="char">k</div>
+				<div class="char">l</div>
+				<div class="char">m</div>
+				<div class="char">n</div>
+				<div class="char">o</div>
+				<div class="char">p</div>
+				<div class="char">q</div>
+				<div class="char">r</div>
+				<div class="char">s</div>
+				<div class="char">t</div>
+				<div class="char">u</div>
+				<div class="char">v</div>
+				<div class="char">w</div>
+				<div class="char">x</div>
+				<div class="char">y</div>
+				<div class="char">z</div>
+			</div>
+
+			<!-- initial message, the number of lives will be changed in js -->
+			<div class="display-lives">You have 8 lives left</div>
+
+			<!-- table for displaying the number of cells to fill in the guessing word -->
+			<div class="guessing-word-table"></div>
+			
+			<!-- create a 10 x 10 table to draw a hangman -->
+			<div class="hangman-table">
+				<table>
+					<tr class="row-one">
+						<td class="col-one"></td>
+						<td class="col-two"></td>
+						<td class="col-three"></td>
+						<td class="col-four"></td>
+						<td class="col-five"></td>
+						<td class="col-six"></td>
+						<td class="col-seven"></td>
+						<td class="col-eight"></td>
+						<td class="col-nine"></td>
+						<td class="col-ten"></td>
+					</tr>
+					<tr class="row-two">
+						<td class="col-one"></td>
+						<td class="col-two"></td>
+						<td class="col-three"></td>
+						<td class="col-four"></td>
+						<td class="col-five"></td>
+						<td class="col-six"></td>
+						<td class="col-seven"></td>
+						<td class="col-eight"></td>
+						<td class="col-nine"></td>
+						<td class="col-ten"></td>
+					</tr>
+					<tr class="row-three">
+						<td class="col-one"></td>
+						<td class="col-two"></td>
+						<td class="col-three"></td>
+						<td class="col-four"></td>
+						<td class="col-five"></td>
+						<td class="col-six"></td>
+						<td class="col-seven"></td>
+						<td class="col-eight"></td>
+						<td class="col-nine"></td>
+						<td class="col-ten"></td>
+					</tr>
+					<tr class="row-four">
+						<td class="col-one"></td>
+						<td class="col-two"></td>
+						<td class="col-three"></td>
+						<td class="col-four"></td>
+						<td class="col-five"></td>
+						<td class="col-six"></td>
+						<td class="col-seven"></td>
+						<td class="col-eight"></td>
+						<td class="col-nine"></td>
+						<td class="col-ten"></td>
+					</tr>
+					<tr class="row-five">
+						<td class="col-one"></td>
+						<td class="col-two"></td>
+						<td class="col-three"></td>
+						<td class="col-four"></td>
+						<td class="col-five"></td>
+						<td class="col-six"></td>
+						<td class="col-seven"></td>
+						<td class="col-eight"></td>
+						<td class="col-nine"></td>
+						<td class="col-ten"></td>
+					</tr>
+					<tr class="row-six">
+						<td class="col-one"></td>
+						<td class="col-two"></td>
+						<td class="col-three"></td>
+						<td class="col-four"></td>
+						<td class="col-five"></td>
+						<td class="col-six"></td>
+						<td class="col-seven"></td>
+						<td class="col-eight"></td>
+						<td class="col-nine"></td>
+						<td class="col-ten"></td>
+					</tr>
+					<tr class="row-seven">
+						<td class="col-one"></td>
+						<td class="col-two"></td>
+						<td class="col-three"></td>
+						<td class="col-four"></td>
+						<td class="col-five"></td>
+						<td class="col-six"></td>
+						<td class="col-seven"></td>
+						<td class="col-eight"></td>
+						<td class="col-nine"></td>
+						<td class="col-ten"></td>
+					</tr>
+					<tr class="row-eight">
+						<td class="col-one"></td>
+						<td class="col-two"></td>
+						<td class="col-three"></td>
+						<td class="col-four"></td>
+						<td class="col-five"></td>
+						<td class="col-six"></td>
+						<td class="col-seven"></td>
+						<td class="col-eight"></td>
+						<td class="col-nine"></td>
+						<td class="col-ten"></td>
+					</tr>
+					<tr class="row-nine">
+						<td class="col-one"></td>
+						<td class="col-two"></td>
+						<td class="col-three"></td>
+						<td class="col-four"></td>
+						<td class="col-five"></td>
+						<td class="col-six"></td>
+						<td class="col-seven"></td>
+						<td class="col-eight"></td>
+						<td class="col-nine"></td>
+						<td class="col-ten"></td>
+					</tr>
+					<tr class="row-ten">
+						<td class="col-one"></td>
+						<td class="col-two"></td>
+						<td class="col-three"></td>
+						<td class="col-four"></td>
+						<td class="col-five"></td>
+						<td class="col-six"></td>
+						<td class="col-seven"></td>
+						<td class="col-eight"></td>
+						<td class="col-nine"></td>
+						<td class="col-ten"></td>
+					</tr>
+				</table>
+			</div>
+
+			<div class="buttons">
+				<button id="hint-btn" class="style-btn">Hint</button>
+				<button id="give-up-btn" class="style-btn">Give up</button>
+				<button id="reset-btn" class="style-btn">Reset</button>
+			</div>
+
+			<div class="hangman-lost"></div>
+
+		</body>
+	</div>
+</html>
