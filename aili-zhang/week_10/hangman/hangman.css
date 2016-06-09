@@ -1,0 +1,109 @@
+
+body {
+	background-color: #9966CC;
+	color: white;
+}
+
+.container {
+	max-width: 960px;
+	text-align: center;
+}
+
+.hangman-table {
+	display: inline-block;
+	position: absolute;
+	margin-left: 150px;
+	border: 1px dashed black;
+}
+
+.hangman-table table tr td {
+	width: 20px;
+	height: 20px;
+	text-align: center;
+	font-size: 20px;
+}
+
+.guessing-word-table {
+	display: inline-block;
+	position: relative;
+	text-align: center;
+	font-size: 25px;
+}
+
+.display-lives {
+	margin-top: 50px;
+}
+
+.cell {
+	width: 50px;
+	height: 50px;
+	text-align: center;
+	border: 1px solid black;
+}
+
+.char {
+	width: 50px;
+	display: inline-block;
+	height: 50px;
+	text-align: center;
+	font-size: 25px;
+	background-color: green;
+	margin-top: 5px;
+	cursor: pointer;
+}
+
+.char:hover {
+	background-color: #33FFCC;
+}
+
+.hangmanImg {
+	width: 20px;
+	height: 20px;
+	border-radius: 50%;
+}
+
+.buttons {
+	margin-top: 10px;
+}
+
+.style-btn {
+	border: 0 none;
+	border-radius: 36px;
+	color: #fff;
+	cursor: pointer;
+	display: inline-block;
+	position: relative;
+	font-size: 14px;
+	padding: 12px 45px;
+	text-transform: none;
+	transition: all 100ms ease-in-out;
+	width: auto; 
+	text-align: center; 
+}
+
+.style-btn:hover {
+	background-color: #3300FF;
+}
+
+.hangman-lost img {
+	width: 300px;
+	height: 300px;
+	margin-top: 20px;
+	border-radius: 4em;
+}
+
+.win-msg {
+	display: inline-block;
+	position: absolute;
+	margin-top: 50px;
+}
+
+.choosing-word {
+	text-align: right;
+	text-decoration: underline;
+}
+
+
+
+
+
